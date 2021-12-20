@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ConceptTest : MonoBehaviour
 {
     Image[] imageBlocks;
+    Block[] blocks;
 
     //Colors
     [SerializeField]
@@ -15,6 +16,7 @@ public class ConceptTest : MonoBehaviour
     private void OnEnable()
     {
         imageBlocks = GetComponentsInChildren<Image>();
+        blocks = GetComponentsInChildren<Block>();
     }
 
     // Start is called before the first frame update
@@ -22,8 +24,9 @@ public class ConceptTest : MonoBehaviour
     {
         for(int i = 0; i < imageBlocks.Length; i++)
         {
-            
-            imageBlocks[i].color = blockColors[Random.Range(0, 3)];
+            var value = Random.Range(0, 3);
+            imageBlocks[i].color = blockColors[value];
+            blocks[i].AssignData(blocks[i].transform.localPosition, (ColorType)value);
         }
     }
 

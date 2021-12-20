@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class PlayingField : MonoBehaviour
     GameObject[] cachedBlocks;
 
     const int MaxBlockPoolSize = 300;
+
+    static Queue<Block> QueuedBlocks = new Queue<Block>(MaxBlockPoolSize);
 
     private void Awake()
     {
@@ -33,5 +36,10 @@ public class PlayingField : MonoBehaviour
 
             cachedBlocks[i] = newBlock;
         }
+    }
+
+    public static void AddToChain(Block block)
+    {
+        QueuedBlocks.Enqueue(block);
     }
 }
