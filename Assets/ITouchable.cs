@@ -8,7 +8,7 @@ public interface ITouchable
     public delegate void TouchCallback();
 
     /// <summary>
-    /// Is the player still touching the screen?
+    /// Is the player still touching the object
     /// </summary>
     public bool IsTouching { get; }
 
@@ -117,7 +117,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchEnd(ITouchable.TouchCallback callback)
     {
-        if(Input.touches[0].phase == TouchPhase.Ended)
+        if (Input.touchCount == 0)
         {
             callback();
         }
@@ -153,8 +153,8 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         {
             try
             {
-
-                    Main();
+                
+                Main();
             }
             catch
             {
@@ -162,7 +162,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             }
 
             yield return null;
-            
+
         }
     }
 }

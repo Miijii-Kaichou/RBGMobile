@@ -13,7 +13,6 @@ public class BlockTouchAction : TouchableEntity
     [SerializeField]
     Color initColor;
 
-
     Color selected = Color.white;
 
     bool initialized = false;

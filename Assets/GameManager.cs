@@ -34,6 +34,8 @@ public class GameManager : Singleton<GameManager>
         targetFPSTMP.text = string.Format(targetFPSFormat, Application.targetFrameRate);
         refreshRateTMP.text = string.Format(refreshRateFormat, Screen.currentResolution.refreshRate);
         FPSCounter.FpsUpdateEvent = PostFPS;
+
+        
     }
 
     public static void PostChainLength(int value)

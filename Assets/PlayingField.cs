@@ -21,6 +21,9 @@ public class PlayingField : Singleton<PlayingField>
     static bool collectionActive = false;
     public static bool CollectionActive => collectionActive;
 
+    public delegate void CollectionValidationCallback();
+    public static CollectionValidationCallback CollectionValidationCallbackMethod;
+
     private void Start()
     {
         cachedBlockObjects = new GameObject[MaxBlockPoolSize];
@@ -28,6 +31,14 @@ public class PlayingField : Singleton<PlayingField>
         {
             cachedBlockObjects[i] = test.Blocks[i].gameObject;
         }
+
+        CollectionValidationCallbackMethod = () =>
+        {
+            GameManager.PostChainLength(QueuedBlocks.Count);
+            collectionActive = false;
+            ClearPositions();
+            AreaHighlightHandler.Clear();
+        };
     }
 
     /// <summary>
@@ -66,17 +77,21 @@ public class PlayingField : Singleton<PlayingField>
                         {
                             //TODO: Validate Block Chain
                             ValidateCollection(ref blocksToChain);
+
                         }
                         else
                         {
                             //Otherwise, invalidate again
                             InvalidateCollection(ref blocksToChain);
                         }
+
+                        ClearPositions();
                     }
                 }
                 else if (blocksToChain[j].Color != startingColor || chainCount < validChainCount)
                 {
                     InvalidateCollection(ref blocksToChain);
+                    ClearPositions();
                     return;
                 }
             }
@@ -91,8 +106,7 @@ public class PlayingField : Singleton<PlayingField>
             referencedChain[i].Deselect();
         }
 
-        GameManager.PostChainLength(QueuedBlocks.Count);
-        collectionActive = false;
+        CollectionValidationCallbackMethod();
     }
 
     /// <summary>
@@ -106,8 +120,8 @@ public class PlayingField : Singleton<PlayingField>
             referencedChain[i].Deselect();
         }
 
-        GameManager.PostChainLength(QueuedBlocks.Count);
-        collectionActive = false;
+        CollectionValidationCallbackMethod();
+;
     }
 
     /// <summary>
@@ -120,5 +134,11 @@ public class PlayingField : Singleton<PlayingField>
         GameManager.PostChainLength(QueuedBlocks.Count);
         Instance.lineRenderer.positionCount = QueuedBlocks.Count;
         Instance.lineRenderer.SetPosition(QueuedBlocks.Count - 1, block.RectTransform.localPosition);
+        AreaHighlightHandler.EnableLane(block.InstanceID % 10);
+    }
+
+    static void ClearPositions()
+    {
+        Instance.lineRenderer.positionCount = 0;
     }
 }
