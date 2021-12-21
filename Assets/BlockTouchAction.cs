@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BlockTouchAction : MonoBehaviour
+public class BlockTouchAction : TouchableEntity
 {
     [SerializeField]
     Block blockIdentity;
@@ -12,71 +11,60 @@ public class BlockTouchAction : MonoBehaviour
     Image blockImage;
 
     [SerializeField]
-    Collider2D _collider;
-
     Color initColor;
+
+
     Color selected = Color.white;
 
-    public delegate void TouchCallback();
-    TouchCallback touchEvent;
+    bool initialized = false;
 
-    // Start is called before the first frame update
-    void Start()
+    bool isSelected = false;
+    public override void Init()
     {
-        initColor = blockImage.color;
+        #region First-Time Initialization
+        if (initialized == false)
+        {
+            initialized = true;
+            initColor = blockImage.color;
+            blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
+        } 
+        #endregion
+
+        base.Init();
     }
 
+
     // Update is called once per frame
-    void Update()
+    public override void Main()
     {
-        OnTouch(() =>
+        OnTouchEnter(() =>
         {
-            Debug.Log("You touched me!!!");
-            blockImage.color = selected;
-            PlayingField.AddToChain(blockIdentity);
+            if (!isSelected)
+            {
+                isSelected = true;
+                blockImage.color = selected;
+                SelectionHandler.EnableSlot(blockIdentity.InstanceID);
+                PlayingField.AddToChain(blockIdentity);
+            }
         });
 
         OnTouchExit(() =>
         {
-            Debug.Log("Why'd you stop? U w U");
-            blockImage.color = initColor;
+            cachedData = null;
+        });
+
+        OnTouchRelease(() =>
+        {
+            if(!PlayingField.CollectionActive)
+                PlayingField.AttempChainCollection();
         });
     }
 
-
-    void OnTouch(TouchCallback callback)
+    internal void RevertToOriginalColor()
     {
-        if(Input.touchCount > 0)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
-            if(hit.collider == _collider)
-            {
-                callback();
-            }
-        }
+        blockImage.color = initColor;
+        isSelected = false;
     }
 
-    void OnTouchEnter(TouchCallback callback)
-    {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
-            if (hit.collider == _collider)
-            {
-                callback();
-            }
-        }
-    }
-
-    void OnTouchExit(TouchCallback callback)
-    {
-        if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Canceled)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
-            if (hit.collider == _collider)
-            {
-                callback();
-            }
-        }
-    }
+    
 }

@@ -26,13 +26,9 @@ public class ConceptTest : MonoBehaviour
         {
             var value = Random.Range(0, 3);
             imageBlocks[i].color = blockColors[value];
-            blocks[i].AssignData(blocks[i].transform.localPosition, (ColorType)value);
+            blocks[i].AssignData( (ColorType)value, i);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Block[] Blocks => blocks;
 }
