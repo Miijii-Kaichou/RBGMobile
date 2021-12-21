@@ -10,15 +10,21 @@ public class GameManager : Singleton<GameManager>
     bool vSyncOn;
 
     [SerializeField, Header("Debug Tools")]
-    TextMeshProUGUI chainLengthTMP, targetFPSTMP, refreshRateTMP, FPSTMP;
+    TextMeshProUGUI chainLengthTMP;
 
+    [SerializeField]
+    TextMeshProUGUI targetFPSTMP;
+
+    [SerializeField]
+    TextMeshProUGUI refreshRateTMP;
+
+    [SerializeField]
+    TextMeshProUGUI FPSTMP;
 
     string chainLengthFormat = "Chain Length: {0}";
     string targetFPSFormat = "Target FPS: {0}";
     string refreshRateFormat = "Refresh Rate: {0}";
     string currentFPSFormat = "FPS: {0}";
-
-
 
     // Start is called before the first frame update
     void Start()

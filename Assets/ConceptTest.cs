@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +15,13 @@ public class ConceptTest : MonoBehaviour
     {
         imageBlocks = GetComponentsInChildren<Image>();
         blocks = GetComponentsInChildren<Block>();
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            if (i > 29)
+            {
+                blocks[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -26,7 +31,7 @@ public class ConceptTest : MonoBehaviour
         {
             var value = Random.Range(0, 3);
             imageBlocks[i].color = blockColors[value];
-            blocks[i].AssignData( (ColorType)value, i);
+            blocks[i].AssignData((ColorType)value, i);
         }
     }
 

@@ -40,10 +40,17 @@ public interface ITouchable
 
     /// <summary>
     /// The very instance that the player release their touch
-    /// from the screen.
+    /// from the object
     /// </summary>
     /// <param name="evt"></param>
     public void OnTouchRelease(TouchCallback evt);
+
+    /// <summary>
+    /// The very instance that the player's touch is complete off the screen,
+    /// no matter the previous state.
+    /// </summary>
+    /// <param name="evt"></param>
+    public void OnTouchEnd(TouchCallback evt);
 }
 
 public abstract class TouchableEntity : MonoBehaviour, ITouchable
@@ -58,10 +65,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     RaycastHit2D hit;
 
-    private void Start()
-    {
-        
-    }
+    int framesUntilNextCall = 0;
 
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
@@ -111,6 +115,14 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         }
     }
 
+    public void OnTouchEnd(ITouchable.TouchCallback callback)
+    {
+        if(Input.touches[0].phase == TouchPhase.Ended)
+        {
+            callback();
+        }
+    }
+
     public void OnTouchStart(ITouchable.TouchCallback callback)
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
@@ -141,7 +153,8 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         {
             try
             {
-                Main();
+
+                    Main();
             }
             catch
             {
@@ -149,6 +162,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             }
 
             yield return null;
+            
         }
     }
 }

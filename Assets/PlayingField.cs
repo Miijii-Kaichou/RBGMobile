@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayingField : MonoBehaviour
+public class PlayingField : Singleton<PlayingField>
 {
-
     GameObject block;
 
     [SerializeField, Header("Testing")]
@@ -14,6 +10,9 @@ public class PlayingField : MonoBehaviour
 
     [SerializeField]
     GameObject[] cachedBlockObjects;
+
+    [SerializeField]
+    LineRenderer lineRenderer;
 
     const int MaxBlockPoolSize = 300;
 
@@ -29,30 +28,12 @@ public class PlayingField : MonoBehaviour
         {
             cachedBlockObjects[i] = test.Blocks[i].gameObject;
         }
-        //block = Resources.Load<GameObject>("Block");
-        //PoolBlocksIntoScene();
-    }
-
-    void PoolBlocksIntoScene()
-    {
-        cachedBlockObjects = new GameObject[MaxBlockPoolSize];
-        for (int i = 0; i < MaxBlockPoolSize; i++)
-        {
-            GameObject newBlock = Instantiate(block, transform);
-            newBlock.SetActive(false);
-
-            #region Calculate and change Block Scaling
-
-            #endregion
-
-            cachedBlockObjects[i] = newBlock;
-        }
     }
 
     /// <summary>
     /// Attempt to eliminate the selected blocks
     /// </summary>
-    internal static void AttempChainCollection()
+    internal static void AttemptChainCollection()
     {
         if (!collectionActive)
         {
@@ -137,6 +118,7 @@ public class PlayingField : MonoBehaviour
     {
         QueuedBlocks.Enqueue(block);
         GameManager.PostChainLength(QueuedBlocks.Count);
-        
+        Instance.lineRenderer.positionCount = QueuedBlocks.Count;
+        Instance.lineRenderer.SetPosition(QueuedBlocks.Count - 1, block.RectTransform.localPosition);
     }
 }

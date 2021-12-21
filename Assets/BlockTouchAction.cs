@@ -22,15 +22,15 @@ public class BlockTouchAction : TouchableEntity
     public override void Init()
     {
         #region First-Time Initialization
-        if (initialized == false)
+        if (initialized == false && gameObject.activeInHierarchy)
         {
             initialized = true;
             initColor = blockImage.color;
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
+            base.Init();
         } 
         #endregion
 
-        base.Init();
     }
 
 
@@ -56,7 +56,7 @@ public class BlockTouchAction : TouchableEntity
         OnTouchRelease(() =>
         {
             if(!PlayingField.CollectionActive)
-                PlayingField.AttempChainCollection();
+                PlayingField.AttemptChainCollection();
         });
     }
 
