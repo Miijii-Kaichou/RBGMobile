@@ -106,15 +106,17 @@ public class MassObject : MonoBehaviour, IMass
         }
     }
 
+    /// <summary>
+    /// A ground check routine checking if the object is grounded,
+    /// not matter it's current status.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator GroundCheckCycle()
     {
         while (true)
         {
-            if (!IsGrounded)
-            {
-                CheckIfGrounded();
-            }
-            yield return new WaitForSeconds(1f / 100f);
+            CheckIfGrounded();
+            yield return new WaitForSeconds(1f / 1000f);
         }
     }
 
