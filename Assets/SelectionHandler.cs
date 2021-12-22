@@ -2,22 +2,23 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectionHandler : MonoBehaviour
+public class SelectionHandler : Singleton<SelectionHandler>
 {
-    private static SelectionHandler Instance;
     static Image[] selectionUIImg;
 
-    private void Awake()
+    public void Start()
     {
-        Instance = this;
         selectionUIImg = GetComponentsInChildren<Image>();
     }
 
-    public static void EnableSlot(int location)
+    public static void EnableSlot(Block blockObj)
     {
-        if(selectionUIImg[location].enabled == false)
+        int location = blockObj.InstanceID;
+
+        if (selectionUIImg[location].enabled == false)
         {
             selectionUIImg[location].enabled = true;
+            selectionUIImg[location].rectTransform.localPosition = blockObj.RectTransform.localPosition;
         }
     }
 

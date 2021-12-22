@@ -42,7 +42,7 @@ public class BlockTouchAction : TouchableEntity
             {
                 isSelected = true;
                 blockImage.color = selected;
-                SelectionHandler.EnableSlot(blockIdentity.InstanceID);
+                SelectionHandler.EnableSlot(blockIdentity);
                 PlayingField.AddToChain(blockIdentity);
             }
         });
