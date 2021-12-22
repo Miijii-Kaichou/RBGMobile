@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum ColorType
@@ -14,9 +15,13 @@ public class Block : MassObject
     int _instanceID = 0;
 
     [SerializeField]
+    int _laneID = 0;
+
+    [SerializeField]
     RectTransform _rectTransform;
 
     public int InstanceID => _instanceID;
+    public int LaneID => _laneID;
     public RectTransform RectTransform => _rectTransform;
 
     [SerializeField]
@@ -25,17 +30,42 @@ public class Block : MassObject
     [SerializeField]
     ColorType _color = ColorType.Blank;
 
+    //Colors
+    [SerializeField]
+    Color[] blockColors = new Color[3];
+
     BlockTouchAction attachedTouchAction;
 
     public Vector2 Position => _position;
 
-    public void AssignData(ColorType color, int instanceID)
+    public void Update()
     {
         Mass = 3f;
-        _color = color;
+        SetPosition(_rectTransform.anchoredPosition);
+    }
+
+    public void AssignData(ColorType color, int instanceID)
+    {
+        ChangeColorType(color);
         _instanceID = instanceID;
-        attachedTouchAction = GetComponent<BlockTouchAction>();
+    }
+
+    public void SetLaneID(int laneId)
+    {
+        _laneID = laneId;
+    }
+
+    public void InitTouchControl()
+    {
+        attachedTouchAction = attachedTouchAction ?? GetComponent<BlockTouchAction>();
+        attachedTouchAction.SetInitColor(blockColors[(int)_color]);
         attachedTouchAction.Init();
+    }
+
+    internal void ApplyColor()
+    {
+        if (attachedTouchAction == null) return;
+        attachedTouchAction.SetColor(blockColors[(int)_color]);
     }
 
     public void Deselect(bool disable = false)
@@ -60,4 +90,16 @@ public class Block : MassObject
     }
 
     public ColorType Color => _color;
+
+    public void ChangeColorType(ColorType type)
+    {
+        _color = type;
+        
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        
+    }
 }

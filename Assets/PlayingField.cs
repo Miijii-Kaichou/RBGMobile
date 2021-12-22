@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,14 @@ public class PlayingField : Singleton<PlayingField>
     [SerializeField]
     LineRenderer lineRenderer;
 
+    [SerializeField]
+    RectTransform rectTransform;
+
+    [SerializeField]
+    Timer timer;
+
+    public static int CurrentLevel = 1;
+
     const int MaxBlockPoolSize = 300;
 
     static Queue<Block> QueuedBlocks = new Queue<Block>(MaxBlockPoolSize);
@@ -22,6 +31,37 @@ public class PlayingField : Singleton<PlayingField>
     public static bool CollectionActive => collectionActive;
 
     public delegate void CollectionValidationCallback();
+
+    [SerializeField]
+    float[] xPositions = new float[10];
+
+    internal static void SpawnNewLane()
+    {
+        int blockCount = 0;
+
+        //Check how many blocks are active
+
+        for (int i = 0; i < Instance.cachedBlockObjects.Length; i++)
+        {
+            if (blockCount > Instance.xPositions.Length - 1)
+                return;
+
+            Block block = Instance.test.Blocks[i];
+
+            if (!block.gameObject.activeInHierarchy)
+            {
+                block.gameObject.SetActive(true);
+                
+                block.AssignData((ColorType)((UnityEngine.Random.Range(0, 3) + blockCount) % 3), i);
+                block.InitTouchControl();
+                block.SetLaneID(blockCount);
+                block.RectTransform.anchoredPosition = new Vector2(Instance.xPositions[blockCount], Instance.rectTransform.rect.size.y);
+                block.ApplyColor();
+                blockCount++;
+            }
+        }
+    }
+
     public static CollectionValidationCallback CollectionValidationCallbackMethod;
 
     private void Start()
@@ -30,6 +70,10 @@ public class PlayingField : Singleton<PlayingField>
         for (int i = 0; i < test.Blocks.Length; i++)
         {
             cachedBlockObjects[i] = test.Blocks[i].gameObject;
+            if(i < xPositions.Length)
+            {
+                xPositions[i] = test.Blocks[i].Position.x;
+            }
         }
 
         CollectionValidationCallbackMethod = () =>
@@ -39,6 +83,8 @@ public class PlayingField : Singleton<PlayingField>
             ClearPositions();
             AreaHighlightHandler.Clear();
         };
+
+        timer.StartTimer();
     }
 
     /// <summary>
@@ -86,6 +132,7 @@ public class PlayingField : Singleton<PlayingField>
                         }
 
                         ClearPositions();
+                        return;
                     }
                 }
                 else if (blocksToChain[j].Color != startingColor || chainCount < validChainCount)
@@ -134,7 +181,7 @@ public class PlayingField : Singleton<PlayingField>
         GameManager.PostChainLength(QueuedBlocks.Count);
         Instance.lineRenderer.positionCount = QueuedBlocks.Count;
         Instance.lineRenderer.SetPosition(QueuedBlocks.Count - 1, block.RectTransform.localPosition);
-        AreaHighlightHandler.EnableLane(block.InstanceID % 10);
+        AreaHighlightHandler.EnableLane(block.LaneID);
     }
 
     static void ClearPositions()

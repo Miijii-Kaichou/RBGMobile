@@ -24,12 +24,23 @@ public class BlockTouchAction : TouchableEntity
         if (initialized == false && gameObject.activeInHierarchy)
         {
             initialized = true;
-            initColor = blockImage.color;
+            SetInitColor(blockImage.color);
+            SetColor(initColor);
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
             base.Init();
         } 
         #endregion
 
+    }
+
+    public void SetInitColor(Color color)
+    {
+        initColor = color;
+    }
+
+    public void SetColor(Color color)
+    {
+        blockImage.color = color;
     }
 
 
@@ -41,7 +52,7 @@ public class BlockTouchAction : TouchableEntity
             if (!isSelected)
             {
                 isSelected = true;
-                blockImage.color = selected;
+                SetColor(selected);
                 SelectionHandler.EnableSlot(blockIdentity);
                 PlayingField.AddToChain(blockIdentity);
             }
@@ -61,8 +72,9 @@ public class BlockTouchAction : TouchableEntity
 
     internal void RevertToOriginalColor()
     {
-        blockImage.color = initColor;
+        SetColor(initColor);
         isSelected = false;
+        cachedData = null;
     }
 
     

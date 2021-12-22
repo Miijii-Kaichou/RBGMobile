@@ -66,6 +66,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     RaycastHit2D hit;
 
     int framesUntilNextCall = 0;
+    private bool initialized;
 
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
@@ -138,8 +139,17 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public virtual void Init()
     {
+        if (initialized == false)
+        {
+            initialized = true;
+            StartCoroutine(TouchCycle());
+        }
+    }
 
-        StartCoroutine(TouchCycle());
+    private void OnEnable()
+    {
+        if (initialized)
+            StartCoroutine(TouchCycle());
     }
 
     public virtual void Main()

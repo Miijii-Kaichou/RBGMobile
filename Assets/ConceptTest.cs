@@ -36,6 +36,9 @@ public class ConceptTest : MonoBehaviour
             var value = Random.Range(0, 3);
             imageBlocks[i].color = blockColors[value];
             blocks[i].AssignData((ColorType)value, i);
+            blocks[i].SetLaneID(i % 10);
+            blocks[i].InitTouchControl();
+            blocks[i].ApplyColor();
         }
     }
 

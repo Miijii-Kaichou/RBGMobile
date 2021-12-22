@@ -38,6 +38,7 @@ public class MassObject : MonoBehaviour, IMass
     int previousGroundedFlag = 0;
 
     public float gridSize = 40.8f;
+    private bool initialized;
 
     float RoundToNearestGrid(float pos, bool snapDown = false, int dividend = 2)
     {
@@ -72,9 +73,29 @@ public class MassObject : MonoBehaviour, IMass
 
     public void Start()
     {
+        Init();   
+    }
+
+    public virtual void OnEnable()
+    {
+        if (initialized)
+        {
+            MainStart();
+        }
+    }
+
+    void Init()
+    {
         //Each time a validation on the playfield is called, all blocks will check if grounded.
         PlayingField.CollectionValidationCallbackMethod += CheckIfGrounded;
 
+        MainStart();
+
+        initialized = true;
+    }
+
+    void MainStart()
+    {
         //TODO: Snap into place
         originCollider.attachedRigidbody.velocity = Vector2.zero;
         StartCoroutine(GroundCheckCycle());
