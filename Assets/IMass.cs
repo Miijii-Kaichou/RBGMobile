@@ -20,6 +20,12 @@ public class MassObject : MonoBehaviour, IMass
     public bool IsGrounded { get; set; }
 
     [SerializeField]
+    Vector2 currentPosition;
+
+    [SerializeField]
+    Grid grid;
+
+    [SerializeField]
     bool _isGrounded;
 
     public IMass.OnGroundCallback GroundedCallback { get; set; }
@@ -31,13 +37,13 @@ public class MassObject : MonoBehaviour, IMass
     int groundedFlag = 0;
     int previousGroundedFlag = 0;
 
-    public float gridSize = 40.5f;
+    public float gridSize = 40.8f;
 
-    float RoundToNearestGrid(float pos)
+    float RoundToNearestGrid(float pos, int dividend = 2)
     {
         float xDiff = pos % gridSize;
         pos -= xDiff;
-        if (xDiff > (gridSize / 2))
+        if (xDiff > (gridSize / dividend))
         {
             pos += gridSize;
         }
@@ -54,16 +60,23 @@ public class MassObject : MonoBehaviour, IMass
     {
         originCollider = GetComponent<Collider2D>();
         rectTransform = GetComponent<RectTransform>();
+        currentPosition = rectTransform.anchoredPosition;
+
+        //TODO: Snap into place
+        rectTransform.anchoredPosition =
+            new Vector2(rectTransform.anchoredPosition.x,
+             RoundToNearestGrid(Mathf.Floor(rectTransform.anchoredPosition.y)));
+        originCollider.attachedRigidbody.velocity = Vector2.zero;
     }
 
     public void Start()
     {
-        
+        //Each time a validation on the playfield is called, all blocks will check if grounded.
+        PlayingField.CollectionValidationCallbackMethod += CheckIfGrounded;
 
         //TODO: Snap into place
-        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, RoundToNearestGrid(rectTransform.anchoredPosition.y));
         originCollider.attachedRigidbody.velocity = Vector2.zero;
-        StartCoroutine(CheckGroundCycle());
+        StartCoroutine(GroundCheckCycle());
         StartCoroutine(MainCycle());
     }
 
@@ -79,39 +92,43 @@ public class MassObject : MonoBehaviour, IMass
             if (IsGrounded == false)
             {
                 decentVector = new Vector2(0f, -(Mass * GameManager.GravityValue));
-                originCollider.attachedRigidbody.velocity = new Vector2(0f, decentVector.y) * Time.fixedDeltaTime;
-                rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, RoundToNearestGrid(rectTransform.anchoredPosition.y));
-
+                originCollider.attachedRigidbody.velocity = new Vector2(0f,decentVector.y) * Time.fixedDeltaTime;
             } else
             {
                 //TODO: Snap into place
-                rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, RoundToNearestGrid(rectTransform.anchoredPosition.y));
+                rectTransform.anchoredPosition = 
+                    new Vector2(rectTransform.anchoredPosition.x,
+                     RoundToNearestGrid(Mathf.Floor(rectTransform.anchoredPosition.y)));
                 originCollider.attachedRigidbody.velocity = Vector2.zero;
+                
             }
             yield return new WaitForFixedUpdate();
         }
     }
 
-    IEnumerator CheckGroundCycle()
+    IEnumerator GroundCheckCycle()
     {
         while (true)
         {
-            CheckIfGrounded();
-            yield return new WaitForFixedUpdate();
+            if (!IsGrounded)
+            {
+                CheckIfGrounded();
+            }
+            yield return new WaitForSeconds(1f / 100f);
         }
     }
 
     void CheckIfGrounded()
     {
+        raycastResults = new RaycastHit2D[30];
         ContactFilter2D filter = new ContactFilter2D();
         filter = filter.NoFilter();
+        filter.useTriggers = true;
         filter.SetLayerMask(LayerMask.GetMask("PlayFieldCollidables"));
-        raycastResults = new RaycastHit2D[30];
-
-        Physics2D.Raycast(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))), filter, raycastResults, detectionLength);
-        Debug.DrawRay(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))) * detectionLength, Color.red);
+        Physics2D.Raycast(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))).normalized, filter, raycastResults, detectionLength);
+        Debug.DrawRay(transform.position, (new Vector2(0f, -((Mass * GameManager.GravityValue))).normalized) * detectionLength, Color.red);
         collidingWith = raycastResults[1].collider;
-        
+
 
         if (collidingWith)
         {
@@ -123,10 +140,18 @@ public class MassObject : MonoBehaviour, IMass
             groundedFlag = 1;
             IsGrounded = true;
         }
-        else
+        else if(collidingWith == null || (collidingWith != null && !collidingWith.GetComponent<MassObject>().IsGrounded))
         {
             groundedFlag = 0;
             IsGrounded = false;
-        }  
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 10)
+        {
+            CheckIfGrounded();
+        }
     }
 }

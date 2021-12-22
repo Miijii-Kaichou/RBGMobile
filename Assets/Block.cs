@@ -29,7 +29,7 @@ public class Block : MassObject
 
     public void AssignData(ColorType color, int instanceID)
     {
-        Mass = 5f;
+        Mass = 2f;
         _color = color;
         _instanceID = instanceID;
         attachedTouchAction = GetComponent<BlockTouchAction>();
