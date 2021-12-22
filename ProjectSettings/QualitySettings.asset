@@ -107,7 +107,7 @@ QualitySettings:
     streamingMipmapsRenderersPerFrame: 512
     streamingMipmapsMaxLevelReduction: 2
     streamingMipmapsMaxFileIORequests: 1024
-    particleRaycastBudget: 64
+    particleRaycastBudget: 60
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
@@ -228,7 +228,7 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     Stadia: 5
-    Standalone: 5
+    Standalone: 2
     WebGL: 3
     Windows Store Apps: 5
     XboxOne: 5

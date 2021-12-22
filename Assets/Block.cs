@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum ColorType
@@ -11,7 +8,7 @@ public enum ColorType
     B
 }
 
-public class Block : MonoBehaviour
+public class Block : MassObject
 {
     [SerializeField]
     int _instanceID = 0;
@@ -32,22 +29,32 @@ public class Block : MonoBehaviour
 
     public void AssignData(ColorType color, int instanceID)
     {
+        Mass = 5f;
         _color = color;
         _instanceID = instanceID;
         attachedTouchAction = GetComponent<BlockTouchAction>();
         attachedTouchAction.Init();
     }
 
-    public void Deselect()
+    public void Deselect(bool disable = false)
     {
         _position = Vector2.zero;
         attachedTouchAction.RevertToOriginalColor();
         SelectionHandler.DisableSlot(_instanceID);
+        if (disable)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void SetPosition(Vector2 position)
     {
         _position = position;
+    }
+
+    public void SendToTop()
+    {
+        _rectTransform.anchoredPosition = new Vector3(_position.x, _position.y + (828.4f - _position.y), 1f);
     }
 
     public ColorType Color => _color;

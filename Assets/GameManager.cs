@@ -21,6 +21,11 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     TextMeshProUGUI FPSTMP;
 
+    [SerializeField]
+    float gravityValue = 0.980665f;
+
+    public static float GravityValue => Instance.gravityValue;
+
     string chainLengthFormat = "Chain Length: {0}";
     string targetFPSFormat = "Target FPS: {0}";
     string refreshRateFormat = "Refresh Rate: {0}";

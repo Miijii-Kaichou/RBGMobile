@@ -102,8 +102,9 @@ public class PlayingField : Singleton<PlayingField>
     {
         for (int i = 0; i < referencedChain.Length; i++)
         {
+            referencedChain[i].SendToTop();
             //TODO: Deselect, and destory blocks / send blocks to opponent
-            referencedChain[i].Deselect();
+            referencedChain[i].Deselect(true);
         }
 
         CollectionValidationCallbackMethod();
@@ -121,7 +122,6 @@ public class PlayingField : Singleton<PlayingField>
         }
 
         CollectionValidationCallbackMethod();
-;
     }
 
     /// <summary>

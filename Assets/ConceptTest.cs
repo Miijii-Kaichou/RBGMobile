@@ -10,6 +10,10 @@ public class ConceptTest : MonoBehaviour
     [SerializeField]
     Color[] blockColors = new Color[3];
 
+    [SerializeField, Range(1f, 3f)]
+    int stackSizeMuliplier = 1;
+
+    const int DefaultStackSize = 29;
 
     private void OnEnable()
     {
@@ -17,7 +21,7 @@ public class ConceptTest : MonoBehaviour
         blocks = GetComponentsInChildren<Block>();
         for (int i = 0; i < blocks.Length; i++)
         {
-            if (i > 29)
+            if (i > DefaultStackSize + (30 * (stackSizeMuliplier - 1)))
             {
                 blocks[i].gameObject.SetActive(false);
             }
