@@ -1,4 +1,5 @@
-using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,7 +52,7 @@ public class PlayingField : Singleton<PlayingField>
             if (!block.gameObject.activeInHierarchy)
             {
                 block.gameObject.SetActive(true);
-                
+
                 block.AssignData((ColorType)((UnityEngine.Random.Range(0, 3) + blockCount) % 3), i);
                 block.InitTouchControl();
                 block.SetLaneID(blockCount);
@@ -70,7 +71,8 @@ public class PlayingField : Singleton<PlayingField>
         for (int i = 0; i < test.Blocks.Length; i++)
         {
             cachedBlockObjects[i] = test.Blocks[i].gameObject;
-            if(i < xPositions.Length)
+
+            if (i < xPositions.Length)
             {
                 xPositions[i] = test.Blocks[i].Position.x;
             }
@@ -85,6 +87,7 @@ public class PlayingField : Singleton<PlayingField>
         };
 
         timer.StartTimer();
+        StartCoroutine(PostActiveBlocksCycle());
     }
 
     /// <summary>
@@ -150,6 +153,7 @@ public class PlayingField : Singleton<PlayingField>
         for (int i = 0; i < referencedChain.Length; i++)
         {
             referencedChain[i].SendToTop();
+
             //TODO: Deselect, and destory blocks / send blocks to opponent
             referencedChain[i].Deselect(true);
         }
@@ -177,15 +181,69 @@ public class PlayingField : Singleton<PlayingField>
     /// <param name="block"></param>
     public static void AddToChain(Block block)
     {
+        //Check if selected item is greater than 40.8. If it is, this is not close to the current selected block
+        if (QueuedBlocks.Count > 0)
+        {
+            var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
+            if (distance > 40.8f * 2f) return;
+        }
+
+        //Select block, since now it's valid
+        block.AttachedTouchAction.IsSelected = true;
+        block.AttachedTouchAction.SetColor(Color.white);
+        SelectionHandler.EnableSlot(block);
+
+        //Enqueue block
         QueuedBlocks.Enqueue(block);
+
+        //Increase the Chain Length to Debug
         GameManager.PostChainLength(QueuedBlocks.Count);
+
+        //Draw out line
         Instance.lineRenderer.positionCount = QueuedBlocks.Count;
         Instance.lineRenderer.SetPosition(QueuedBlocks.Count - 1, block.RectTransform.localPosition);
+
+        //Enable lane highlighting
         AreaHighlightHandler.EnableLane(block.LaneID);
+
+        block.Node.ConnectedMain(block);
+
+        //Connect Chain to previous in queue
+        if(QueuedBlocks.Count > 1)
+        {
+            Block[] blockArray = QueuedBlocks.ToArray();
+            //Check what side the previous block is on.
+            Block previousBlock = blockArray[QueuedBlocks.Count - 2];
+            BlockSide previousBlockSide = BlockSide.Right;
+            var Xdifference = (block.RectTransform.anchoredPosition.x - previousBlock.RectTransform.anchoredPosition.x);
+            var YDifference = (block.RectTransform.anchoredPosition.y - previousBlock.RectTransform.anchoredPosition.y);
+
+            //Check Right, Bottom, Left, and Top
+            if (Xdifference > 0)
+                previousBlockSide = BlockSide.Left;
+            else if (Xdifference < 0)
+                previousBlockSide = BlockSide.Right;
+            else if (YDifference > 0)
+                previousBlockSide = BlockSide.Down;
+            else if (YDifference < 0)
+                previousBlockSide = BlockSide.Up;
+
+            block.Node.ConnectBlockToSide(previousBlock, previousBlockSide);
+        }
     }
 
     static void ClearPositions()
     {
         Instance.lineRenderer.positionCount = 0;
+    }
+
+    IEnumerator PostActiveBlocksCycle()
+    {
+        while (true)
+        {
+            var activeBlocks = (from activeBlock in cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray().Length;
+            GameManager.PostActiveBlocks(activeBlocks);
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }

@@ -9,6 +9,39 @@ public enum ColorType
     B
 }
 
+public enum BlockSide
+{
+    Right,
+    Down,
+    Left,
+    Up
+}
+
+[Serializable]
+public class BlockNode
+{
+    [SerializeField]
+    Block _main;
+
+    [SerializeField]
+    Block[] _existingSides = new Block[4];
+
+    public void ConnectedMain(Block main)
+    {
+        _main = main;
+    }
+
+    /// <summary>
+    /// Connect a block to a selected side
+    /// </summary>
+    /// <param name="block"></param>
+    /// <param name="side"></param>
+    public void ConnectBlockToSide(Block block, BlockSide side)
+    {
+        _existingSides[(int)side] = block;
+    }
+}
+
 public class Block : MassObject
 {
     [SerializeField]
@@ -35,6 +68,10 @@ public class Block : MassObject
     Color[] blockColors = new Color[3];
 
     BlockTouchAction attachedTouchAction;
+
+    public BlockTouchAction AttachedTouchAction => attachedTouchAction;
+
+    public BlockNode Node;
 
     public Vector2 Position => _position;
 
@@ -94,7 +131,7 @@ public class Block : MassObject
     public void ChangeColorType(ColorType type)
     {
         _color = type;
-        
+        ApplyColor();
     }
 
     public override void OnEnable()

@@ -22,6 +22,9 @@ public class GameManager : Singleton<GameManager>
     TextMeshProUGUI FPSTMP;
 
     [SerializeField]
+    TextMeshProUGUI activeBlocksTMP;
+
+    [SerializeField]
     float gravityValue = 0.980665f;
 
     public static float GravityValue => Instance.gravityValue;
@@ -30,6 +33,7 @@ public class GameManager : Singleton<GameManager>
     string targetFPSFormat = "Target FPS: {0}";
     string refreshRateFormat = "Refresh Rate: {0}";
     string currentFPSFormat = "FPS: {0}";
+    string activeBlocksFormat = "Active Blocks (#/300): {0}";
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +56,10 @@ public class GameManager : Singleton<GameManager>
     {
         Instance.targetFPSTMP.text = string.Format(Instance.targetFPSFormat, Application.targetFrameRate);
         Instance.FPSTMP.text = string.Format(Instance.currentFPSFormat, FPSCounter.GetCurrectFPS());
+    }
+
+    public static void PostActiveBlocks(int value)
+    {
+        Instance.activeBlocksTMP.text = string.Format(Instance.activeBlocksFormat, value);
     }
 }

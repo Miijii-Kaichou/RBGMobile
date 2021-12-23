@@ -68,9 +68,11 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     int framesUntilNextCall = 0;
     private bool initialized;
 
+    Condition uninteractableCondition;
+
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (hit.collider == entityCollider)
@@ -83,7 +85,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchEnter(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (!IsTouching && hit.collider == entityCollider)
@@ -96,7 +98,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchExit(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (IsTouching && hit.collider != entityCollider)
@@ -109,7 +111,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchRelease(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && cachedData != null)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && cachedData != null && uninteractableCondition.WasMet == false)
         {
             cachedData = null;
             callback();
@@ -118,7 +120,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchEnd(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount == 0)
+        if (Input.touchCount == 0 && uninteractableCondition.WasMet == false)
         {
             callback();
         }
@@ -126,7 +128,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchStart(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (!IsTouching && hit.collider == entityCollider)
@@ -144,6 +146,11 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             initialized = true;
             StartCoroutine(TouchCycle());
         }
+    }
+
+    protected void DontInteractIf(ref Condition condition)
+    {
+        uninteractableCondition = condition;
     }
 
     private void OnEnable()

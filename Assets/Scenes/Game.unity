@@ -184,9 +184,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 806917}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &806919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -439,9 +444,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 3720974}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &3720976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -961,9 +971,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 27650798}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &27650800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1127,9 +1142,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 31090163}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &31090165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1601,7 +1621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ActiveBlocks (#/300): 0'
+  m_text: 'Active Blocks (#/300): 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f511ac63d06ac84bb353390fc5ae256, type: 2}
   m_sharedMaterial: {fileID: 6657724756383462998, guid: 2f511ac63d06ac84bb353390fc5ae256, type: 2}
@@ -1828,9 +1848,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 36302025}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &36302027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1994,9 +2019,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 42255310}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &42255312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2160,9 +2190,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 43840098}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &43840100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2415,9 +2450,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 46398184}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &46398186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2670,9 +2710,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 64588980}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &64588982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2925,9 +2970,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 70928906}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &70928908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3180,9 +3230,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 75742376}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &75742378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3346,9 +3401,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 76302364}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &76302366
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3690,9 +3750,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 81322737}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &81322739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3990,9 +4055,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 83045952}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &83045954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4156,9 +4226,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 88394221}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &88394223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4322,9 +4397,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 96656104}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &96656106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4755,9 +4835,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 104634432}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &104634434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4921,9 +5006,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 104959690}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &104959692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5087,9 +5177,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 109577970}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &109577972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5253,9 +5348,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 110036216}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &110036218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5419,9 +5519,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 111970668}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &111970670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5763,9 +5868,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 117511797}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &117511799
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5929,9 +6039,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 117886261}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &117886263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6095,9 +6210,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 118687209}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &118687211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6911,9 +7031,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 166396694}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &166396696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7330,9 +7455,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 181041843}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &181041845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7496,9 +7626,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 188332183}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &188332185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7662,9 +7797,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 192248215}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &192248217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7917,9 +8057,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 195768549}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &195768551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8083,9 +8228,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 197812556}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &197812558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8338,9 +8488,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 201778161}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &201778163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8504,9 +8659,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 203105149}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &203105151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8759,9 +8919,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 204936689}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &204936691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9014,9 +9179,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 208316344}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &208316346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9358,9 +9528,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 212455874}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &212455876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9702,9 +9877,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 224027115}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &224027117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9868,9 +10048,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 228289732}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &228289734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10034,9 +10219,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 228455834}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &228455836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11046,9 +11236,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 259623596}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &259623598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11301,9 +11496,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 265149793}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &265149795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11645,9 +11845,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 272976449}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &272976451
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11811,9 +12016,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 273934341}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &273934343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12155,9 +12365,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 287662452}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &287662454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12410,9 +12625,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 288855970}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &288855972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12665,9 +12885,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 299187729}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &299187731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12920,9 +13145,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 310949528}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &310949530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13256,9 +13486,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 313258478}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!50 &313258484
 Rigidbody2D:
   serializedVersion: 4
@@ -13964,9 +14199,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 349313275}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &349313277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14264,9 +14504,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 355773941}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &355773943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14519,9 +14764,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 360513871}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &360513873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14952,9 +15202,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 367796017}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &367796019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15296,9 +15551,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 390491198}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &390491200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15462,9 +15722,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 394084061}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &394084063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15628,9 +15893,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 396379774}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &396379776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15794,9 +16064,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 398817036}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &398817038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15960,9 +16235,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 406789461}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &406789463
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16238,9 +16518,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 421392667}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &421392669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16493,9 +16778,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 432830398}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &432830400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16823,9 +17113,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 444561725}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &444561727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17167,9 +17462,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 451682371}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &451682373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17511,9 +17811,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 459662634}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &459662636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17677,9 +17982,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 459868569}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &459868571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17932,9 +18242,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 462464888}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &462464890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18098,9 +18413,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 463870823}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &463870825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18353,9 +18673,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 474120234}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &474120236
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18608,9 +18933,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 477260703}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &477260705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18774,9 +19104,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 481987695}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &481987697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19207,9 +19542,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 498033990}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &498033992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19698,9 +20038,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 521636994}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &521636996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19953,9 +20298,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 537855001}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &537855003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20119,9 +20469,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 543833697}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &543833699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20730,9 +21085,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 565985724}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &565985726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20985,9 +21345,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 578175512}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &578175514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21240,9 +21605,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 582346511}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &582346513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21406,9 +21776,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 582347943}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &582347945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21572,9 +21947,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 583342047}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &583342049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21738,9 +22118,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 587501818}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &587501820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21904,9 +22289,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 588136126}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &588136128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22248,9 +22638,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 600670943}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &600670945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22540,9 +22935,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 607170898}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &607170900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22795,9 +23195,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 611300323}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &611300325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22961,9 +23366,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 612981865}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &612981867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23127,9 +23537,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 614229511}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &614229513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23471,9 +23886,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 618862002}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &618862004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23815,9 +24235,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 621430977}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &621430979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23981,9 +24406,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 630564014}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &630564016
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24147,9 +24577,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 637279248}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &637279250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24491,9 +24926,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 648538619}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &648538621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24835,9 +25275,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 670901178}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &670901180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25179,9 +25624,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 675850340}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &675850342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25345,9 +25795,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 677364723}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &677364725
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25511,9 +25966,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 678448694}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &678448696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25677,9 +26137,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 681445209}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &681445211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26021,9 +26486,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 697969761}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &697969763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26187,9 +26657,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 702070900}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &702070902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26353,9 +26828,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 710661457}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &710661459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26519,9 +26999,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 722549037}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &722549039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26685,9 +27170,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 724477326}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &724477328
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26851,9 +27341,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 729549948}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &729549950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27017,9 +27512,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 735743898}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &735743900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27361,9 +27861,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 741519537}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &741519539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27616,9 +28121,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 745236184}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &745236186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27782,9 +28292,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 755932730}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &755932732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27948,9 +28463,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 756488421}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &756488423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28203,9 +28723,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 757294409}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &757294411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28458,9 +28983,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 760841903}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &760841905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28624,9 +29154,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 768031784}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &768031786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28790,9 +29325,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 768196666}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &768196668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28956,9 +29496,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 771149381}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &771149383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29122,9 +29667,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 771844195}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &771844197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29288,9 +29838,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 774490853}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &774490855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29543,9 +30098,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 779740946}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &779740948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29683,7 +30243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -0.000019073}
+  m_AnchoredPosition: {x: -180, y: -0.000019073}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786270579
@@ -29918,9 +30478,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 790092618}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &790092620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30084,9 +30649,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 792170419}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &792170421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30428,9 +30998,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 797434705}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &797434707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30683,9 +31258,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 822945204}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &822945206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30849,9 +31429,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 825209493}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &825209495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31193,9 +31778,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 833718676}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &833718678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31549,9 +32139,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 841482803}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &841482805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31715,9 +32310,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 844047013}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &844047015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31970,9 +32570,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 850772111}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &850772113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32238,9 +32843,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 860618497}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &860618499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32452,6 +33062,140 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+--- !u!1 &862489553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862489554}
+  - component: {fileID: 862489556}
+  - component: {fileID: 862489555}
+  m_Layer: 6
+  m_Name: TimerValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &862489554
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862489553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00021362305}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523311340}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -32.000008}
+  m_SizeDelta: {x: 64, y: 32}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &862489555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862489553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 20
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &862489556
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862489553}
+  m_CullTransparentMesh: 1
 --- !u!1 &863514165
 GameObject:
   m_ObjectHideFlags: 0
@@ -32691,9 +33435,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 868684581}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &868684583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37667,9 +38416,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 873824480}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &873824482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38080,9 +38834,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 882459831}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &882459833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38246,9 +39005,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 883339349}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &883339351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38412,9 +39176,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 884573925}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &884573927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38756,9 +39525,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 892178004}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &892178006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38922,9 +39696,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 893103708}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &893103710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39348,9 +40127,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 927584529}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &927584531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39514,9 +40298,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 932971690}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &932971692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39680,9 +40469,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 934026652}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &934026654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39935,9 +40729,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 937071955}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &937071957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40101,9 +40900,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 942250915}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &942250917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40267,9 +41071,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 945128392}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &945128394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40433,9 +41242,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 946899708}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &946899710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40599,9 +41413,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 947788902}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &947788904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40943,9 +41762,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 963801791}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &963801793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41109,9 +41933,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 969803587}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &969803589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41364,9 +42193,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 971649059}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &971649061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41530,9 +42364,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 972680381}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &972680383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42052,9 +42891,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 984427109}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &984427111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42485,9 +43329,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 993376099}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &993376101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42740,9 +43589,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 998272224}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &998272226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42906,9 +43760,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1000665049}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1000665051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43236,9 +44095,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1006131024}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1006131026
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43566,9 +44430,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1013835190}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1013835192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43821,9 +44690,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1017316488}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1017316490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44254,9 +45128,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1028633222}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1028633224
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44420,9 +45299,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1029796948}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1029796950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44675,9 +45559,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1034283433}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1034283435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44841,9 +45730,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1037977228}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1037977230
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45602,9 +46496,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1064619430}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1064619432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45857,9 +46756,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1068725627}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1068725629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46290,9 +47194,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1090853564}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1090853566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46456,9 +47365,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1094330624}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1094330626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46622,9 +47536,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1098690821}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1098690823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46788,9 +47707,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1101766195}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1101766197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46954,9 +47878,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1101919806}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1101919808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47120,9 +48049,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1102351873}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1102351875
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47412,9 +48346,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1112125552}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1112125554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47578,9 +48517,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1115696829}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1115696831
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47833,9 +48777,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1119268115}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1119268117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47999,9 +48948,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1120961707}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1120961709
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48165,9 +49119,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1121128904}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1121128906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48509,9 +49468,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1128640771}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1128640773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48839,9 +49803,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1138375317}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1138375319
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49094,9 +50063,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1149030522}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1149030524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49616,9 +50590,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1158212976}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1158212978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49782,9 +50761,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1159696610}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1159696612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50037,9 +51021,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1166576918}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1166576920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50559,9 +51548,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1188749600}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1188749602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50725,9 +51719,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1193536908}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1193536910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50980,9 +51979,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1206766632}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1206766634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51369,9 +52373,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1220476239}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1220476241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51535,9 +52544,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1237495833}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1237495835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51879,9 +52893,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1243231273}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1243231275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52045,9 +53064,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1247087343}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1247087345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52544,9 +53568,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1258875257}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1258875259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52710,9 +53739,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1266609600}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1266609602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53054,9 +54088,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1268725405}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1268725407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53309,9 +54348,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1270172146}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1270172148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53475,9 +54519,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1271534224}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1271534226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53641,9 +54690,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1275960607}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1275960609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54208,9 +55262,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1311402388}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1311402390
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54374,9 +55433,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1321521918}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1321521920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54540,9 +55604,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1323069774}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1323069776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -54795,9 +55864,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1327560684}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1327560686
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55050,9 +56124,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1332112445}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1332112447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55216,9 +56295,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1333211214}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1333211216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55560,9 +56644,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1340810037}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1340810039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55815,9 +56904,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1342485629}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1342485631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55981,9 +57075,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1344337341}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1344337343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56325,9 +57424,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1351741654}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1351741656
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -56833,9 +57937,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1377922790}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1377922792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57038,9 +58147,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1393220336}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1393220338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57204,9 +58318,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1394671341}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1394671343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57370,9 +58489,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1397004404}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1397004406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57714,9 +58838,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1406031261}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1406031263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -57880,9 +59009,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1412122943}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1412122945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58046,9 +59180,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1412326013}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1412326015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58301,9 +59440,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1419136430}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1419136432
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58556,9 +59700,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1422843836}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1422843838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58722,9 +59871,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1427907133}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1427907135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58888,9 +60042,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1436266240}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1436266242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59143,9 +60302,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1454779454}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1454779456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59309,9 +60473,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1457752911}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1457752913
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59742,9 +60911,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1459764477}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1459764479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60442,9 +61616,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1480285843}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1480285845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60697,9 +61876,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1489506867}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1489506869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65672,9 +66856,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1491055531}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1491055533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65927,9 +67116,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1491836926}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1491836928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66093,9 +67287,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1501080688}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1501080690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66348,9 +67547,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1505478268}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1505478270
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66692,9 +67896,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1512104116}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1512104118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66858,9 +68067,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1513799835}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1513799837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67157,9 +68371,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1519490297}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1519490299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67323,9 +68542,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1520138310}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1520138312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67546,13 +68770,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 862489554}
   m_Father: {fileID: 1389320894}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 2}
+  m_AnchoredPosition: {x: 180, y: 2}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523311341
@@ -67606,18 +68831,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerFillImg: {fileID: 1523311341}
+  timeTMP: {fileID: 862489555}
   timerGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 0.41037738, g: 0.8034593, b: 1, a: 1}
-    key2: {r: 0.504717, g: 0.83629143, b: 1, a: 0}
+    key0: {r: 0.4917958, g: 1, b: 0.4764151, a: 1}
+    key1: {r: 0.4575472, g: 0.8166358, b: 1, a: 1}
+    key2: {r: 1, g: 0.41176474, b: 0.41176474, a: 0}
+    key3: {r: 1, g: 0.41176474, b: 0.41176474, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32768
+    ctime2: 65535
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  timeGradient:
+    serializedVersion: 2
+    key0: {r: 0.4917958, g: 1, b: 0.4764151, a: 1}
+    key1: {r: 0.4575472, g: 0.8166358, b: 1, a: 1}
+    key2: {r: 1, g: 0.41176474, b: 0.41176474, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 65535
+    ctime1: 32768
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -67633,9 +68888,10 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   currentTime: 0
+  currentDuration: 20
 --- !u!1 &1529741370
 GameObject:
   m_ObjectHideFlags: 0
@@ -67697,9 +68953,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1529741371}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1529741373
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67952,9 +69213,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1541067862}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1541067864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68252,9 +69518,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1546394022}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1546394024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68507,9 +69778,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1553974379}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1553974381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69029,9 +70305,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1574111132}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1574111134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69170,6 +70451,7 @@ MonoBehaviour:
   targetFPSTMP: {fileID: 1544396105}
   refreshRateTMP: {fileID: 906524188}
   FPSTMP: {fileID: 1284712980}
+  activeBlocksTMP: {fileID: 34085474}
   gravityValue: 50
 --- !u!4 &1574527622
 Transform:
@@ -69348,9 +70630,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1583208367}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1583208369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69514,9 +70801,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1586653081}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1586653083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69817,9 +71109,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1596268458}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1596268460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -69983,9 +71280,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1613898396}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1613898398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70149,9 +71451,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1616494901}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1616494903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70315,9 +71622,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1618891701}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1618891703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70481,9 +71793,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1623378866}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1623378868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70736,9 +72053,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1633346905}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1633346907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70902,9 +72224,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1634665301}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1634665303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71068,9 +72395,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1636773548}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1636773550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71323,9 +72655,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1643849269}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1643849271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71578,9 +72915,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1661809670}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1661809672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71967,9 +73309,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1678409651}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1678409653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72222,9 +73569,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1684629637}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1684629639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72566,9 +73918,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1690476704}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1690476706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72732,9 +74089,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1693514918}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1693514920
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72898,9 +74260,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1697753513}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1697753515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73242,9 +74609,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1704236554}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1704236556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73497,9 +74869,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1710498938}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1710498940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73663,9 +75040,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1718175944}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1718175946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73829,9 +75211,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1718375883}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1718375885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74173,9 +75560,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1724465115}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1724465117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74428,9 +75820,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1729349975}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1729349977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74728,9 +76125,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1734231444}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1734231446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75072,9 +76474,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1742443004}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1742443006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75238,9 +76645,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1745013643}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1745013645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75866,9 +77278,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1751032409}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1751032411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76121,9 +77538,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1757622074}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1757622076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76465,9 +77887,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1767430370}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1767430372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76809,9 +78236,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1773782007}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1773782009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77331,9 +78763,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1784935963}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1784935965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77497,9 +78934,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1787060897}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1787060899
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77916,9 +79358,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1826203561}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1826203563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -78171,9 +79618,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1840993473}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1840993475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -78604,9 +80056,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1854275751}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1854275753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79126,9 +80583,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1868999526}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1868999528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79470,9 +80932,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1875587752}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1875587754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79636,9 +81103,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1878222750}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1878222752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80247,9 +81719,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1887230300}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1887230302
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80591,9 +82068,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1893922486}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1893922488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -80846,9 +82328,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1900630307}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1900630309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81101,9 +82588,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1910215274}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1910215276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81609,9 +83101,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1915053768}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1915053770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82198,9 +83695,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1923614706}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1923614708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82364,9 +83866,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1927333339}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1927333341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82619,9 +84126,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1934941250}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1934941252
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82785,9 +84297,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1937564625}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1937564627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82951,9 +84468,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1945371139}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1945371141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83117,9 +84639,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1947837357}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1947837359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83283,9 +84810,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1948001845}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1948001847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83716,9 +85248,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1961255107}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1961255109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -83971,9 +85508,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1971310286}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1971310288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84137,9 +85679,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1974379370}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1974379372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84659,9 +86206,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1984325465}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1984325467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84825,9 +86377,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1989465987}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1989465989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84991,9 +86548,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1995569335}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1995569337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85157,9 +86719,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 1999928397}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &1999928399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85412,9 +86979,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2001467267}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2001467269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85756,9 +87328,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2007631439}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2007631441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -85922,9 +87499,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2008221241}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2008221243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -86088,9 +87670,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2009556141}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2009556143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -86254,9 +87841,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2011913186}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2011913188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -86420,9 +88012,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2015888603}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2015888605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87120,9 +88717,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2043940414}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2043940416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87375,9 +88977,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2049055722}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2049055724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87719,9 +89326,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2054647016}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2054647018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88063,9 +89675,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2064034462}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2064034464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88229,9 +89846,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2067348020}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2067348022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88618,9 +90240,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2073199264}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2073199266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88784,9 +90411,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2075151135}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2075151137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88950,9 +90582,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2077511832}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2077511834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89116,9 +90753,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2080343937}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2080343939
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89282,9 +90924,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2081866906}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2081866908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89448,9 +91095,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2084201039}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2084201041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -89778,9 +91430,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2094704278}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2094704280
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90306,9 +91963,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2106777879}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2106777881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -91006,9 +92668,14 @@ MonoBehaviour:
   _isGrounded: 0
   gridSize: 40.8
   _instanceID: 0
+  _laneID: 0
   _rectTransform: {fileID: 2142779342}
   _position: {x: 0, y: 0}
   _color: -1
+  blockColors:
+  - {r: 1, g: 0.45882353, b: 0.45882353, a: 1}
+  - {r: 0.34509805, g: 1, b: 0.35686275, a: 1}
+  - {r: 0.39215687, g: 0.627451, b: 1, a: 1}
 --- !u!61 &2142779344
 BoxCollider2D:
   m_ObjectHideFlags: 0

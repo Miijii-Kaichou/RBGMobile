@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class Timer : MonoBehaviour
     Image timerFillImg;
 
     [SerializeField]
-    Gradient timerGradient;
+    TextMeshProUGUI timeTMP;
+
+    [SerializeField]
+    Gradient timerGradient, timeGradient;
 
     //Timer alarm
     Alarm timerAlarm = new Alarm(1);
@@ -17,9 +21,12 @@ public class Timer : MonoBehaviour
     //Timer values;
     [SerializeField]
     float currentTime = 0f;
+
+    [SerializeField]
     float currentDuration = 20f;
+
     float durationDelta = 1f;
-    float durationCap = 1f;
+    float durationCap = 3f;
 
     EventManager.Event timedOutEvent;
 
@@ -55,7 +62,10 @@ public class Timer : MonoBehaviour
         if (currentDuration > durationCap)
         {
             currentDuration -= durationDelta;
-            durationDelta -= PlayingField.CurrentLevel / 10f;
+            durationDelta += (PlayingField.CurrentLevel / 10f) / 4f;
+        } else
+        {
+            currentDuration = durationCap;
         }
     }
 
@@ -64,8 +74,12 @@ public class Timer : MonoBehaviour
         while (true)
         {
             currentTime = timerAlarm.registeredTimers[0].CurrentTime;
+
             timerFillImg.fillAmount = currentTime / currentDuration;
             timerFillImg.color = timerGradient.Evaluate(timerFillImg.fillAmount);
+
+            timeTMP.text = Mathf.FloorToInt(currentDuration - currentTime).ToString();
+            timeTMP.color = timerGradient.Evaluate(timerFillImg.fillAmount);
 
             //Give this loop 0.001 secs to refresh image
             yield return new WaitForSeconds(1f / 1000f);

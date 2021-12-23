@@ -17,13 +17,16 @@ public class BlockTouchAction : TouchableEntity
 
     bool initialized = false;
 
-    bool isSelected = false;
+    public bool IsSelected { get; set; } = false;
+
+    Condition dontInteractCondition;
     public override void Init()
     {
         #region First-Time Initialization
         if (initialized == false && gameObject.activeInHierarchy)
         {
             initialized = true;
+            dontInteractCondition = new Condition(() => blockIdentity.IsGrounded == false);
             SetInitColor(blockImage.color);
             SetColor(initColor);
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
@@ -47,13 +50,18 @@ public class BlockTouchAction : TouchableEntity
     // Update is called once per frame
     public override void Main()
     {
+        DontInteractIf(ref dontInteractCondition);
+
+        if (dontInteractCondition.WasMet)
+        {
+            Debug.Log("Can't interact while blocks are falling...");
+
+        }
+
         OnTouchEnter(() =>
         {
-            if (!isSelected)
+            if (!IsSelected)
             {
-                isSelected = true;
-                SetColor(selected);
-                SelectionHandler.EnableSlot(blockIdentity);
                 PlayingField.AddToChain(blockIdentity);
             }
         });
@@ -73,7 +81,7 @@ public class BlockTouchAction : TouchableEntity
     internal void RevertToOriginalColor()
     {
         SetColor(initColor);
-        isSelected = false;
+        IsSelected = false;
         cachedData = null;
     }
 
