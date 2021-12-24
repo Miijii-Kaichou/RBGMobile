@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayingField : Singleton<PlayingField>
 {
@@ -22,6 +23,18 @@ public class PlayingField : Singleton<PlayingField>
     [SerializeField]
     Timer timer;
 
+    [SerializeField, Header("Stat Text")]
+    TextMeshProUGUI scoreTMP;
+
+    [SerializeField]
+    TextMeshProUGUI bestTMP;
+
+    [SerializeField]
+    TextMeshProUGUI maxChainTMP;
+
+    [SerializeField]
+    TextMeshProUGUI levelTMP;
+
     public static int CurrentLevel = 1;
 
     const int MaxBlockPoolSize = 300;
@@ -36,11 +49,14 @@ public class PlayingField : Singleton<PlayingField>
     [SerializeField]
     float[] xPositions = new float[10];
 
+    //Chain Length Info
+    static PlayingFieldStats Stats;
+
+    const int BlockScore = 10;
+
     internal static void SpawnNewLane()
     {
         int blockCount = 0;
-
-        //Check how many blocks are active
 
         for (int i = 0; i < Instance.cachedBlockObjects.Length; i++)
         {
@@ -63,11 +79,68 @@ public class PlayingField : Singleton<PlayingField>
         }
     }
 
+    /// <summary>
+    /// Update Level Text
+    /// </summary>
+    internal static void PostLevel()
+    {
+        if (Stats == null) return;
+        Instance.levelTMP.text = string.Format("Level {0}", Stats.Level);
+    }
+
+    /// <summary>
+    /// Update Score Text
+    /// </summary>
+    internal static void PostScore()
+    {
+        if (Stats == null) return;
+        Instance.scoreTMP.text = Stats.Score.ToString();
+    }
+
+    /// <summary>
+    /// Update Best Score
+    /// </summary>
+    internal static void PostBest()
+    {
+        if (Stats == null) return;
+        Instance.bestTMP.text = string.Format("Best: {0}", Stats.BestScore);
+    }
+
+    /// <summary>
+    /// Update Max Chain Text
+    /// </summary>
+    internal static void PostMaxChain()
+    {
+        if (Stats == null) return;
+        Instance.maxChainTMP.text = string.Format("Chain: {0}",Stats.MaxChainLength);
+    }
+
     public static CollectionValidationCallback CollectionValidationCallbackMethod;
 
     private void Start()
     {
         cachedBlockObjects = new GameObject[MaxBlockPoolSize];
+
+        Stats = PlayingFieldStats.CreateNew();
+
+        UpdateXPositions();
+
+        CollectionValidationCallbackMethod = () =>
+        {
+            GameManager.PostChainLength(Stats.ChainLength);
+            Stats.CheckLevel();
+            PostLevel();
+            collectionActive = false;
+            ClearPositions();
+            AreaHighlightHandler.Clear();
+        };
+
+        timer.StartTimer();
+        StartCoroutine(PostActiveBlocksCycle());
+    }
+
+    void UpdateXPositions()
+    {
         for (int i = 0; i < test.Blocks.Length; i++)
         {
             cachedBlockObjects[i] = test.Blocks[i].gameObject;
@@ -77,17 +150,6 @@ public class PlayingField : Singleton<PlayingField>
                 xPositions[i] = test.Blocks[i].Position.x;
             }
         }
-
-        CollectionValidationCallbackMethod = () =>
-        {
-            GameManager.PostChainLength(QueuedBlocks.Count);
-            collectionActive = false;
-            ClearPositions();
-            AreaHighlightHandler.Clear();
-        };
-
-        timer.StartTimer();
-        StartCoroutine(PostActiveBlocksCycle());
     }
 
     /// <summary>
@@ -124,6 +186,8 @@ public class PlayingField : Singleton<PlayingField>
                     {
                         if (chainCount >= validChainCount)
                         {
+                            Stats.ChainLength = chainCount;
+                            PostMaxChain();
                             //TODO: Validate Block Chain
                             ValidateCollection(ref blocksToChain);
 
@@ -152,10 +216,14 @@ public class PlayingField : Singleton<PlayingField>
     {
         for (int i = 0; i < referencedChain.Length; i++)
         {
+
             referencedChain[i].SendToTop();
 
             //TODO: Deselect, and destory blocks / send blocks to opponent
             referencedChain[i].Deselect(true);
+
+            Stats.Score += BlockScore;
+            PostScore();
         }
 
         CollectionValidationCallbackMethod();
@@ -185,7 +253,7 @@ public class PlayingField : Singleton<PlayingField>
         if (QueuedBlocks.Count > 0)
         {
             var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
-            if (distance > 40.8f * 2f) return;
+            if (distance > 40.8f * 1.5f) return;
         }
 
         //Select block, since now it's valid
@@ -209,7 +277,7 @@ public class PlayingField : Singleton<PlayingField>
         block.Node.ConnectedMain(block);
 
         //Connect Chain to previous in queue
-        if(QueuedBlocks.Count > 1)
+        if (QueuedBlocks.Count > 1)
         {
             Block[] blockArray = QueuedBlocks.ToArray();
             //Check what side the previous block is on.

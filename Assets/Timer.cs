@@ -25,15 +25,14 @@ public class Timer : MonoBehaviour
     [SerializeField]
     float currentDuration = 20f;
 
-    float durationDelta = 1f;
-    float durationCap = 3f;
+    DifficultyConfig setConfig = GameManager.SelectedConfig;
 
     EventManager.Event timedOutEvent;
 
-    bool timerReset = false;
-
     public void StartTimer()
     {
+        GameManager.PostSetConfig(setConfig);
+
         timedOutEvent = EventManager.AddEvent(999, "TimedOut", () =>
         {
             //Another lane will be spawned
@@ -45,6 +44,8 @@ public class Timer : MonoBehaviour
             //Update timer duration
             timerAlarm.UpdateDuration(0, currentDuration);
         });
+
+        currentDuration = setConfig.InitDuration;
 
         StartCoroutine(TimerCycle());
 
@@ -59,13 +60,13 @@ public class Timer : MonoBehaviour
     /// </summary>
     void RecalculateTimerValues()
     {
-        if (currentDuration > durationCap)
+        if (currentDuration > setConfig.DurationCap)
         {
-            currentDuration -= durationDelta;
-            durationDelta += (PlayingField.CurrentLevel / 10f) / 4f;
+            currentDuration -= setConfig.DurationDelta;
+            setConfig.DurationDelta += (PlayingField.CurrentLevel / setConfig.LevelDividend);
         } else
         {
-            currentDuration = durationCap;
+            currentDuration = setConfig.DurationCap;
         }
     }
 

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RotateAnimation : MonoBehaviour
@@ -9,7 +8,7 @@ public class RotateAnimation : MonoBehaviour
 
     Vector3 eularAngles;
 
-    private void Start()
+    private void Awake()
     {
         StartCoroutine(Animation());
     }
@@ -19,7 +18,7 @@ public class RotateAnimation : MonoBehaviour
         while (true)
         {
             Animate();
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
     }
 

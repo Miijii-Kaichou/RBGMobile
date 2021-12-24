@@ -65,7 +65,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     RaycastHit2D hit;
 
-    int framesUntilNextCall = 0;
     private bool initialized;
 
     Condition uninteractableCondition;

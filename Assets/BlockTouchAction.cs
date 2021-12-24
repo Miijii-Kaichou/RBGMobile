@@ -52,12 +52,6 @@ public class BlockTouchAction : TouchableEntity
     {
         DontInteractIf(ref dontInteractCondition);
 
-        if (dontInteractCondition.WasMet)
-        {
-            Debug.Log("Can't interact while blocks are falling...");
-
-        }
-
         OnTouchEnter(() =>
         {
             if (!IsSelected)

@@ -25,6 +25,9 @@ public class GameManager : Singleton<GameManager>
     TextMeshProUGUI activeBlocksTMP;
 
     [SerializeField]
+    TextMeshProUGUI diffConfigTMP;
+
+    [SerializeField]
     float gravityValue = 0.980665f;
 
     public static float GravityValue => Instance.gravityValue;
@@ -33,7 +36,44 @@ public class GameManager : Singleton<GameManager>
     string targetFPSFormat = "Target FPS: {0}";
     string refreshRateFormat = "Refresh Rate: {0}";
     string currentFPSFormat = "FPS: {0}";
+    string diffConfigFormat = "Diff Config: {0}";
     string activeBlocksFormat = "Active Blocks (#/300): {0}";
+
+    //Difficulty Configurations
+    public static DifficultyConfig[] DiffConfigs { get; private set; } =
+    {
+       new DifficultyConfig
+       (
+            "DIFF_CONFIG_NORMAL",
+            totalLanes: 3,
+            initDuration:  30f,
+            durationDelta: 1f,
+            durationCap:   5f,
+            levelDividend: 32f
+       ),
+
+       new DifficultyConfig
+       (
+            "DIFF_CONFIG_HARD",
+            totalLanes: 6,
+            initDuration:  30f,
+            durationDelta: 2f,
+            durationCap:   3f,
+            levelDividend: 16f
+       ),
+
+       new DifficultyConfig
+       (
+            "DIFF_CONFIG_EXPERT",
+            totalLanes: 9,
+            initDuration:  30f,
+            durationDelta: 3f,
+            durationCap:   1f,
+            levelDividend: 8f
+       ),
+    };
+
+    public static DifficultyConfig SelectedConfig => DiffConfigs[0];
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +84,7 @@ public class GameManager : Singleton<GameManager>
         refreshRateTMP.text = string.Format(refreshRateFormat, Screen.currentResolution.refreshRate);
         FPSCounter.FpsUpdateEvent = PostFPS;
 
-        
+
     }
 
     public static void PostChainLength(int value)
@@ -62,4 +102,10 @@ public class GameManager : Singleton<GameManager>
     {
         Instance.activeBlocksTMP.text = string.Format(Instance.activeBlocksFormat, value);
     }
+
+    public static void PostSetConfig(DifficultyConfig config)
+    {
+        Instance.diffConfigTMP.text = string.Format(Instance.diffConfigFormat, config.Tag);
+    }
+
 }
