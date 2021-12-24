@@ -61,9 +61,11 @@ public class PlayingField : Singleton<PlayingField>
 
     const int BlockScore = 10;
 
-    bool playerDefeated = false;
+    public static bool PlayerDefeated { get; private set; } = false;
 
     bool gameSessionIsPaused = false;
+
+    public static RectTransform RectTransform => Instance.rectTransform;
 
     internal static void SpawnNewLane()
     {
@@ -92,9 +94,9 @@ public class PlayingField : Singleton<PlayingField>
 
     internal static void Lose()
     {
-        Instance.playerDefeated = true;
+        PlayerDefeated = true;
         Instance.timer.Stop();
-        
+        Instance.gameOverObject.SetActive(PlayerDefeated);
     }
 
     /// <summary>
@@ -275,7 +277,7 @@ public class PlayingField : Singleton<PlayingField>
         if (QueuedBlocks.Count > 0)
         {
             var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
-            if (distance > 40.8f * 1.5f) return;
+            if (distance > 40.8f * 1.75f) return;
         }
 
         //Select block, since now it's valid
@@ -336,9 +338,9 @@ public class PlayingField : Singleton<PlayingField>
 
     IEnumerator PostActiveBlocksCycle()
     {
-        playerDefeated = false;
+        PlayerDefeated = false;
 
-        while (!playerDefeated)
+        while (!PlayerDefeated)
         {
             var activeBlocks = (from activeBlock in cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray().Length;
             GameManager.PostActiveBlocks(activeBlocks);

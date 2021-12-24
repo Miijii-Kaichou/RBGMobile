@@ -26,7 +26,7 @@ public class BlockTouchAction : TouchableEntity
         if (initialized == false && gameObject.activeInHierarchy)
         {
             initialized = true;
-            dontInteractCondition = new Condition(() => blockIdentity.IsGrounded == false);
+            dontInteractCondition = new Condition(() => blockIdentity.IsGrounded == false || PlayingField.PlayerDefeated);
             SetInitColor(blockImage.color);
             SetColor(initColor);
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);

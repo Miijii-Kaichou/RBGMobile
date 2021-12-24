@@ -79,10 +79,11 @@ public class Block : MassObject
     {
         Mass = 3f;
         SetPosition(_rectTransform.anchoredPosition);
-        if (IsGrounded && Position.y > 428f)
+        if (justSpawned == false && IsGrounded && Position.y > PlayingField.RectTransform.rect.height / 2f && PlayingField.PlayerDefeated == false)
         {
-            //TODO: Say Game Over
+            Debug.Log("Block: " + InstanceID + " at Position-Y " + Position.y + " - FieldSize: " + PlayingField.RectTransform.rect.height / 2f);
             PlayingField.Lose();
+            //TODO: Say Game Over
             Debug.Log("You Rose!");
         }
     }
@@ -138,11 +139,5 @@ public class Block : MassObject
     {
         _color = type;
         ApplyColor();
-    }
-
-    public override void OnEnable()
-    {
-        base.OnEnable();
-        
     }
 }

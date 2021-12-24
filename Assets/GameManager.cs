@@ -47,36 +47,46 @@ public class GameManager : Singleton<GameManager>
     {
        new DifficultyConfig
        (
+            "DIFF_CONFIG_EASY",
+            totalLanes: 3,
+            initDuration:  20f,
+            durationDelta: 0.05f,
+            durationCap:   3f,
+            levelDividend: 256f
+       ),
+
+       new DifficultyConfig
+       (
             "DIFF_CONFIG_NORMAL",
-            totalLanes: 9,
+            totalLanes: 6,
             initDuration:  15f,
             durationDelta: 0.125f,
             durationCap:   3f,
-            levelDividend: 128f
+            levelDividend: 256f
        ),
 
        new DifficultyConfig
        (
             "DIFF_CONFIG_HARD",
-            totalLanes: 15,
+            totalLanes: 12,
             initDuration:  10f,
             durationDelta: 0.25f,
             durationCap:   2f,
-            levelDividend: 64f
+            levelDividend: 128f
        ),
 
        new DifficultyConfig
        (
             "DIFF_CONFIG_EXPERT",
-            totalLanes: 20,
-            initDuration:  6f,
+            totalLanes: 18,
+            initDuration:  5f,
             durationDelta: 0.5f,
             durationCap:   1f,
-            levelDividend: 32f
+            levelDividend: 64f
        ),
     };
 
-    public static DifficultyConfig SelectedConfig => DiffConfigs[2];
+    public static DifficultyConfig SelectedConfig => DiffConfigs[1];
 
     // Start is called before the first frame update
     void Start()

@@ -18,7 +18,7 @@ public class SelectionHandler : Singleton<SelectionHandler>
         if (selectionUIImg[location].enabled == false)
         {
             selectionUIImg[location].enabled = true;
-            selectionUIImg[location].rectTransform.localPosition = blockObj.Position;
+            selectionUIImg[location].rectTransform.anchoredPosition = blockObj.Position;
         }
     }
 

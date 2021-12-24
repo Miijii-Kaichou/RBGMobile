@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class ConceptTest : Singleton<ConceptTest>
     public static void Init()
     {
         Instance.imageBlocks = Instance.GetComponentsInChildren<Image>();
+        Instance.imageBlocks = (from imgB in Instance.imageBlocks where imgB.GetComponent<Block>() != null select imgB).ToArray();
         Instance.blocks = Instance.GetComponentsInChildren<Block>();
         Instance.stackSizeMuliplier = GameManager.SelectedConfig.StartingLaneCount;
         for (int i = 0; i < Instance.blocks.Length; i++)

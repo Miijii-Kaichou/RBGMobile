@@ -40,6 +40,9 @@ public class MassObject : MonoBehaviour, IMass
     public float gridSize = 40.8f;
     public bool justSpawned = false;
     private bool initialized;
+    private int spawnDelayTime;
+    private int spawnedLifeTimeDelay = 10;
+    private bool delayEnded = false;
 
     float RoundToNearestGrid(float pos, bool snapDown = false, int dividend = 2)
     {
@@ -98,13 +101,14 @@ public class MassObject : MonoBehaviour, IMass
 
     void MainStart()
     {
-        rectTransform.anchoredPosition =
-            new Vector2(rectTransform.anchoredPosition.x,
-             RoundToNearestGrid(Mathf.FloorToInt(rectTransform.anchoredPosition.y), true));
+        spawnDelayTime = 0;
+
+        Vector3Int cellPosition;
+        cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
+        rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+
         originCollider.attachedRigidbody.velocity = Vector2.zero;
 
-        //TODO: Snap into place
-        originCollider.attachedRigidbody.velocity = Vector2.zero;
         StartCoroutine(GroundCheckCycle());
         StartCoroutine(MainCycle());
     }
@@ -115,9 +119,12 @@ public class MassObject : MonoBehaviour, IMass
     /// <returns></returns>
     IEnumerator MainCycle()
     {
+        justSpawned = true;
+        spawnDelayTime = 0;
         while (true)
         {
             _isGrounded = IsGrounded;
+
             if (IsGrounded == false)
             {
                 decentVector = new Vector2(0f, -(Mass * GameManager.GravityValue));
@@ -133,6 +140,16 @@ public class MassObject : MonoBehaviour, IMass
 
             }
             yield return new WaitForFixedUpdate();
+
+            if (spawnDelayTime >= spawnedLifeTimeDelay)
+            {
+
+                delayEnded = true;
+            }
+            else
+            {
+                spawnDelayTime++;
+            }
         }
     }
 
@@ -170,6 +187,7 @@ public class MassObject : MonoBehaviour, IMass
             }
             groundedFlag = 1;
             IsGrounded = true;
+            if (delayEnded) justSpawned = false;
         }
         else if (collidingWith == null || (collidingWith != null && !collidingWith.GetComponent<MassObject>().IsGrounded))
         {
@@ -180,12 +198,14 @@ public class MassObject : MonoBehaviour, IMass
 
     public void OnDisable()
     {
+        spawnDelayTime = 0;
         IsGrounded = false;
+        delayEnded = IsGrounded;
     }
 
-    public void OnTriggerStay2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 10)
+        if (collision.gameObject.layer == 1 << 10)
         {
             CheckIfGrounded();
         }
