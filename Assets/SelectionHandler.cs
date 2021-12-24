@@ -1,5 +1,3 @@
-using System;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class SelectionHandler : Singleton<SelectionHandler>
@@ -20,7 +18,7 @@ public class SelectionHandler : Singleton<SelectionHandler>
         if (selectionUIImg[location].enabled == false)
         {
             selectionUIImg[location].enabled = true;
-            selectionUIImg[location].rectTransform.localPosition = blockObj.RectTransform.localPosition;
+            selectionUIImg[location].rectTransform.localPosition = blockObj.Position;
         }
     }
 

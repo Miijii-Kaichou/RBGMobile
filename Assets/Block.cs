@@ -79,6 +79,12 @@ public class Block : MassObject
     {
         Mass = 3f;
         SetPosition(_rectTransform.anchoredPosition);
+        if (IsGrounded && Position.y > 428f)
+        {
+            //TODO: Say Game Over
+            PlayingField.Lose();
+            Debug.Log("You Rose!");
+        }
     }
 
     public void AssignData(ColorType color, int instanceID)

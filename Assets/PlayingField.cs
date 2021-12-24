@@ -35,6 +35,13 @@ public class PlayingField : Singleton<PlayingField>
     [SerializeField]
     TextMeshProUGUI levelTMP;
 
+    [SerializeField, Header("Game Over Sign")]
+    GameObject gameOverObject;
+
+    [SerializeField, Header("Pause Menu")]
+    GameObject pauseMenuObject;
+
+
     public static int CurrentLevel = 1;
 
     const int MaxBlockPoolSize = 300;
@@ -54,6 +61,10 @@ public class PlayingField : Singleton<PlayingField>
 
     const int BlockScore = 10;
 
+    bool playerDefeated = false;
+
+    bool gameSessionIsPaused = false;
+
     internal static void SpawnNewLane()
     {
         int blockCount = 0;
@@ -69,7 +80,7 @@ public class PlayingField : Singleton<PlayingField>
             {
                 block.gameObject.SetActive(true);
 
-                block.AssignData((ColorType)((UnityEngine.Random.Range(0, 3) + blockCount) % 3), i);
+                block.AssignData((ColorType)((Random.Range(0, 3) + blockCount) % 3), i);
                 block.InitTouchControl();
                 block.SetLaneID(blockCount);
                 block.RectTransform.anchoredPosition = new Vector2(Instance.xPositions[blockCount], Instance.rectTransform.rect.size.y);
@@ -77,6 +88,13 @@ public class PlayingField : Singleton<PlayingField>
                 blockCount++;
             }
         }
+    }
+
+    internal static void Lose()
+    {
+        Instance.playerDefeated = true;
+        Instance.timer.Stop();
+        
     }
 
     /// <summary>
@@ -122,6 +140,8 @@ public class PlayingField : Singleton<PlayingField>
         cachedBlockObjects = new GameObject[MaxBlockPoolSize];
 
         Stats = PlayingFieldStats.CreateNew();
+        
+        ConceptTest.Init();
 
         UpdateXPositions();
 
@@ -136,6 +156,8 @@ public class PlayingField : Singleton<PlayingField>
         };
 
         timer.StartTimer();
+
+
         StartCoroutine(PostActiveBlocksCycle());
     }
 
@@ -305,9 +327,18 @@ public class PlayingField : Singleton<PlayingField>
         Instance.lineRenderer.positionCount = 0;
     }
 
+    public void OnPauseToggle()
+    {
+        gameSessionIsPaused = !gameSessionIsPaused;
+        pauseMenuObject.SetActive(gameSessionIsPaused);
+        Time.timeScale = gameSessionIsPaused ? 0f : 1f;
+    }
+
     IEnumerator PostActiveBlocksCycle()
     {
-        while (true)
+        playerDefeated = false;
+
+        while (!playerDefeated)
         {
             var activeBlocks = (from activeBlock in cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray().Length;
             GameManager.PostActiveBlocks(activeBlocks);

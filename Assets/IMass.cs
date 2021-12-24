@@ -38,6 +38,7 @@ public class MassObject : MonoBehaviour, IMass
     int previousGroundedFlag = 0;
 
     public float gridSize = 40.8f;
+    public bool justSpawned = false;
     private bool initialized;
 
     float RoundToNearestGrid(float pos, bool snapDown = false, int dividend = 2)
@@ -73,6 +74,7 @@ public class MassObject : MonoBehaviour, IMass
 
     public void Start()
     {
+        IsGrounded = true;
         Init();   
     }
 
@@ -96,6 +98,11 @@ public class MassObject : MonoBehaviour, IMass
 
     void MainStart()
     {
+        rectTransform.anchoredPosition =
+            new Vector2(rectTransform.anchoredPosition.x,
+             RoundToNearestGrid(Mathf.FloorToInt(rectTransform.anchoredPosition.y), true));
+        originCollider.attachedRigidbody.velocity = Vector2.zero;
+
         //TODO: Snap into place
         originCollider.attachedRigidbody.velocity = Vector2.zero;
         StartCoroutine(GroundCheckCycle());
@@ -108,7 +115,6 @@ public class MassObject : MonoBehaviour, IMass
     /// <returns></returns>
     IEnumerator MainCycle()
     {
-        IsGrounded = true;
         while (true)
         {
             _isGrounded = IsGrounded;
@@ -172,9 +178,14 @@ public class MassObject : MonoBehaviour, IMass
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnDisable()
     {
-        if (collision.gameObject.layer == 10 && !IsGrounded)
+        IsGrounded = false;
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
         {
             CheckIfGrounded();
         }

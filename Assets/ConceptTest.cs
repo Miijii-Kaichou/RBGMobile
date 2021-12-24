@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ConceptTest : MonoBehaviour
+public class ConceptTest : Singleton<ConceptTest>
 {
     Image[] imageBlocks;
     Block[] blocks;
@@ -10,26 +10,28 @@ public class ConceptTest : MonoBehaviour
     [SerializeField]
     Color[] blockColors = new Color[3];
 
-    [SerializeField, Range(1f, 3f)]
     int stackSizeMuliplier = 1;
 
-    const int DefaultStackSize = 29;
+    const int DefaultStackSize = 9;
 
-    private void OnEnable()
+    public static void Init()
     {
-        imageBlocks = GetComponentsInChildren<Image>();
-        blocks = GetComponentsInChildren<Block>();
-        for (int i = 0; i < blocks.Length; i++)
+        Instance.imageBlocks = Instance.GetComponentsInChildren<Image>();
+        Instance.blocks = Instance.GetComponentsInChildren<Block>();
+        Instance.stackSizeMuliplier = GameManager.SelectedConfig.StartingLaneCount;
+        for (int i = 0; i < Instance.blocks.Length; i++)
         {
-            if (i > DefaultStackSize + (30 * (stackSizeMuliplier - 1)))
+            if (i > DefaultStackSize + (10 * (Instance.stackSizeMuliplier - 1)))
             {
-                blocks[i].gameObject.SetActive(false);
+                Instance.blocks[i].gameObject.SetActive(false);
             }
         }
+
+        Instance.SetUpBlockData();
     }
 
     // Start is called before the first frame update
-    void Start()
+    void SetUpBlockData()
     {
         for(int i = 0; i < imageBlocks.Length; i++)
         {

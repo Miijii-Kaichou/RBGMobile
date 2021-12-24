@@ -39,41 +39,44 @@ public class GameManager : Singleton<GameManager>
     string diffConfigFormat = "Diff Config: {0}";
     string activeBlocksFormat = "Active Blocks (#/300): {0}";
 
+    const int ResWidth = 1080;
+    const int ResHeight = 1920;
+
     //Difficulty Configurations
     public static DifficultyConfig[] DiffConfigs { get; private set; } =
     {
        new DifficultyConfig
        (
             "DIFF_CONFIG_NORMAL",
-            totalLanes: 3,
-            initDuration:  30f,
-            durationDelta: 1f,
-            durationCap:   5f,
-            levelDividend: 32f
+            totalLanes: 9,
+            initDuration:  15f,
+            durationDelta: 0.125f,
+            durationCap:   3f,
+            levelDividend: 128f
        ),
 
        new DifficultyConfig
        (
             "DIFF_CONFIG_HARD",
-            totalLanes: 6,
-            initDuration:  30f,
-            durationDelta: 2f,
-            durationCap:   3f,
-            levelDividend: 16f
+            totalLanes: 15,
+            initDuration:  10f,
+            durationDelta: 0.25f,
+            durationCap:   2f,
+            levelDividend: 64f
        ),
 
        new DifficultyConfig
        (
             "DIFF_CONFIG_EXPERT",
-            totalLanes: 9,
-            initDuration:  30f,
-            durationDelta: 3f,
+            totalLanes: 20,
+            initDuration:  6f,
+            durationDelta: 0.5f,
             durationCap:   1f,
-            levelDividend: 8f
+            levelDividend: 32f
        ),
     };
 
-    public static DifficultyConfig SelectedConfig => DiffConfigs[0];
+    public static DifficultyConfig SelectedConfig => DiffConfigs[2];
 
     // Start is called before the first frame update
     void Start()
@@ -83,8 +86,6 @@ public class GameManager : Singleton<GameManager>
         targetFPSTMP.text = string.Format(targetFPSFormat, Application.targetFrameRate);
         refreshRateTMP.text = string.Format(refreshRateFormat, Screen.currentResolution.refreshRate);
         FPSCounter.FpsUpdateEvent = PostFPS;
-
-
     }
 
     public static void PostChainLength(int value)

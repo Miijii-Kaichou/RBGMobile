@@ -70,6 +70,12 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void Stop()
+    {
+        timerAlarm.Discard();
+        StopAllCoroutines();
+    }
+
     IEnumerator TimerCycle()
     {
         while (true)

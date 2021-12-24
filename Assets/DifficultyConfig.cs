@@ -18,7 +18,7 @@ public struct DifficultyConfig
     public string Tag { get; private set; }
 
     #region Starting Lanes
-    int StartingLaneCount;
+    public int StartingLaneCount { get; private set; }
     #endregion
 
     #region Timer Related
