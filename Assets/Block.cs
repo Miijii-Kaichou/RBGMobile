@@ -80,12 +80,7 @@ public class Block : MassObject
         Mass = 3f;
         SetPosition(_rectTransform.anchoredPosition);
         if (justSpawned == false && IsGrounded && Position.y > PlayingField.RectTransform.rect.height / 2f && PlayingField.PlayerDefeated == false)
-        {
-            Debug.Log("Block: " + InstanceID + " at Position-Y " + Position.y + " - FieldSize: " + PlayingField.RectTransform.rect.height / 2f);
             PlayingField.Lose();
-            //TODO: Say Game Over
-            Debug.Log("You Rose!");
-        }
     }
 
     public void AssignData(ColorType color, int instanceID)

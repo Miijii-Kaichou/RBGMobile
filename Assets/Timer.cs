@@ -66,7 +66,11 @@ public class Timer : MonoBehaviour
             setConfig.DurationDelta += (PlayingField.CurrentLevel / setConfig.LevelDividend);
         } else
         {
+            //Even though we are at the cap, this is called the "Bulging Period"
+            //where we slowly go beyond the initial cap value that we have.
+            GameManager.MarkBulgingPeriod();
             currentDuration = setConfig.DurationCap;
+            currentDuration -= PlayingField.CurrentLevel / 1000f;
         }
     }
 

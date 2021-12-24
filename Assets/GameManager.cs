@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -26,6 +27,9 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     TextMeshProUGUI diffConfigTMP;
+
+    [SerializeField]
+    TextMeshProUGUI bulgingTMP;
 
     [SerializeField]
     float gravityValue = 0.980665f;
@@ -85,6 +89,11 @@ public class GameManager : Singleton<GameManager>
             levelDividend: 64f
        ),
     };
+
+    internal static void MarkBulgingPeriod()
+    {
+        Instance.bulgingTMP.text = "Status: Bulging";
+    }
 
     public static DifficultyConfig SelectedConfig => DiffConfigs[1];
 
