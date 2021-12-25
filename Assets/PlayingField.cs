@@ -67,6 +67,8 @@ public class PlayingField : Singleton<PlayingField>
 
     public static RectTransform RectTransform => Instance.rectTransform;
 
+    static bool fingerOnScreen = false;
+
     internal static void SpawnNewLane()
     {
         int blockCount = 0;
@@ -161,6 +163,7 @@ public class PlayingField : Singleton<PlayingField>
 
 
         StartCoroutine(PostActiveBlocksCycle());
+        StartCoroutine(TouchOnScreenCycle());
     }
 
     void UpdateXPositions()
@@ -181,6 +184,8 @@ public class PlayingField : Singleton<PlayingField>
     /// </summary>
     internal static void AttemptChainCollection()
     {
+        Block block = null;
+
         if (!collectionActive)
         {
             collectionActive = true;
@@ -191,7 +196,7 @@ public class PlayingField : Singleton<PlayingField>
             //TODO: Dequeue all QueueBlocks, and deselect them
             while (QueuedBlocks.Count > 0)
             {
-                Block block = QueuedBlocks.Dequeue();
+                block = QueuedBlocks.Dequeue();
                 blocksToChain[i] = block;
                 i++;
             }
@@ -345,6 +350,18 @@ public class PlayingField : Singleton<PlayingField>
             var activeBlocks = (from activeBlock in cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray().Length;
             GameManager.PostActiveBlocks(activeBlocks);
             yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+    IEnumerator TouchOnScreenCycle()
+    {
+        while (true)
+        {
+            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && QueuedBlocks.Count > 0)
+            {
+                AttemptChainCollection();
+            }
+            yield return null;
         }
     }
 }

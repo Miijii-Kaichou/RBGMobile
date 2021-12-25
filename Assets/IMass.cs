@@ -44,6 +44,9 @@ public class MassObject : MonoBehaviour, IMass
     private int spawnedLifeTimeDelay = 10;
     private bool delayEnded = false;
 
+    Vector3Int cellPosition;
+    ContactFilter2D filter = new ContactFilter2D();
+
     float RoundToNearestGrid(float pos, bool snapDown = false, int dividend = 2)
     {
         float xDiff = pos % (snapDown ? -1 : 1) * gridSize;
@@ -103,7 +106,6 @@ public class MassObject : MonoBehaviour, IMass
     {
         spawnDelayTime = 0;
 
-        Vector3Int cellPosition;
         cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
         rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
 
@@ -128,15 +130,17 @@ public class MassObject : MonoBehaviour, IMass
             if (IsGrounded == false)
             {
                 decentVector = new Vector2(0f, -(Mass * GameManager.GravityValue));
-                originCollider.attachedRigidbody.velocity = new Vector2(0f, RoundToNearestGrid(decentVector.y)) * Time.fixedDeltaTime;
+                originCollider.attachedRigidbody.velocity = new Vector2(0f, decentVector.y) * Time.fixedDeltaTime;
             }
             else
             {
-                originCollider.attachedRigidbody.velocity = Vector2.zero;
-
-                Vector3Int cellPosition;
-                cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
-                rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+                if (delayEnded)
+                {
+                    originCollider.attachedRigidbody.velocity = Vector2.zero;
+                    
+                    cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
+                    rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+                }
 
             }
             yield return new WaitForFixedUpdate();
@@ -170,10 +174,9 @@ public class MassObject : MonoBehaviour, IMass
     void CheckIfGrounded()
     {
         raycastResults = new RaycastHit2D[30];
-        ContactFilter2D filter = new ContactFilter2D();
         filter = filter.NoFilter();
         filter.useTriggers = true;
-        filter.SetLayerMask(LayerMask.GetMask("PlayFieldCollidables"));
+        filter.SetLayerMask(1 << 10);
         Physics2D.Raycast(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))).normalized, filter, raycastResults, detectionLength);
         collidingWith = raycastResults[1].collider;
 

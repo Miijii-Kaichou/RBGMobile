@@ -69,6 +69,8 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     Condition uninteractableCondition;
 
+    bool onScreen = false;
+
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary && uninteractableCondition.WasMet == false)
@@ -91,6 +93,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             {
                 callback();
                 cachedData = entityCollider;
+                onScreen = true;   
             }
         }
     }
@@ -110,7 +113,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchRelease(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && cachedData != null && uninteractableCondition.WasMet == false)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && IsTouching && uninteractableCondition.WasMet == false)
         {
             cachedData = null;
             callback();
@@ -119,8 +122,9 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void OnTouchEnd(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount == 0 && uninteractableCondition.WasMet == false)
+        if (onScreen == true && Input.touchCount == 0)
         {
+            onScreen = false;
             callback();
         }
     }
@@ -130,6 +134,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
+            onScreen = true;
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();
@@ -169,7 +174,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         {
             try
             {
-                
                 Main();
             }
             catch
