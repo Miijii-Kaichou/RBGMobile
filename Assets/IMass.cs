@@ -87,18 +87,24 @@ public class MassObject : MonoBehaviour, IMass
 
     public virtual void OnEnable()
     {
+        //Be sure to snap to grid and zero-out rb velocity
+        originCollider.attachedRigidbody.velocity = Vector2.zero;
+
+        cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
+        rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+
+        originCollider.attachedRigidbody.velocity = Vector2.zero;
+
+        justSpawned = true;
+        spawnDelayTime = 0;
+        collidingWith = null;
+
         if (initialized)
-        {
-            justSpawned = true;
             MainStart();
-        }
     }
 
     void Init()
     {
-        
-        IsGrounded = true;
-
         //Each time a validation on the playfield is called, all blocks will check if grounded.
 
         PlayingField.CollectionValidationCallbackMethod += CheckIfGrounded;
@@ -110,13 +116,6 @@ public class MassObject : MonoBehaviour, IMass
 
     void MainStart()
     {
-        justSpawned = true;
-        spawnDelayTime = 0;
-
-        cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
-        rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
-
-        originCollider.attachedRigidbody.velocity = Vector2.zero;
 
         StartCoroutine(GroundCheckCycle());
         StartCoroutine(MainCycle());
@@ -128,9 +127,6 @@ public class MassObject : MonoBehaviour, IMass
     /// <returns></returns>
     IEnumerator MainCycle()
     {
-        justSpawned = true;
-        spawnDelayTime = 0;
-        collidingWith = null;
         while (PlayingField.PlayerDefeated == false || PlayingField.ResettingPhase == false)
         {
             _isGrounded = IsGrounded;
