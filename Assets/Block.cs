@@ -79,12 +79,16 @@ public class Block : MassObject
     {
         Mass = 3f;
         SetPosition(_rectTransform.anchoredPosition);
-        if (justSpawned == false && IsGrounded && Position.y > PlayingField.RectTransform.rect.height / 2f && PlayingField.PlayerDefeated == false)
+        if (PlayingField.ResettingPhase == false && justSpawned == false && IsGrounded && Position.y > PlayingField.RectTransform.rect.height / 2f && PlayingField.PlayerDefeated == false)
+        {
+            Debug.Log($"Block ID: {InstanceID}");
             PlayingField.Lose();
+        }
     }
 
     public void AssignData(ColorType color, int instanceID)
     {
+        IsGrounded = false;
         ChangeColorType(color);
         _instanceID = instanceID;
     }
@@ -104,6 +108,11 @@ public class Block : MassObject
     internal void ApplyColor()
     {
         if (attachedTouchAction == null) return;
+        if (_color == ColorType.Blank)
+        {
+            attachedTouchAction.SetColor(UnityEngine.Color.white);
+                return;
+        }
         attachedTouchAction.SetColor(blockColors[(int)_color]);
     }
 
@@ -126,6 +135,12 @@ public class Block : MassObject
     public void SendToTop()
     {
         _rectTransform.anchoredPosition = new Vector3(_position.x, _position.y + (828.4f - _position.y), 1f);
+    }
+
+    internal void TurnBlank()
+    {
+        _color = ColorType.Blank;
+        ApplyColor();
     }
 
     public ColorType Color => _color;

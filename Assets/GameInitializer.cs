@@ -2,22 +2,29 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ConceptTest : Singleton<ConceptTest>
+/// <summary>
+/// The full intent of this call is to set up the blocks for the first time, and give them
+/// their color-values upon the start of a session
+/// </summary>
+public class GameInitializer : Singleton<GameInitializer>
 {
-    Image[] imageBlocks;
-    Block[] blocks;
-
     //Colors
     [SerializeField]
     Color[] blockColors = new Color[3];
+
+    Image[] imageBlocks;
+    Block[] blocks;
 
     int stackSizeMuliplier = 1;
 
     const int DefaultStackSize = 9;
 
+    /// <summary>
+    /// Initialize all blocks in the object pool
+    /// </summary>
     public static void Init()
     {
-        Instance.imageBlocks = Instance.GetComponentsInChildren<Image>();
+        Instance.imageBlocks =  Instance.GetComponentsInChildren<Image>();
         Instance.imageBlocks = (from imgB in Instance.imageBlocks where imgB.GetComponent<Block>() != null select imgB).ToArray();
         Instance.blocks = Instance.GetComponentsInChildren<Block>();
         Instance.stackSizeMuliplier = GameManager.SelectedConfig.StartingLaneCount;
@@ -32,7 +39,9 @@ public class ConceptTest : Singleton<ConceptTest>
         Instance.SetUpBlockData();
     }
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Set up initial block data prior to start of game session
+    /// </summary>
     void SetUpBlockData()
     {
         for(int i = 0; i < imageBlocks.Length; i++)

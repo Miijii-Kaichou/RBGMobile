@@ -4,8 +4,6 @@ public class SelectionHandler : Singleton<SelectionHandler>
 {
     static Image[] selectionUIImg;
 
-    
-
     public void Start()
     {
         selectionUIImg = GetComponentsInChildren<Image>();

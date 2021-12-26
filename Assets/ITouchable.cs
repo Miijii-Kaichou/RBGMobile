@@ -44,13 +44,6 @@ public interface ITouchable
     /// </summary>
     /// <param name="evt"></param>
     public void OnTouchRelease(TouchCallback evt);
-
-    /// <summary>
-    /// The very instance that the player's touch is complete off the screen,
-    /// no matter the previous state.
-    /// </summary>
-    /// <param name="evt"></param>
-    public void OnTouchEnd(TouchCallback evt);
 }
 
 public abstract class TouchableEntity : MonoBehaviour, ITouchable
@@ -68,9 +61,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     private bool initialized;
 
     Condition uninteractableCondition;
-
-    bool onScreen = false;
-
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary && uninteractableCondition.WasMet == false)
@@ -92,8 +82,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();
-                cachedData = entityCollider;
-                onScreen = true;   
+                cachedData = entityCollider; 
             }
         }
     }
@@ -119,22 +108,12 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             callback();
         }
     }
-
-    public void OnTouchEnd(ITouchable.TouchCallback callback)
-    {
-        if (onScreen == true && Input.touchCount == 0)
-        {
-            onScreen = false;
-            callback();
-        }
-    }
-
     public void OnTouchStart(ITouchable.TouchCallback callback)
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && uninteractableCondition.WasMet == false)
         {
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
-            onScreen = true;
+
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();

@@ -76,25 +76,31 @@ public class MassObject : MonoBehaviour, IMass
             new Vector2(rectTransform.anchoredPosition.x,
              RoundToNearestGrid(Mathf.FloorToInt(rectTransform.anchoredPosition.y), true));
         originCollider.attachedRigidbody.velocity = Vector2.zero;
+
+        
     }
 
     public void Start()
     {
-        IsGrounded = true;
-        Init();   
+        Init();
     }
 
     public virtual void OnEnable()
     {
         if (initialized)
         {
+            justSpawned = true;
             MainStart();
         }
     }
 
     void Init()
     {
+        
+        IsGrounded = true;
+
         //Each time a validation on the playfield is called, all blocks will check if grounded.
+
         PlayingField.CollectionValidationCallbackMethod += CheckIfGrounded;
 
         MainStart();
@@ -104,6 +110,7 @@ public class MassObject : MonoBehaviour, IMass
 
     void MainStart()
     {
+        justSpawned = true;
         spawnDelayTime = 0;
 
         cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
@@ -123,7 +130,8 @@ public class MassObject : MonoBehaviour, IMass
     {
         justSpawned = true;
         spawnDelayTime = 0;
-        while (true)
+        collidingWith = null;
+        while (PlayingField.PlayerDefeated == false || PlayingField.ResettingPhase == false)
         {
             _isGrounded = IsGrounded;
 
@@ -155,6 +163,17 @@ public class MassObject : MonoBehaviour, IMass
                 spawnDelayTime++;
             }
         }
+
+        //Be sure to snap to grid and zero-out rb velocity
+        originCollider.attachedRigidbody.velocity = Vector2.zero;
+
+        cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
+        rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+
+        initialized = false;
+        justSpawned = false;
+        spawnDelayTime = 0;
+        collidingWith = null;
     }
 
     /// <summary>
@@ -173,11 +192,13 @@ public class MassObject : MonoBehaviour, IMass
 
     void CheckIfGrounded()
     {
+        collidingWith = null;
         raycastResults = new RaycastHit2D[30];
         filter = filter.NoFilter();
         filter.useTriggers = true;
         filter.SetLayerMask(1 << 10);
         Physics2D.Raycast(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))).normalized, filter, raycastResults, detectionLength);
+        Debug.DrawRay(transform.position, new Vector2(0f, -((Mass * GameManager.GravityValue))).normalized, Color.red, detectionLength);
         collidingWith = raycastResults[1].collider;
 
 
@@ -204,6 +225,9 @@ public class MassObject : MonoBehaviour, IMass
         spawnDelayTime = 0;
         IsGrounded = false;
         delayEnded = IsGrounded;
+        collidingWith = null;
+        justSpawned = true;
+        spawnDelayTime = 0;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

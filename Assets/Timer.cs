@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     Gradient timerGradient, timeGradient;
 
     //Timer alarm
-    Alarm timerAlarm = new Alarm(1);
+    Alarm timerAlarm;
 
     //Timer values;
     [SerializeField]
@@ -25,25 +25,34 @@ public class Timer : MonoBehaviour
     [SerializeField]
     float currentDuration = 20f;
 
-    DifficultyConfig setConfig = GameManager.SelectedConfig;
+    DifficultyConfig setConfig;
 
     EventManager.Event timedOutEvent;
 
     public void StartTimer()
     {
+        StopAllCoroutines();
+        timerAlarm = new Alarm(1);
+
+        setConfig = GameManager.SelectedConfig;
+        
         GameManager.PostSetConfig(setConfig);
 
-        timedOutEvent = EventManager.AddEvent(999, "TimedOut", () =>
+
+        if (timedOutEvent == null)
         {
+            timedOutEvent = EventManager.AddEvent(999, "TimedOut", () =>
+            {
             //Another lane will be spawned
             PlayingField.SpawnNewLane();
-            
+
             //Recalculate Timer Values
             RecalculateTimerValues();
 
             //Update timer duration
             timerAlarm.UpdateDuration(0, currentDuration);
-        });
+            });
+        }
 
         currentDuration = setConfig.InitDuration;
 
@@ -82,7 +91,7 @@ public class Timer : MonoBehaviour
 
     IEnumerator TimerCycle()
     {
-        while (true)
+        while (PlayingField.PlayerDefeated == false)
         {
             currentTime = timerAlarm.registeredTimers[0].CurrentTime;
 
@@ -95,5 +104,6 @@ public class Timer : MonoBehaviour
             //Give this loop 0.001 secs to refresh image
             yield return new WaitForSeconds(1f / 1000f);
         }
+        timerAlarm.Discard();
     }
 }

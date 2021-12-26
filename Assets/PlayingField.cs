@@ -2,14 +2,14 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayingField : Singleton<PlayingField>
 {
-    GameObject block;
-
+    #region Serialized Fields
     [SerializeField, Header("Testing")]
-    ConceptTest test;
+    GameInitializer test;
 
     [SerializeField]
     GameObject[] cachedBlockObjects;
@@ -41,34 +41,133 @@ public class PlayingField : Singleton<PlayingField>
     [SerializeField, Header("Pause Menu")]
     GameObject pauseMenuObject;
 
-
-    public static int CurrentLevel = 1;
-
-    const int MaxBlockPoolSize = 300;
-
-    static Queue<Block> QueuedBlocks = new Queue<Block>(MaxBlockPoolSize);
-
-    static bool collectionActive = false;
-    public static bool CollectionActive => collectionActive;
-
-    public delegate void CollectionValidationCallback();
+    [SerializeField, Header("Grid Layout Component")]
+    private GridLayoutGroup gridLayoutComponent;
 
     [SerializeField]
     float[] xPositions = new float[10];
 
-    //Chain Length Info
-    static PlayingFieldStats Stats;
-
-    const int BlockScore = 10;
-
-    public static bool PlayerDefeated { get; private set; } = false;
-
     bool gameSessionIsPaused = false;
+    #endregion
 
+    public static int CurrentLevel = 1;
+    public static bool CollectionActive => collectionActive;
+    public static bool ResettingPhase = false;
+
+    public delegate void PlayingFieldCallback();
+    public static PlayingFieldCallback CollectionValidationCallbackMethod;
+    public static PlayingFieldCallback PlayingFieldResetCallbackMethod;
+
+    //Chain Length Info
+    public static bool PlayerDefeated { get; private set; } = false;
     public static RectTransform RectTransform => Instance.rectTransform;
 
-    static bool fingerOnScreen = false;
+    static PlayingFieldStats Stats;
+    static Alarm PlayingFieldAlarm = new Alarm(2);
+    static Queue<Block> QueuedBlocks = new Queue<Block>(MaxBlockPoolSize);
+    static bool collectionActive = false;
+    static bool haveXPositions = false;
+    const int MaxBlockPoolSize = 300;
+    const int BlockScore = 10;
 
+    //Start is called just before any of the Update Method is called the first time
+    private void Start()
+    {
+        InitPlayingField();
+    }
+
+
+    #region Non-Static Methods
+    void InitPlayingField()
+    {
+        PlayingFieldAlarm = new Alarm(2);
+
+        cachedBlockObjects = new GameObject[MaxBlockPoolSize];
+
+        Stats = PlayingFieldStats.CreateNew();
+
+        GameInitializer.Init();
+
+        UpdateXPositions();
+
+        CollectionValidationCallbackMethod = () =>
+        {
+            GameManager.PostChainLength(Stats.ChainLength);
+            Stats.CheckLevel();
+            PostLevel();
+            collectionActive = false;
+            ClearPositions();
+            AreaHighlightHandler.Clear();
+        };
+
+        timer.StartTimer();
+
+
+        StartCoroutine(PostActiveBlocksCycle());
+        StartCoroutine(TouchOnScreenCycle());
+
+        ResettingPhase = false;
+    }
+    void UpdateXPositions()
+    {
+        for (int i = 0; i < test.Blocks.Length; i++)
+        {
+            cachedBlockObjects[i] = test.Blocks[i].gameObject;
+
+            if (haveXPositions) continue;
+
+            if (i < xPositions.Length)
+            {
+                xPositions[i] = test.Blocks[i].Position.x;
+            }
+            else
+                haveXPositions = true;
+        }
+    }
+
+    public void OnPauseToggle()
+    {
+        gameSessionIsPaused = !gameSessionIsPaused;
+        pauseMenuObject.SetActive(gameSessionIsPaused);
+        Time.timeScale = gameSessionIsPaused ? 0f : 1f;
+    }
+
+    /// <summary>
+    /// Will Reset the whole playing field.
+    /// </summary>
+    public void ResetField()
+    {
+        timer.Stop();
+
+        StopAllCoroutines();
+
+        ResettingPhase = true;
+
+        //TODO: Set all values blank
+        TurnActiveBlocksBlank();
+
+        //TODO: Enable all blocks
+        for (int i = 0; i < cachedBlockObjects.Length; i++)
+        {
+            cachedBlockObjects[i].SetActive(true);
+        }
+
+        //TODO: Enable GridLayout to resort all objects
+        gridLayoutComponent.enabled = true;
+
+
+        PlayerDefeated = false;
+
+        //Create new Queue
+        QueuedBlocks = new Queue<Block>(300);
+
+        InitPlayingField();
+        gridLayoutComponent.enabled = false;
+    }
+
+    #endregion
+
+    #region Static Methods
     internal static void SpawnNewLane()
     {
         int blockCount = 0;
@@ -98,7 +197,85 @@ public class PlayingField : Singleton<PlayingField>
     {
         PlayerDefeated = true;
         Instance.timer.Stop();
-        Instance.gameOverObject.SetActive(PlayerDefeated);
+
+        //Create new Queue
+        QueuedBlocks = new Queue<Block>(300);
+
+        //TODO: Set all active blocks to blank.
+        TurnActiveBlocksBlank();
+
+        PlayingFieldAlarm.SetFor(2f, 0, true, () =>
+        {
+            //TODO: Disable them one by one
+            WipeOutPlayingField(GetAllActiveBlocks());
+        });
+    }
+
+    /// <summary>
+    /// Turns all active blocks in the Playing Field white (signaling that it's Game Over)
+    /// </summary>
+    static void TurnActiveBlocksBlank()
+    {
+        Block[] activeBlocks = GetAllActiveBlocks(out GameObject[] objects);
+        for (int i = 0; i < activeBlocks.Length; i++)
+        {
+            activeBlocks[i].Deselect();
+            activeBlocks[i].TurnBlank();
+        }
+    }
+
+    /// <summary>
+    /// Removes each active block during a set interval, wiping the entire playing field
+    /// </summary>
+    static void WipeOutPlayingField(Block[] blocks)
+    {
+        int count = 0;
+
+        //Alarm-Duration Loop
+        PlayingFieldAlarm.SetFor(0.005f, 1, false, () =>
+        {
+            //Condition
+            if (count < blocks.Length)
+            {
+                blocks[count].gameObject.SetActive(false);
+            }
+            else
+            {
+                //Alarm no longer needs to be used.
+                //This breaks from the Alarm-Duration Loop
+                PlayingFieldAlarm.Discard();
+            }
+
+            //Increment Value
+            count++;
+        });
+    }
+
+    static Block[] GetAllActiveBlocks(out GameObject[] gameObjects)
+    {
+        Block[] blocks;
+        var activeBlocks = (from activeBlock in Instance.cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray();
+        gameObjects = activeBlocks;
+        blocks = new Block[activeBlocks.Length];
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            blocks[i] = activeBlocks[i].GetComponent<Block>();
+        }
+
+        return blocks;
+    }
+
+    static Block[] GetAllActiveBlocks()
+    {
+        Block[] blocks;
+        var activeBlocks = (from activeBlock in Instance.cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray();
+        blocks = new Block[activeBlocks.Length];
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            blocks[i] = activeBlocks[i].GetComponent<Block>();
+        }
+
+        return blocks;
     }
 
     /// <summary>
@@ -134,50 +311,9 @@ public class PlayingField : Singleton<PlayingField>
     internal static void PostMaxChain()
     {
         if (Stats == null) return;
-        Instance.maxChainTMP.text = string.Format("Chain: {0}",Stats.MaxChainLength);
+        Instance.maxChainTMP.text = string.Format("Chain: {0}", Stats.MaxChainLength);
     }
 
-    public static CollectionValidationCallback CollectionValidationCallbackMethod;
-
-    private void Start()
-    {
-        cachedBlockObjects = new GameObject[MaxBlockPoolSize];
-
-        Stats = PlayingFieldStats.CreateNew();
-        
-        ConceptTest.Init();
-
-        UpdateXPositions();
-
-        CollectionValidationCallbackMethod = () =>
-        {
-            GameManager.PostChainLength(Stats.ChainLength);
-            Stats.CheckLevel();
-            PostLevel();
-            collectionActive = false;
-            ClearPositions();
-            AreaHighlightHandler.Clear();
-        };
-
-        timer.StartTimer();
-
-
-        StartCoroutine(PostActiveBlocksCycle());
-        StartCoroutine(TouchOnScreenCycle());
-    }
-
-    void UpdateXPositions()
-    {
-        for (int i = 0; i < test.Blocks.Length; i++)
-        {
-            cachedBlockObjects[i] = test.Blocks[i].gameObject;
-
-            if (i < xPositions.Length)
-            {
-                xPositions[i] = test.Blocks[i].Position.x;
-            }
-        }
-    }
 
     /// <summary>
     /// Attempt to eliminate the selected blocks
@@ -272,6 +408,9 @@ public class PlayingField : Singleton<PlayingField>
         CollectionValidationCallbackMethod();
     }
 
+
+
+
     /// <summary>
     /// Add selected blocks to the Queue for Chain Collecting
     /// </summary>
@@ -333,14 +472,9 @@ public class PlayingField : Singleton<PlayingField>
     {
         Instance.lineRenderer.positionCount = 0;
     }
+    #endregion
 
-    public void OnPauseToggle()
-    {
-        gameSessionIsPaused = !gameSessionIsPaused;
-        pauseMenuObject.SetActive(gameSessionIsPaused);
-        Time.timeScale = gameSessionIsPaused ? 0f : 1f;
-    }
-
+    #region Non-Static Coroutines
     IEnumerator PostActiveBlocksCycle()
     {
         PlayerDefeated = false;
@@ -355,13 +489,14 @@ public class PlayingField : Singleton<PlayingField>
 
     IEnumerator TouchOnScreenCycle()
     {
-        while (true)
+        while (!PlayerDefeated)
         {
-            if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended && QueuedBlocks.Count > 0)
+            if (Input.touchCount < 1 && QueuedBlocks.Count > 0 && CollectionActive == false)
             {
                 AttemptChainCollection();
             }
             yield return null;
         }
     }
+    #endregion
 }
