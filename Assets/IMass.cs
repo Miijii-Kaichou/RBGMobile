@@ -43,6 +43,7 @@ public class MassObject : MonoBehaviour, IMass
     private int spawnDelayTime;
     private int spawnedLifeTimeDelay = 10;
     private bool delayEnded = false;
+    private bool enableGravity = true;
 
     Vector3Int cellPosition;
     ContactFilter2D filter = new ContactFilter2D();
@@ -80,7 +81,7 @@ public class MassObject : MonoBehaviour, IMass
         
     }
 
-    public void Start()
+    public virtual void Start()
     {
         Init();
     }
@@ -131,7 +132,7 @@ public class MassObject : MonoBehaviour, IMass
         {
             _isGrounded = IsGrounded;
 
-            if (IsGrounded == false)
+            if (IsGrounded == false && enableGravity)
             {
                 decentVector = new Vector2(0f, -(Mass * GameManager.GravityValue));
                 originCollider.attachedRigidbody.velocity = new Vector2(0f, decentVector.y) * Time.fixedDeltaTime;
@@ -181,6 +182,7 @@ public class MassObject : MonoBehaviour, IMass
     {
         while (true)
         {
+            if(enableGravity)
             CheckIfGrounded();
             yield return new WaitForFixedUpdate();
         }
@@ -216,7 +218,11 @@ public class MassObject : MonoBehaviour, IMass
         }
     }
 
-    public void OnDisable()
+    public void DisableGravity() => enableGravity = false;
+
+    public void EnableGravity() => enableGravity = true;
+
+    public virtual void OnDisable()
     {
         spawnDelayTime = 0;
         IsGrounded = false;
@@ -226,7 +232,7 @@ public class MassObject : MonoBehaviour, IMass
         spawnDelayTime = 0;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 1 << 10)
         {

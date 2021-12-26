@@ -61,6 +61,9 @@ public class Block : MassObject
     Vector2 _position;
 
     [SerializeField]
+    Vector2 initPosition;
+    
+    [SerializeField]
     ColorType _color = ColorType.Blank;
 
     //Colors
@@ -69,21 +72,39 @@ public class Block : MassObject
 
     BlockTouchAction attachedTouchAction;
 
+    Block syncingBlock = null;
+
     public BlockTouchAction AttachedTouchAction => attachedTouchAction;
 
     public BlockNode Node;
 
     public Vector2 Position => _position;
 
+    public override void Start()
+    {
+        base.Start();
+        initPosition = RectTransform.anchoredPosition;
+    }
+
     public void Update()
     {
         Mass = 3f;
-        SetPosition(_rectTransform.anchoredPosition);
+
+        if (syncingBlock != null)
+        {
+            _rectTransform.anchoredPosition = new Vector2(_rectTransform.anchoredPosition.x, syncingBlock._rectTransform.anchoredPosition.y);
+            SetPosition(_rectTransform.anchoredPosition);
+            syncingBlock = null;
+        } else
+            SetPosition(_rectTransform.anchoredPosition);
+
+        #region Lose Condition
         if (PlayingField.ResettingPhase == false && justSpawned == false && IsGrounded && Position.y > PlayingField.RectTransform.rect.height / 2f && PlayingField.PlayerDefeated == false)
         {
             Debug.Log($"Block ID: {InstanceID}");
             PlayingField.Lose();
-        }
+        } 
+        #endregion
     }
 
     public void AssignData(ColorType color, int instanceID)
@@ -134,7 +155,7 @@ public class Block : MassObject
 
     public void SendToTop()
     {
-        _rectTransform.anchoredPosition = new Vector3(_position.x, _position.y + (828.4f - _position.y), 1f);
+        _rectTransform.anchoredPosition = new Vector2(Position.x, Mathf.FloorToInt(PlayingField.RectTransform.rect.height));
     }
 
     internal void TurnBlank()
@@ -149,5 +170,17 @@ public class Block : MassObject
     {
         _color = type;
         ApplyColor();
+    }
+
+    public void ReturnToInitialPosition() => RectTransform.anchoredPosition = initPosition;
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
+    internal void SyncYPositionWith(Block block)
+    {
+        syncingBlock = block;
     }
 }

@@ -172,24 +172,42 @@ public class PlayingField : Singleton<PlayingField>
     {
         int blockCount = 0;
 
+        Block[] blocksToDrop = new Block[10];
+
         for (int i = 0; i < Instance.cachedBlockObjects.Length; i++)
         {
             if (blockCount > Instance.xPositions.Length - 1)
-                return;
+                break;
 
             Block block = Instance.test.Blocks[i];
 
             if (!block.gameObject.activeInHierarchy)
             {
                 block.gameObject.SetActive(true);
-
+                block.DisableGravity();
                 block.AssignData((ColorType)((Random.Range(0, 3) + blockCount) % 3), i);
                 block.InitTouchControl();
                 block.SetLaneID(blockCount);
-                block.RectTransform.anchoredPosition = new Vector2(Instance.xPositions[blockCount], Instance.rectTransform.rect.size.y);
+                block.RectTransform.anchoredPosition = new Vector2(Instance.xPositions[blockCount], Mathf.FloorToInt(Instance.rectTransform.rect.height));
                 block.ApplyColor();
+                blocksToDrop[blockCount] = block;
                 blockCount++;
             }
+        }
+
+        Block firstBlock = null;
+
+        for(int i = 0; i < blockCount; i++)
+        {
+            if (i == 0)
+            {
+                firstBlock = blocksToDrop[i];
+                
+            } else if (i > 0)
+            {
+                blocksToDrop[i].SyncYPositionWith(firstBlock);
+            }
+            blocksToDrop[i].EnableGravity();
         }
     }
 
@@ -386,7 +404,6 @@ public class PlayingField : Singleton<PlayingField>
 
             //TODO: Deselect, and destory blocks / send blocks to opponent
             referencedChain[i].Deselect(true);
-
             Stats.Score += BlockScore;
             PostScore();
         }
