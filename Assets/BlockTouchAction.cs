@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -78,6 +77,4 @@ public class BlockTouchAction : TouchableEntity
         IsSelected = false;
         cachedData = null;
     }
-
-    
 }

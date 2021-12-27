@@ -101,8 +101,7 @@ public class Timer : MonoBehaviour
             timeTMP.text = Mathf.FloorToInt(currentDuration - currentTime).ToString();
             timeTMP.color = timerGradient.Evaluate(timerFillImg.fillAmount);
 
-            //Give this loop 0.001 secs to refresh image
-            yield return new WaitForSeconds(1f / 1000f);
+            yield return null;
         }
         timerAlarm.Discard();
     }

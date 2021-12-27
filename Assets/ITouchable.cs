@@ -160,7 +160,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
                 yield break;
             }
 
-            yield return new WaitForSeconds(1f / 1000f);
+            yield return null;
 
         }
     }

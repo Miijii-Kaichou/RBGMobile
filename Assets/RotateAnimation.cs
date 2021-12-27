@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class RotateAnimation : MonoBehaviour
@@ -7,26 +6,24 @@ public class RotateAnimation : MonoBehaviour
     float rotationSpeed = 1;
 
     Vector3 eularAngles;
-
+    Vector3 rotation;
+    Vector3 rotationEularAngleSpeed;
     private void Awake()
     {
-        StartCoroutine(Animation());
+        rotationEularAngleSpeed = new Vector3(0f, 0f, (-1 * rotationSpeed));
     }
 
-    IEnumerator Animation()
+    void Update()
     {
-        while (true)
-        {
-            Animate();
-            yield return new WaitForEndOfFrame();
-        }
+        Animate();
     }
+
 
     void Animate()
     {
-        eularAngles = new Vector3(0f, 0f, (-1 * rotationSpeed) * (Screen.currentResolution.refreshRate / 60));
+        eularAngles = rotationEularAngleSpeed; ;
         transform.Rotate(eularAngles);
-        Vector3 rotation = transform.rotation.eulerAngles;
+        rotation = transform.rotation.eulerAngles;
         rotation.z = Mathf.Clamp(rotation.z, 0f, Mathf.Abs(360f));
         transform.eulerAngles = rotation;
     }

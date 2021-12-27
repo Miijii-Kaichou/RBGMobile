@@ -73,7 +73,8 @@ public class Block : MassObject
     BlockTouchAction attachedTouchAction;
 
     Block syncingBlock = null;
-
+    float targetSyncingFrames = 6f;
+    float currentSyncingFrames = 0f;
     public BlockTouchAction AttachedTouchAction => attachedTouchAction;
 
     public BlockNode Node;
@@ -94,7 +95,13 @@ public class Block : MassObject
         {
             _rectTransform.anchoredPosition = new Vector2(_rectTransform.anchoredPosition.x, syncingBlock._rectTransform.anchoredPosition.y);
             SetPosition(_rectTransform.anchoredPosition);
-            syncingBlock = null;
+            currentSyncingFrames++;
+            if(currentSyncingFrames >= targetSyncingFrames)
+            {
+                syncingBlock = null;
+                currentSyncingFrames = 0;
+            }
+            
         } else
             SetPosition(_rectTransform.anchoredPosition);
 

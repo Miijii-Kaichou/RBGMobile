@@ -197,16 +197,18 @@ public class PlayingField : Singleton<PlayingField>
 
         Block firstBlock = null;
 
-        for(int i = 0; i < blockCount; i++)
+        for (int i = 0; i < blockCount; i++)
         {
             if (i == 0)
             {
                 firstBlock = blocksToDrop[i];
-                
-            } else if (i > 0)
+
+            }
+            else
             {
                 blocksToDrop[i].SyncYPositionWith(firstBlock);
             }
+
             blocksToDrop[i].EnableGravity();
         }
     }
@@ -234,7 +236,7 @@ public class PlayingField : Singleton<PlayingField>
     /// </summary>
     static void TurnActiveBlocksBlank()
     {
-        Block[] activeBlocks = GetAllActiveBlocks(out GameObject[] objects);
+        var activeBlocks = GetAllActiveBlocks(out GameObject[] objects);
         for (int i = 0; i < activeBlocks.Length; i++)
         {
             activeBlocks[i].Deselect();
@@ -437,7 +439,7 @@ public class PlayingField : Singleton<PlayingField>
         //Check if selected item is greater than 40.8. If it is, this is not close to the current selected block
         if (QueuedBlocks.Count > 0)
         {
-            var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
+            var distance = Mathf.Abs(Vector2.Distance(block.Position ,QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
             if (distance > 40.8f * 1.75f) return;
         }
 
@@ -494,7 +496,7 @@ public class PlayingField : Singleton<PlayingField>
     #region Non-Static Coroutines
     IEnumerator PostActiveBlocksCycle()
     {
-        PlayerDefeated = false;
+        if (!GameManager.EnableDebug) yield return null;
 
         while (!PlayerDefeated)
         {

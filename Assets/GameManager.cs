@@ -11,6 +11,9 @@ public class GameManager : Singleton<GameManager>
     bool vSyncOn;
 
     [SerializeField, Header("Debug Tools")]
+    GameObject debugObj;
+
+    [SerializeField]
     TextMeshProUGUI chainLengthTMP;
 
     [SerializeField]
@@ -53,9 +56,9 @@ public class GameManager : Singleton<GameManager>
        (
             "DIFF_CONFIG_EASY",
             totalLanes: 3,
-            initDuration:  20f,
+            initDuration:  15f,
             durationDelta: 0.05f,
-            durationCap:   3f,
+            durationCap:   4f,
             levelDividend: 256f
        ),
 
@@ -97,34 +100,47 @@ public class GameManager : Singleton<GameManager>
 
     public static DifficultyConfig SelectedConfig => DiffConfigs[1];
 
+    public static bool EnableDebug { get; internal set; }
+
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = (int)targetFrameRate;
         QualitySettings.vSyncCount = vSyncOn ? 1 : 0;
+        FPSCounter.FpsUpdateEvent = PostFPS;
+
+        if (!EnableDebug)
+        {
+            debugObj.SetActive(EnableDebug);
+            return;
+        }
+        
         targetFPSTMP.text = string.Format(targetFPSFormat, Application.targetFrameRate);
         refreshRateTMP.text = string.Format(refreshRateFormat, Screen.currentResolution.refreshRate);
-        FPSCounter.FpsUpdateEvent = PostFPS;
     }
 
     public static void PostChainLength(int value)
     {
+        if (!EnableDebug) return;
         Instance.chainLengthTMP.text = string.Format(Instance.chainLengthFormat, value);
     }
 
     public static void PostFPS()
     {
+        if (!EnableDebug) return;
         Instance.targetFPSTMP.text = string.Format(Instance.targetFPSFormat, Application.targetFrameRate);
         Instance.FPSTMP.text = string.Format(Instance.currentFPSFormat, FPSCounter.GetCurrectFPS());
     }
 
     public static void PostActiveBlocks(int value)
     {
+        if (!EnableDebug) return;
         Instance.activeBlocksTMP.text = string.Format(Instance.activeBlocksFormat, value);
     }
 
     public static void PostSetConfig(DifficultyConfig config)
     {
+        if (!EnableDebug) return;
         Instance.diffConfigTMP.text = string.Format(Instance.diffConfigFormat, config.Tag);
     }
 

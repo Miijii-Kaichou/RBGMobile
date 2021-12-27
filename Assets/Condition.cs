@@ -18,9 +18,9 @@ public class Condition
     /// <summary>
     /// Create a new condition to be checked
     /// </summary>
-    /// <param name="condition"></param>
-    public Condition(Func<bool> condition)
+    /// <param name="predicate"></param>
+    public Condition(Func<bool> predicate)
     {
-        Predicate = condition;
+        Predicate = predicate;
     }
 }
