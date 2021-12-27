@@ -14,25 +14,21 @@ public class BlockTouchAction : TouchableEntity
 
     Color selected = Color.white;
 
-    bool initialized = false;
-
     public bool IsSelected { get; set; } = false;
 
     Condition dontInteractCondition;
-    public override void Init()
+    public override void OnInitialized()
     {
         #region First-Time Initialization
-        if (initialized == false && gameObject.activeInHierarchy)
+        if (gameObject.activeInHierarchy)
         {
-            initialized = true;
             dontInteractCondition = new Condition(() => blockIdentity.IsGrounded == false || PlayingField.PlayerDefeated);
             SetInitColor(blockImage.color);
             SetColor(initColor);
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
-            base.Init();
+            base.OnInitialized();
         } 
         #endregion
-
     }
 
     public void SetInitColor(Color color)
@@ -54,9 +50,7 @@ public class BlockTouchAction : TouchableEntity
         OnTouchEnter(() =>
         {
             if (!IsSelected)
-            {
                 PlayingField.AddToChain(blockIdentity);
-            }
         });
 
         OnTouchExit(() =>
