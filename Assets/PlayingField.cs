@@ -80,33 +80,36 @@ public class PlayingField : Singleton<PlayingField>
     #region Non-Static Methods
     void InitPlayingField()
     {
-        PlayingFieldAlarm = new Alarm(2);
+        PlayingFieldAlarm = new Alarm(3);
 
-        cachedBlockObjects = new GameObject[MaxBlockPoolSize];
-
-        Stats = PlayingFieldStats.CreateNew();
-
-        GameInitializer.Init();
-
-        UpdateXPositions();
-
-        CollectionValidationCallbackMethod = () =>
+        PlayingFieldAlarm.SetFor(2f, PlayingFieldAlarm.Avaliable, true, () =>
         {
-            GameManager.PostChainLength(Stats.ChainLength);
-            Stats.CheckLevel();
-            PostLevel();
-            collectionActive = false;
-            ClearPositions();
-            AreaHighlightHandler.Clear();
-        };
+            cachedBlockObjects = new GameObject[MaxBlockPoolSize];
 
-        timer.StartTimer();
+            Stats = PlayingFieldStats.CreateNew();
+
+            GameInitializer.Init();
+
+            UpdateXPositions();
+
+            CollectionValidationCallbackMethod = () =>
+            {
+                GameManager.PostChainLength(Stats.ChainLength);
+                Stats.CheckLevel();
+                PostLevel();
+                collectionActive = false;
+                ClearPositions();
+                AreaHighlightHandler.Clear();
+            };
+
+            timer.StartTimer();
 
 
-        StartCoroutine(PostActiveBlocksCycle());
-        StartCoroutine(TouchOnScreenCycle());
+            StartCoroutine(PostActiveBlocksCycle());
+            StartCoroutine(TouchOnScreenCycle());
 
-        ResettingPhase = false;
+            ResettingPhase = false;
+        });
     }
     void UpdateXPositions()
     {
@@ -216,6 +219,9 @@ public class PlayingField : Singleton<PlayingField>
     internal static void Lose()
     {
         PlayerDefeated = true;
+
+        ClearPositions();
+
         Instance.timer.Stop();
 
         //Create new Queue
@@ -224,7 +230,7 @@ public class PlayingField : Singleton<PlayingField>
         //TODO: Set all active blocks to blank.
         TurnActiveBlocksBlank();
 
-        PlayingFieldAlarm.SetFor(2f, 0, true, () =>
+        PlayingFieldAlarm.SetFor(2f, PlayingFieldAlarm.Avaliable, true, () =>
         {
             //TODO: Disable them one by one
             WipeOutPlayingField(GetAllActiveBlocks());
@@ -252,7 +258,7 @@ public class PlayingField : Singleton<PlayingField>
         int count = 0;
 
         //Alarm-Duration Loop
-        PlayingFieldAlarm.SetFor(0.005f, 1, false, () =>
+        PlayingFieldAlarm.SetFor(0.005f, PlayingFieldAlarm.Avaliable, false, () =>
         {
             //Condition
             if (count < blocks.Length)
@@ -263,6 +269,7 @@ public class PlayingField : Singleton<PlayingField>
             {
                 //Alarm no longer needs to be used.
                 //This breaks from the Alarm-Duration Loop
+                Instance.gameOverObject.SetActive(true);
                 PlayingFieldAlarm.Discard();
             }
 
@@ -440,7 +447,7 @@ public class PlayingField : Singleton<PlayingField>
         if (QueuedBlocks.Count > 0)
         {
             var distance = Mathf.Abs(Vector2.Distance(block.Position ,QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
-            if (distance > 40.8f * 1.75f) return;
+            if (distance > Instance.gridLayoutComponent.cellSize.x * 1.75f) return;
         }
 
         //Select block, since now it's valid
@@ -449,6 +456,7 @@ public class PlayingField : Singleton<PlayingField>
         SelectionHandler.EnableSlot(block);
 
         //Enqueue block
+        AudioManager.Play("BlockSelect", 50f, true);
         QueuedBlocks.Enqueue(block);
 
         //Increase the Chain Length to Debug

@@ -10,6 +10,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     bool vSyncOn;
 
+    [SerializeField]
+    public bool _enableDebug = false;
+    public static bool EnableDebug => Instance._enableDebug;
+
     [SerializeField, Header("Debug Tools")]
     GameObject debugObj;
 
@@ -100,7 +104,6 @@ public class GameManager : Singleton<GameManager>
 
     public static DifficultyConfig SelectedConfig => DiffConfigs[1];
 
-    public static bool EnableDebug { get; internal set; }
 
     // Start is called before the first frame update
     void Start()
