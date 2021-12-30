@@ -89,7 +89,7 @@ public class PlayingField : Singleton<PlayingField>
 
         GameInitializer.Init();
 
-        UpdateXPositions();
+        
 
         CollectionValidationCallbackMethod = () =>
         {
@@ -103,6 +103,9 @@ public class PlayingField : Singleton<PlayingField>
 
         PlayingFieldAlarm.SetFor(2f, PlayingFieldAlarm.Avaliable, true, () =>
         {
+
+            UpdateXPositions();
+
             timer.StartTimer();
 
             StartCoroutine(PostActiveBlocksCycle());
