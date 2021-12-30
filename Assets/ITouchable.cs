@@ -129,7 +129,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     public void Init()
     {
-        if (initialized == false)
+        if (initialized == false && PlayingField.GameSessionStarted)
         {
             initialized = true;
             OnInitialized();
@@ -149,7 +149,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     private void OnEnable()
     {
-        if (initialized)
+        if (initialized && PlayingField.GameSessionStarted)
             StartCoroutine(TouchCycle());
     }
 

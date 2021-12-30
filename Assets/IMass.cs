@@ -41,7 +41,8 @@ public class MassObject : MonoBehaviour, IMass
     public bool justSpawned = false;
     private bool initialized;
     private int spawnDelayTime;
-    private int spawnedLifeTimeDelay = 10;
+    private int spawnedLifeTimeDelay = 30;
+    [SerializeField]
     private bool delayEnded = false;
     private bool enableGravity = true;
 
@@ -72,13 +73,12 @@ public class MassObject : MonoBehaviour, IMass
         currentPosition = rectTransform.anchoredPosition;
 
         //TODO: Snap into place
-        //TODO: Snap into place
-        rectTransform.anchoredPosition =
-            new Vector2(rectTransform.anchoredPosition.x,
-             RoundToNearestGrid(Mathf.FloorToInt(rectTransform.anchoredPosition.y), true));
+        cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
+        rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
+
+        //Be sure to snap to grid and zero-out rb velocity
         originCollider.attachedRigidbody.velocity = Vector2.zero;
 
-        
     }
 
     public virtual void Start()
@@ -88,12 +88,12 @@ public class MassObject : MonoBehaviour, IMass
 
     public virtual void OnEnable()
     {
-        //Be sure to snap to grid and zero-out rb velocity
-        originCollider.attachedRigidbody.velocity = Vector2.zero;
+       
 
         cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
         rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
 
+        //Be sure to snap to grid and zero-out rb velocity
         originCollider.attachedRigidbody.velocity = Vector2.zero;
 
         justSpawned = true;
@@ -101,7 +101,10 @@ public class MassObject : MonoBehaviour, IMass
         collidingWith = null;
 
         if (initialized)
+        {
+            
             MainStart();
+        }
     }
 
     void Init()
@@ -117,6 +120,8 @@ public class MassObject : MonoBehaviour, IMass
 
     void MainStart()
     {
+        justSpawned = true;
+        spawnDelayTime = 0;
         StartCoroutine(MainCycle());
     }
 
@@ -126,6 +131,8 @@ public class MassObject : MonoBehaviour, IMass
     /// <returns></returns>
     IEnumerator MainCycle()
     {
+        IsGrounded = false;
+
         while (PlayingField.PlayerDefeated == false && PlayingField.ResettingPhase == false)
         {
 
@@ -144,7 +151,7 @@ public class MassObject : MonoBehaviour, IMass
         if (enableGravity)
             CheckIfGrounded();
 
-        _isGrounded = IsGrounded;
+        
 
         if (IsGrounded == false && enableGravity)
         {
@@ -160,7 +167,6 @@ public class MassObject : MonoBehaviour, IMass
                 cellPosition = grid.LocalToCell(rectTransform.anchoredPosition);
                 rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
             }
-
         }
     }
 
@@ -188,9 +194,9 @@ public class MassObject : MonoBehaviour, IMass
         rectTransform.anchoredPosition = grid.CellToLocal(cellPosition) + new Vector3(grid.cellSize.x / 2f, grid.cellSize.y / 2f, 1f);
 
         initialized = false;
-        justSpawned = false;
         spawnDelayTime = 0;
         collidingWith = null;
+        IsGrounded = false;
     }
 
     void CheckIfGrounded()
@@ -220,6 +226,8 @@ public class MassObject : MonoBehaviour, IMass
             groundedFlag = 0;
             IsGrounded = false;
         }
+
+        _isGrounded = IsGrounded;
     }
 
     public void DisableGravity() => enableGravity = false;

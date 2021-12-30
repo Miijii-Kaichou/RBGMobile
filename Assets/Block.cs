@@ -183,6 +183,8 @@ public class Block : MassObject
 
     public override void OnDisable()
     {
+        IsGrounded = false;
+        justSpawned = true;
         base.OnDisable();
     }
 

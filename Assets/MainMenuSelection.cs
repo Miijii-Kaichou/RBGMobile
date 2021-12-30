@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuSelection : MonoBehaviour
 {
     public void OnSolo()
     {
+        GameOverlay.DisableOverlay();
         GameSceneManager.LoadScene(2);
     }
 

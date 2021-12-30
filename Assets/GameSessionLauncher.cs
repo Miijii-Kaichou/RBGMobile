@@ -18,5 +18,6 @@ public class GameSessionLauncher : MonoBehaviour
     public void Back()
     {
         GameSceneManager.LoadPrevious();
+        GameOverlay.EnableOverlay();
     }
 }

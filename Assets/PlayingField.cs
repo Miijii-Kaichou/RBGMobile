@@ -69,6 +69,7 @@ public class PlayingField : Singleton<PlayingField>
     static bool haveXPositions = false;
     const int MaxBlockPoolSize = 300;
     const int BlockScore = 10;
+    public static bool GameSessionStarted = false;
 
     //Start is called just before any of the Update Method is called the first time
     private void Start()
@@ -82,33 +83,34 @@ public class PlayingField : Singleton<PlayingField>
     {
         PlayingFieldAlarm = new Alarm(3);
 
+        cachedBlockObjects = new GameObject[MaxBlockPoolSize];
+
+        Stats = PlayingFieldStats.CreateNew();
+
+        GameInitializer.Init();
+
+        UpdateXPositions();
+
+        CollectionValidationCallbackMethod = () =>
+        {
+            GameSessionDebugger.PostChainLength(Stats.ChainLength);
+            Stats.CheckLevel();
+            PostLevel();
+            collectionActive = false;
+            ClearPositions();
+            AreaHighlightHandler.Clear();
+        };
+
         PlayingFieldAlarm.SetFor(2f, PlayingFieldAlarm.Avaliable, true, () =>
         {
-            cachedBlockObjects = new GameObject[MaxBlockPoolSize];
-
-            Stats = PlayingFieldStats.CreateNew();
-
-            GameInitializer.Init();
-
-            UpdateXPositions();
-
-            CollectionValidationCallbackMethod = () =>
-            {
-                GameSessionDebugger.PostChainLength(Stats.ChainLength);
-                Stats.CheckLevel();
-                PostLevel();
-                collectionActive = false;
-                ClearPositions();
-                AreaHighlightHandler.Clear();
-            };
-
             timer.StartTimer();
-
 
             StartCoroutine(PostActiveBlocksCycle());
             StartCoroutine(TouchOnScreenCycle());
 
             ResettingPhase = false;
+
+            GameSessionStarted = true;
         });
     }
     void UpdateXPositions()
@@ -177,6 +179,8 @@ public class PlayingField : Singleton<PlayingField>
 
         Block[] blocksToDrop = new Block[10];
 
+        Instance.UpdateXPositions();
+
         for (int i = 0; i < Instance.cachedBlockObjects.Length; i++)
         {
             if (blockCount > Instance.xPositions.Length - 1)
@@ -202,6 +206,7 @@ public class PlayingField : Singleton<PlayingField>
 
         for (int i = 0; i < blockCount; i++)
         {
+            blocksToDrop[i].IsGrounded = false;
             if (i == 0)
             {
                 firstBlock = blocksToDrop[i];
