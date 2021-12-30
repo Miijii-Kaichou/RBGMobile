@@ -14,6 +14,10 @@ public class GameManager : Singleton<GameManager>
     public bool _enableDebug = false;
     public static bool EnableDebug => Instance._enableDebug;
 
+    internal static void SetDiffConfig(int difficulty)
+    {
+        SelectedConfig = DiffConfigs[difficulty];
+    }
 
     [SerializeField]
     float gravityValue = 0.980665f;
@@ -69,7 +73,7 @@ public class GameManager : Singleton<GameManager>
     };
 
   
-    public static DifficultyConfig SelectedConfig => DiffConfigs[1];
+    public static DifficultyConfig SelectedConfig { get; private set; }
 
 
     // Start is called before the first frame update
