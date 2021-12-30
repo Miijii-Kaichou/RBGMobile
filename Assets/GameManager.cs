@@ -14,41 +14,12 @@ public class GameManager : Singleton<GameManager>
     public bool _enableDebug = false;
     public static bool EnableDebug => Instance._enableDebug;
 
-    [SerializeField, Header("Debug Tools")]
-    GameObject debugObj;
-
-    [SerializeField]
-    TextMeshProUGUI chainLengthTMP;
-
-    [SerializeField]
-    TextMeshProUGUI targetFPSTMP;
-
-    [SerializeField]
-    TextMeshProUGUI refreshRateTMP;
-
-    [SerializeField]
-    TextMeshProUGUI FPSTMP;
-
-    [SerializeField]
-    TextMeshProUGUI activeBlocksTMP;
-
-    [SerializeField]
-    TextMeshProUGUI diffConfigTMP;
-
-    [SerializeField]
-    TextMeshProUGUI bulgingTMP;
 
     [SerializeField]
     float gravityValue = 0.980665f;
 
     public static float GravityValue => Instance.gravityValue;
 
-    string chainLengthFormat = "Chain Length: {0}";
-    string targetFPSFormat = "Target FPS: {0}";
-    string refreshRateFormat = "Refresh Rate: {0}";
-    string currentFPSFormat = "FPS: {0}";
-    string diffConfigFormat = "Diff Config: {0}";
-    string activeBlocksFormat = "Active Blocks (#/300): {0}";
 
     const int ResWidth = 1080;
     const int ResHeight = 1920;
@@ -97,11 +68,7 @@ public class GameManager : Singleton<GameManager>
        ),
     };
 
-    internal static void MarkBulgingPeriod()
-    {
-        Instance.bulgingTMP.text = "Status: Bulging";
-    }
-
+  
     public static DifficultyConfig SelectedConfig => DiffConfigs[1];
 
 
@@ -110,41 +77,6 @@ public class GameManager : Singleton<GameManager>
     {
         Application.targetFrameRate = (int)targetFrameRate;
         QualitySettings.vSyncCount = vSyncOn ? 1 : 0;
-        FPSCounter.FpsUpdateEvent = PostFPS;
-
-        if (!EnableDebug)
-        {
-            debugObj.SetActive(EnableDebug);
-            return;
-        }
         
-        targetFPSTMP.text = string.Format(targetFPSFormat, Application.targetFrameRate);
-        refreshRateTMP.text = string.Format(refreshRateFormat, Screen.currentResolution.refreshRate);
     }
-
-    public static void PostChainLength(int value)
-    {
-        if (!EnableDebug) return;
-        Instance.chainLengthTMP.text = string.Format(Instance.chainLengthFormat, value);
-    }
-
-    public static void PostFPS()
-    {
-        if (!EnableDebug) return;
-        Instance.targetFPSTMP.text = string.Format(Instance.targetFPSFormat, Application.targetFrameRate);
-        Instance.FPSTMP.text = string.Format(Instance.currentFPSFormat, FPSCounter.GetCurrectFPS());
-    }
-
-    public static void PostActiveBlocks(int value)
-    {
-        if (!EnableDebug) return;
-        Instance.activeBlocksTMP.text = string.Format(Instance.activeBlocksFormat, value);
-    }
-
-    public static void PostSetConfig(DifficultyConfig config)
-    {
-        if (!EnableDebug) return;
-        Instance.diffConfigTMP.text = string.Format(Instance.diffConfigFormat, config.Tag);
-    }
-
 }

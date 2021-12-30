@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -11,15 +9,15 @@ using UnityEngine;
 /// </summary>
 public class Gateway : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        GameSceneManager.PrepareToLoad(1);
+        LoadPlayerData();
+        GameSceneManager.Deploy();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadPlayerData()
     {
-        
+
     }
 }

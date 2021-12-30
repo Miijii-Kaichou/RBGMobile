@@ -54,7 +54,7 @@ public static class GameSceneManager
 
     internal static void Deploy()
     {
-        LoadScene(StagePrepped ?? TITLE_SCREEN);
+        LoadScene(StagePrepped ?? 0);
     }
 
     public static void ReloadScene()

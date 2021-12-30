@@ -36,7 +36,7 @@ public class Timer : MonoBehaviour
 
         setConfig = GameManager.SelectedConfig;
         
-        GameManager.PostSetConfig(setConfig);
+        GameSessionDebugger.PostSetConfig(setConfig);
 
 
         if (timedOutEvent == null)
@@ -77,7 +77,7 @@ public class Timer : MonoBehaviour
         {
             //Even though we are at the cap, this is called the "Bulging Period"
             //where we slowly go beyond the initial cap value that we have.
-            GameManager.MarkBulgingPeriod();
+            GameSessionDebugger.MarkBulgingPeriod();
             currentDuration = setConfig.DurationCap;
             currentDuration -= PlayingField.CurrentLevel / 1000f;
         }

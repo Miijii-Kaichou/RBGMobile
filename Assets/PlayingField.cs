@@ -94,7 +94,7 @@ public class PlayingField : Singleton<PlayingField>
 
             CollectionValidationCallbackMethod = () =>
             {
-                GameManager.PostChainLength(Stats.ChainLength);
+                GameSessionDebugger.PostChainLength(Stats.ChainLength);
                 Stats.CheckLevel();
                 PostLevel();
                 collectionActive = false;
@@ -460,7 +460,7 @@ public class PlayingField : Singleton<PlayingField>
         QueuedBlocks.Enqueue(block);
 
         //Increase the Chain Length to Debug
-        GameManager.PostChainLength(QueuedBlocks.Count);
+        GameSessionDebugger.PostChainLength(QueuedBlocks.Count);
 
         //Draw out line
         Instance.lineRenderer.positionCount = QueuedBlocks.Count;
@@ -509,7 +509,7 @@ public class PlayingField : Singleton<PlayingField>
         while (!PlayerDefeated)
         {
             var activeBlocks = (from activeBlock in cachedBlockObjects where activeBlock.activeInHierarchy select activeBlock).ToArray().Length;
-            GameManager.PostActiveBlocks(activeBlocks);
+            GameSessionDebugger.PostActiveBlocks(activeBlocks);
             yield return new WaitForSeconds(0.25f);
         }
     }

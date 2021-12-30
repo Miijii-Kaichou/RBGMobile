@@ -25,41 +25,9 @@ namespace Extensions
         public const int ONE = 1;
         public const float HALF = 0.5f;
         public const float QUARTER = 0.25f;
-        public const int ASPECT_RATION_WIDTH = 3;
-        public const int ASPECT_RATION_HEIGHT = 2;
-        public const string HIGH_SCORE_JSON = @"/TOP.json";
-        public const int OPTION_COLLECTIONS_COUNT = 4;
-        public const int DEFAULT_LIVE_COUNT = 3;
-        public const string DEFAULT_KEYMAPPING_SCHEME = "Z;X;LeftShift;A;S;D;Return;Backspace;Escape;";
         public const bool ALLOW = true, ENABLE = true, YES = true, ACTIVE = true;
         public const bool PROHIBIT = false, DISABLE = false, NO = false, INACTIVE = false;
-        public const int STAGE_1 = 6;
-        public const int STAGE_2 = 13;
-        public const int STAGE_3 = 14;
-        public const int STAGE_4 = 15;
-        public const int STAGE_5 = 16;
-        public const int STAGE_6 = 17;
-        public const int STAGE_7 = 18;
-        public const int STAGE_8 = 19;
-        public const int DIFFICULTY_SELECTION = 2;
-        public const int TUTORIAL_LOG = 8;
-        public const int STAGE_SELECTION = 7;
-        public const int OPTIONS_MENU = 5;
-        public const int CHARACTER_SELECTION = 3;
-        public const int TITLE_SCREEN = 0;
-        public const int STAR_SIMULATRE_SELECTION = 1;
-        public const int AKASHIC_RECORDS_ENTRY = 4;
-        public const int AKASHIC_RECORDS_VIEW = 11;
-        public const int MUSIC_BOX = 9;
-        public const int GALLERY = 10;
-        public const int GRIMOIRELOG = 12;
         public const char SEMICOLON = ';';
-        public const string ENABLED = "ENABLED";
-        public const string GENERAL_TAG = "__GENERAL__";
-        public const string INPUT_TAG = "__INPUT__";
-        public const string GRAPHICS_TAG = "__GRAPHICS__";
-        public const string AUDIO_TAG = "__AUDIO__";
-        public const string SPELL_LIBRARY_TAG = "";
         public const char SPACE_CHAR = ' ';
         public const object NULL_OBJ = null;
         public const float HIGH_REVERB_LEVEL = 1000.00f;
@@ -68,20 +36,7 @@ namespace Extensions
         public const float NORMAL_PITCH = 1f;
         public const int TWO = 2;
         public const string EMPTY = "";
-        public const char DELIMITER_X = 'x';
-        public const string DEFAULT_RESOLUTION = "1920 x 1080";
-        public const int CONTINUOUS = -1;
-        public const float GLOBAL_REFRESH_INTERVAL = 0.05f;
-        public const int PITY_SCORE = HUNDRED;
-        public const string REPLAY_FILE_EXTENSION = ".akr";
         public const string UNKNOWN = "???";
-        #endregion
-
-        #region Readonly Fields
-        public static readonly EventManager.CallBackMethod MOVE_CURSOR = () => AudioManager.Play("selection");
-        public static readonly EventManager.CallBackMethod CONFIRM = () => AudioManager.Play("confirmSelection");
-        public static readonly EventManager.CallBackMethod CANCEL = () => AudioManager.Play("cancelSelection");
-        public static readonly EventManager.CallBackMethod FINAL = () => AudioManager.Play("finalConfirmation");
         #endregion
     }
 
