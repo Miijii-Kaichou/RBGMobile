@@ -37,61 +37,24 @@ public class UsernameCreation : MonoBehaviour
 
         //Update PlayerModel
         GameManager.PlayerModel.FirstTimeUser = true;
-        GameManager.PlayerModel.BlooxCurrency = 1000;
         GameManager.PlayerModel.UniqueIdentifier = GetUniqueIdentifier();
         GameManager.PlayerModel.UserName = userNameField.text;
         GameManager.PlayerModel.PlayerAvatar = 0;
         GameManager.PlayerModel.PlayerTheme = 0;
-        GameManager.PlayerModel.PlayerLevel = 1;
         GameManager.PlayerModel.TimesPlayedSolo = 0;
         GameManager.PlayerModel.TimesPlayedSurvival = 0;
         GameManager.PlayerModel.TimesPlayedWipeOut = 0;
         GameManager.PlayerModel.HasRecoverableAccount = false;
 
         //Push Modified PlayerModel to Playfab Title
-        GameManager.PushToRemotePlayerModel(InitializePlayerStatistics, PostError);
+        GameManager.PushToRemotePlayerModel(GameManager.InitializePlayerStatistics, GameManager.PostError);
     }
 
-    void PostError(PlayFabError error)
-    {
-        Debug.Log($"Failed! [REASON: {error.ErrorMessage}] [EXIT CODE: {error.HttpCode}]");
-    }
+  
 
     public void RecoverAccountInfo()
     {
 
-    }
-
-    void InitializePlayerStatistics(PlayFabResultCommon result)
-    {
-        var request = new UpdatePlayerStatisticsRequest()
-        {
-            Statistics = new System.Collections.Generic.List<StatisticUpdate>()
-            {
-                new StatisticUpdate() {StatisticName = "SoloModePlayCount", Value = 0 },
-                new StatisticUpdate(){StatisticName = "SurvivalModePlayCount", Value = 0 },
-                new StatisticUpdate(){StatisticName = "WipeOutPlayCount", Value = 0 },
-            }
-        };
-
-        PlayFabClientAPI.UpdatePlayerStatistics(request, GetInitialzeVirtualCurrency, PostError);
-    }
-
-    void GetInitialzeVirtualCurrency(PlayFabResultCommon result)
-    {
-        
-        PlayFabClientAPI.GetUserInventory(
-            new GetUserInventoryRequest { },
-            ok => { GameManager.VirtualCurrency = ok.VirtualCurrency; GotoMainSelection(ok); },
-            err => PostError(err)
-        );
-    }
-    
-    void GotoMainSelection(PlayFabResultCommon success)
-    {
-        Debug.Log("Proceeding to Main Menu");
-        GameManager.PlayerModel.BlooxCurrency = GameManager.VirtualCurrency["Bloox"];
-        GameSceneManager.Deploy();
     }
 
     private string GetUniqueIdentifier()

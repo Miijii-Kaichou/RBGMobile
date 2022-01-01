@@ -10,8 +10,8 @@ using static Extensions.Convenience;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField]
-    PlayerModel _playerModel;
+
+    public PlayerModel playerModel;
 
     [SerializeField]
     FrameRate targetFrameRate;
@@ -24,6 +24,8 @@ public class GameManager : Singleton<GameManager>
     public static bool EnableDebug => Instance._enableDebug;
 
     public static Dictionary<string, int> VirtualCurrency = new Dictionary<string, int>();
+
+    
 
     internal static void SetDiffConfig(int difficulty)
     {
@@ -49,7 +51,8 @@ public class GameManager : Singleton<GameManager>
             initDuration:  15f,
             durationDelta: 0.05f,
             durationCap:   4f,
-            levelDividend: 256f
+            levelDividend: 256f,
+            influence: 0.25f
        ),
 
        new DifficultyConfig
@@ -59,7 +62,8 @@ public class GameManager : Singleton<GameManager>
             initDuration:  15f,
             durationDelta: 0.125f,
             durationCap:   3f,
-            levelDividend: 256f
+            levelDividend: 256f,
+            influence: 0.5f
        ),
 
        new DifficultyConfig
@@ -69,7 +73,8 @@ public class GameManager : Singleton<GameManager>
             initDuration:  10f,
             durationDelta: 0.25f,
             durationCap:   2f,
-            levelDividend: 128f
+            levelDividend: 128f,
+            influence: 1
        ),
 
        new DifficultyConfig
@@ -79,7 +84,8 @@ public class GameManager : Singleton<GameManager>
             initDuration:  5f,
             durationDelta: 0.5f,
             durationCap:   1f,
-            levelDividend: 64f
+            levelDividend: 64f,
+            influence: 2
        ),
     };
 
@@ -95,9 +101,48 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    public static PlayerModel PlayerModel => Instance._playerModel;
+    public static PlayerModel PlayerModel => Instance.playerModel;
 
-    #region Cloud-Scripts Calls
+    #region Client-API Calls
+
+    public static void PostError(PlayFabError error)
+    {
+        Debug.Log($"Failed! [REASON: {error.ErrorMessage}] [EXIT CODE: {error.HttpCode}]");
+    }
+
+    public static void InitializePlayerStatistics(PlayFabResultCommon result)
+    {
+        var request = new UpdatePlayerStatisticsRequest()
+        {
+            Statistics = new System.Collections.Generic.List<StatisticUpdate>()
+            {
+                new StatisticUpdate() {StatisticName = "SoloModePlayCount", Value = 0 },
+                new StatisticUpdate(){StatisticName = "SurvivalModePlayCount", Value = 0 },
+                new StatisticUpdate(){StatisticName = "WipeOutPlayCount", Value = 0 },
+            }
+        };
+
+        PlayFabClientAPI.UpdatePlayerStatistics(request, GetInitialzeVirtualCurrency, PostError);
+    }
+
+    public static void GetInitialzeVirtualCurrency(PlayFabResultCommon result)
+    {
+
+        PlayFabClientAPI.GetUserInventory(
+            new GetUserInventoryRequest { },
+            ok => { GameManager.VirtualCurrency = ok.VirtualCurrency; GotoMainSelection(ok); },
+            err => PostError(err)
+        );
+    }
+
+    static void GotoMainSelection(PlayFabResultCommon success)
+    {
+        Debug.Log("Proceeding to Main Menu");
+        PlayerModel.BlooxCurrency = GameManager.VirtualCurrency["BX"];
+        GameSceneManager.Deploy();
+    }
+
+
     public static void PushToRemotePlayerModel(Action<UpdateUserDataResult> success, Action<PlayFabError> fail)
     {
         var request = new UpdateUserDataRequest()
@@ -109,7 +154,7 @@ public class GameManager : Singleton<GameManager>
                 { "UniqueIdentifier", PlayerModel.UniqueIdentifier },
                 { "PlayerAvatar", PlayerModel.PlayerAvatar.ToString() },
                 { "RGBTheme", PlayerModel.PlayerTheme.ToString() },
-                { "Level", PlayerModel.PlayerLevel.ToString() },
+                { "ExperiencePoints", PlayerModel._PlayerExperience.ToString() },
                 { "Recoverable", PlayerModel.HasRecoverableAccount.ToString() },
             },
         };
@@ -161,15 +206,6 @@ public class GameManager : Singleton<GameManager>
 
     public static void RequestPlayerModel(string pfID, Action<GetUserDataResult> success, Action<PlayFabError> fail)
     {
-        if (PlayerModel.FirstTimeUser)
-        {
-            //Automatic Success Invocation. 
-            //The class responsible for call will handle
-            //the rest.
-            success.Invoke(null);
-            return;
-        }
-
         //Set up GET REQUEST
         var request = new GetUserDataRequest()
         {
@@ -188,7 +224,9 @@ public class GameManager : Singleton<GameManager>
                 PlayerModel.UniqueIdentifier = ok.Data["UniqueIdentifier"].Value;
                 PlayerModel.PlayerAvatar = ok.Data["PlayerAvatar"].Value.ToInt();
                 PlayerModel.PlayerTheme = ok.Data["RGBTheme"].Value.ToInt();
-                PlayerModel.PlayerLevel = ok.Data["Level"].Value.ToInt();
+                PlayerModel.PlayerExperience = ok.Data["ExperiencePoints"].Value.ToFloat();
+                PlayerLevelManager.LevelExperiencePoints = ok.Data["ExperiencePoints"].Value.ToFloat();
+                Debug.Log(ok.Data["ExperiencePoints"].Value.ToFloat());
                 PlayerModel.HasRecoverableAccount = ok.Data["Recoverable"].Value.ToBool();
                 success.Invoke(ok);
             },
@@ -200,3 +238,6 @@ public class GameManager : Singleton<GameManager>
     }
     #endregion
 }
+
+#if UNITY_EDITOR
+#endif

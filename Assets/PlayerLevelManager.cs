@@ -1,18 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlayerLevelManager : MonoBehaviour
+public class PlayerLevelManager : Singleton<PlayerLevelManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    public static float PreviousLevelExperiencePoints = 0;
+    public static float LevelExperiencePoints = 0;
+    public static int CurrentLevel
     {
-        
+        get
+        {
+            return Mathf.FloorToInt(LevelExperiencePoints / ExperienceMax) + 1;
+        }
+    }
+    public const float MaxLevel = 200;
+    public const float ExperienceMax = 100;
+    public static float Percentage => (LevelExperiencePoints / ExperienceMax) % 1f;
+    
+    public static void AddExperience(float value)
+    {
+        LevelExperiencePoints += value * (((MaxLevel + 1f) - (float)CurrentLevel) / MaxLevel);
     }
 
-    // Update is called once per frame
-    void Update()
+    internal static void Reset()
     {
-        
+        LevelExperiencePoints = 0;
+        PreviousLevelExperiencePoints = LevelExperiencePoints;
     }
 }

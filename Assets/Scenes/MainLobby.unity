@@ -2069,9 +2069,9 @@ MonoBehaviour:
   PlayerOverlay: {fileID: 1272179056}
   MenuOverlay: {fileID: 1644804810}
   playerUserNameTMP: {fileID: 561308279}
-  playerBlooxValuesTMP: {fileID: 0}
   playerLevelTMP: {fileID: 133559868}
-  playerAvatarImage: {fileID: 0}
+  playerAvatarImage: {fileID: 1914696973}
+  levelFillMeter: {fileID: 1382420334}
 --- !u!1 &945870068
 GameObject:
   m_ObjectHideFlags: 0

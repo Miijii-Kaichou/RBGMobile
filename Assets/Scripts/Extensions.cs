@@ -180,6 +180,10 @@ namespace Extensions
         {
             return Convert.ToInt32(_);
         }
+        public static float ToFloat(this string _)
+        {
+            return Convert.ToSingle(_);
+        }
 
         public static T CastTo<T>(this object _)
         {

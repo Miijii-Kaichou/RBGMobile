@@ -19,6 +19,7 @@ public class BlockTouchAction : TouchableEntity
     Condition dontInteractCondition;
     public override void OnInitialized()
     {
+        base.OnInitialized();
         #region First-Time Initialization
         if (gameObject.activeInHierarchy)
         {
@@ -30,8 +31,8 @@ public class BlockTouchAction : TouchableEntity
             );
             SetInitColor(blockImage.color);
             SetColor(initColor);
+            blockIdentity.ApplyColor();
             blockIdentity.SetPosition(blockIdentity.RectTransform.localPosition);
-            base.OnInitialized();
         } 
         #endregion
     }

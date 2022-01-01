@@ -53,21 +53,25 @@ public class Gateway : MonoBehaviour
     {
         //FetchPlayerModelData
         GameManager.RequestPlayerModel(result.PlayFabId, ValidateFirstTimeUser, PostError);
-
+        
        
     }
 
     public void ValidateFirstTimeUser(GetUserDataResult result)
     {
-        //Check if this is the first time player had played this game
-        if (GameManager.PlayerModel.FirstTimeUser && GameManager.PlayerModel.UserName == string.Empty)
+        //Check if this is the first time player had played this game, not by if it is his first time, but if
+        //there is no username.
+        if (GameManager.PlayerModel.UserName == string.Empty)
         {
+            Debug.Log(GameManager.PlayerModel.FirstTimeUser);
             //Player is first time player
             GameSceneManager.PrepareToLoad(1);
 
         }
         else
         {
+            PlayerLevelManager.LevelExperiencePoints = GameManager.PlayerModel.PlayerExperience;
+
             //Player account exists, and player has username
             GameSceneManager.PrepareToLoad(2);
         }

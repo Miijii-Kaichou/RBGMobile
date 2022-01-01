@@ -7,20 +7,11 @@ public class MainMenuSelection : MonoBehaviour
 
     public void OnEnable()
     {
-        GameManager.PushToRemotePlayerModel(UpdateStats, PostError);
+        GameOverlay.Reinstate();
+        
     }
 
-    void UpdateStats(UpdateUserDataResult result)
-    {
-        GameManager.PostPlayerPlayCountStatistics(
-            (success) => { Debug.Log("PlayerStats Successfully Updated"); },
-            PostError);
-    }
-
-    void PostError(PlayFabError error)
-    {
-        Debug.LogError($"Player Stats Update Failed: [REASON:{error.ErrorMessage}] [EXIT CODE: {error.HttpCode}]");
-    }
+    
 
     public void OnSolo()
     {

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class PlayingField : Singleton<PlayingField>
 {
@@ -70,6 +72,7 @@ public class PlayingField : Singleton<PlayingField>
     const int MaxBlockPoolSize = 300;
     const int BlockScore = 10;
     public static bool GameSessionStarted = false;
+    static float collectedExperience = 0;
 
     //Start is called just before any of the Update Method is called the first time
     private void Start()
@@ -140,7 +143,23 @@ public class PlayingField : Singleton<PlayingField>
 
     public void ReturnToMainMenu()
     {
+        Debug.Log($"You've Gained {collectedExperience} EXP");
+        PlayerLevelManager.AddExperience(collectedExperience);
+        GameManager.PushToRemotePlayerModel(UpdateStats, GameManager.PostError);
+        GameOverlay.EnableOverlay();
         GameSceneManager.LoadScene(2);
+    }
+
+    void UpdateStats(UpdateUserDataResult result)
+    {
+        GameManager.PostPlayerPlayCountStatistics(
+            (success) => { Debug.Log("PlayerStats Successfully Updated"); },
+            PostError);
+    }
+
+    void PostError(PlayFabError error)
+    {
+        Debug.LogError($"Player Stats Update Failed: [REASON:{error.ErrorMessage}] [EXIT CODE: {error.HttpCode}]");
     }
 
     /// <summary>
@@ -427,6 +446,7 @@ public class PlayingField : Singleton<PlayingField>
             //TODO: Deselect, and destory blocks / send blocks to opponent
             referencedChain[i].Deselect(true);
             Stats.Score += BlockScore;
+            collectedExperience += (CurrentLevel / (GameManager.SelectedConfig.PlayerExperienceInfluence * 10f));
             PostScore();
         }
 

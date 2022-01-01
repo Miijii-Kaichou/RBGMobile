@@ -8,17 +8,22 @@ public class GameOverlay : Singleton<GameOverlay>
     GameObject PlayerOverlay, MenuOverlay;
 
     [SerializeField]
-    TextMeshProUGUI playerUserNameTMP, playerBlooxValuesTMP, playerLevelTMP;
+    TextMeshProUGUI playerUserNameTMP, playerLevelTMP;
 
     [SerializeField]
     Image playerAvatarImage;
 
-    public void OnEnable()
+    [SerializeField]
+    Image levelFillMeter;
+
+    public static void Reinstate()
     {
-        playerUserNameTMP.text = GameManager.PlayerModel.UserName;
+        Instance.playerUserNameTMP.text = GameManager.PlayerModel.UserName;
         //playerBlooxValuesTMP.text = GameManager.PlayerModel.BlooxCurrency.ToString();
-        playerLevelTMP.text = $"LV {GameManager.PlayerModel.PlayerLevel}";
-        playerAvatarImage.sprite = Sprite.Create(AvatarCollectionLog.GetAvatar(GameManager.PlayerModel.PlayerAvatar), new Rect(0, 0, 2, 2), new Vector2(0.5f, 0.5f));
+        Instance.playerLevelTMP.text = $"LV {PlayerLevelManager.CurrentLevel}";
+        Instance.levelFillMeter.fillAmount = PlayerLevelManager.Percentage;
+        Texture2D avatar = AvatarCollectionLog.GetAvatar(GameManager.PlayerModel.PlayerAvatar);
+        Instance.playerAvatarImage.sprite = Sprite.Create(avatar, new Rect(0, 0, avatar.width, avatar.height), new Vector2(0.5f, 0.5f));
     }
 
     public static void DisableOverlay()

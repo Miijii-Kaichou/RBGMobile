@@ -50,7 +50,6 @@ public class GameInitializer : Singleton<GameInitializer>
             imageBlocks[i].color = blockColors[value];
             blocks[i].AssignData((ColorType)value, i);
             blocks[i].SetLaneID(i % 10);
-            blocks[i].ApplyColor();
             
             if(blocks[i].gameObject.activeInHierarchy)
                 blocks[i].InitTouchControl();

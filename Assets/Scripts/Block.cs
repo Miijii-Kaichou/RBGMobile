@@ -118,7 +118,8 @@ public class Block : MassObject
     {
         IsGrounded = false;
         _instanceID = instanceID;
-        ChangeColorType(color);
+        _color = color;
+        ApplyColor();
     }
 
     public void SetLaneID(int laneId)
@@ -130,6 +131,7 @@ public class Block : MassObject
     {
         attachedTouchAction = attachedTouchAction ?? GetComponent<BlockTouchAction>();
         attachedTouchAction.SetInitColor(blockColors[(int)_color]);
+        attachedTouchAction.SetColor(blockColors[(int)_color]);
         attachedTouchAction.Init();
     }
 
@@ -142,6 +144,7 @@ public class Block : MassObject
                 return;
         }
         attachedTouchAction.SetColor(blockColors[(int)_color]);
+        
     }
 
     public void Deselect(bool disable = false)
@@ -172,12 +175,6 @@ public class Block : MassObject
     }
 
     public ColorType Color => _color;
-
-    public void ChangeColorType(ColorType type)
-    {
-        _color = type;
-        ApplyColor();
-    }
 
     public void ReturnToInitialPosition() => RectTransform.anchoredPosition = initPosition;
 
