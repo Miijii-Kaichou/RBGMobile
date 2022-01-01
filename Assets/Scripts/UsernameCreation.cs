@@ -42,7 +42,7 @@ public class UsernameCreation : MonoBehaviour
         GameManager.PlayerModel.UserName = userNameField.text;
         GameManager.PlayerModel.PlayerAvatar = 0;
         GameManager.PlayerModel.PlayerTheme = 0;
-        GameManager.PlayerModel.PlayerRank = 1;
+        GameManager.PlayerModel.PlayerLevel = 1;
         GameManager.PlayerModel.TimesPlayedSolo = 0;
         GameManager.PlayerModel.TimesPlayedSurvival = 0;
         GameManager.PlayerModel.TimesPlayedWipeOut = 0;

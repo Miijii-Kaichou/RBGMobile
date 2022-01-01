@@ -109,6 +109,7 @@ public class GameManager : Singleton<GameManager>
                 { "UniqueIdentifier", PlayerModel.UniqueIdentifier },
                 { "PlayerAvatar", PlayerModel.PlayerAvatar.ToString() },
                 { "RGBTheme", PlayerModel.PlayerTheme.ToString() },
+                { "Level", PlayerModel.PlayerLevel.ToString() },
                 { "Recoverable", PlayerModel.HasRecoverableAccount.ToString() },
             },
         };
@@ -187,6 +188,7 @@ public class GameManager : Singleton<GameManager>
                 PlayerModel.UniqueIdentifier = ok.Data["UniqueIdentifier"].Value;
                 PlayerModel.PlayerAvatar = ok.Data["PlayerAvatar"].Value.ToInt();
                 PlayerModel.PlayerTheme = ok.Data["RGBTheme"].Value.ToInt();
+                PlayerModel.PlayerLevel = ok.Data["Level"].Value.ToInt();
                 PlayerModel.HasRecoverableAccount = ok.Data["Recoverable"].Value.ToBool();
                 success.Invoke(ok);
             },

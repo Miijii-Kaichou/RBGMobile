@@ -9,7 +9,8 @@ public class PlayerModel : ScriptableObject
     public int BlooxCurrency  = 0;
     public int PlayerAvatar;
     public int PlayerTheme;
-    public int PlayerRank = 1;
+    public int PlayerLevel = 1;
+    public int PlayerEXUntilNextLevel = 90;
     public int TimesPlayedSolo  = 0;
     public int TimesPlayedWipeOut  = 0;
     public int TimesPlayedSurvival = 0;
@@ -29,6 +30,7 @@ public class PlayerModel : ScriptableObject
             TotalModesPlayed = value;
         }
     }
+
 
     public void SetTotalModePlayed(int value) => TotalModesPlayed = value;
     public bool HasRecoverableAccount  = false;
