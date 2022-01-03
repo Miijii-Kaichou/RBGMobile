@@ -6,6 +6,7 @@ public class PlayerModel : ScriptableObject
     public string UserName;
     public string UniqueIdentifier;
     public int BlooxCurrency = 0;
+    public int PrizmCurrency = 0;
     public int PlayerAvatar;
     public int PlayerTheme;
     public float PlayerExperience;
@@ -43,9 +44,12 @@ public class PlayerModel : ScriptableObject
         }
     }
 
+    
 
     public void SetTotalModePlayed(int value) => TotalModesPlayed = value;
     public bool HasRecoverableAccount = false;
+    public int[] SoloBestScores = new int[4];
+    public int SurvivalBestScore, WipeOutBestScore = 0;
 
     public void Reset()
     {
@@ -62,5 +66,8 @@ public class PlayerModel : ScriptableObject
         TimesPlayedWipeOut = default;
         TimesPlayedSurvival = default;
         TotalModesPlayed = default;
+        SoloBestScores = new int[4];
+        SurvivalBestScore = 0;
+        WipeOutBestScore = SurvivalBestScore;
     }
 }

@@ -48,7 +48,8 @@ public sealed class PlayingFieldStats
         Level = 1;
         PreviousLevel = Level;
         Score = MaxChainLength;
-        BestScore = Score;
+        Debug.Log(GameManager.SelectedConfig.ID);
+        BestScore = GameManager.PlayerModel.SoloBestScores[GameManager.SelectedConfig.ID];
     }
     public static PlayingFieldStats CreateNew()
     {

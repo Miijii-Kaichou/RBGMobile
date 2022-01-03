@@ -1,6 +1,7 @@
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using PlayFab.SharedModels;
 using System;
 
 /// <summary>
@@ -51,14 +52,41 @@ public class Gateway : MonoBehaviour
 
     private void OnMobileLogInSuccess(LoginResult result)
     {
-        //FetchPlayerModelData
-        GameManager.RequestPlayerModel(result.PlayFabId, ValidateFirstTimeUser, PostError);
-        
-       
+        //Begin the Player Data Retrieval Process
+        Debug.Log("Retrieving Player Data...");
+        GameManager.RequestPlayerModel(result.PlayFabId, FetchPlayerStatistics, PostError);
     }
 
-    public void ValidateFirstTimeUser(GetUserDataResult result)
+    #region Player Data Retrieval Process
+    /// <summary>
+    /// Return the Player Statistics Data. This happens after the Player Model has been retrieved.
+    /// </summary>
+    /// <param name="result"></param>
+    private void FetchPlayerStatistics(PlayFabResultCommon result)
     {
+        GameManager.RequestPlayerBestStatistics(FetchPlayerVirtualCurrencty, PostError);
+    }
+
+    /// <summary>
+    /// Return the player's Virtual Currency. This happen after the Player Statistics has been retrieved.
+    /// </summary>
+    /// <param name="result"></param>
+    private void FetchPlayerVirtualCurrencty(PlayFabResultCommon result)
+    {
+        GameManager.GetVirtualCurrency(ValidateFirstTimeUser, PostError);
+    }
+
+    /// <summary>
+    /// The last stage of the Player Data Retrieval Process. 
+    /// This happens after all Player Data (Player Model, Stats, Virtual Currency) has been retrieved
+    /// </summary>
+    /// <param name="result"></param>
+    public void ValidateFirstTimeUser(PlayFabResultCommon result)
+    {
+        Debug.Log("Player Data Successfully Retrieved!");
+
+        
+
         //Check if this is the first time player had played this game, not by if it is his first time, but if
         //there is no username.
         if (GameManager.PlayerModel.UserName == string.Empty)
@@ -71,16 +99,27 @@ public class Gateway : MonoBehaviour
         else
         {
             PlayerLevelManager.LevelExperiencePoints = GameManager.PlayerModel.PlayerExperience;
+            GameManager.VirtualCurrency = (result as GetUserInventoryResult).VirtualCurrency;
+            GameManager.PlayerModel.BlooxCurrency = GameManager.VirtualCurrency["BX"];
+            GameManager.PlayerModel.PrizmCurrency = GameManager.VirtualCurrency["PZ"];
 
             //Player account exists, and player has username
             GameSceneManager.PrepareToLoad(2);
         }
         GameSceneManager.Deploy();
-    }
+    } 
+    #endregion
 
     public void PostError(PlayFabError err)
     {
-        //This mean it failed to read, so it's going to have to create a new account
+        if(GameManager.PlayerModel.UserName != string.Empty)
+        {
+            //Can't continue forward. An error had occured
+            Application.Quit();
+        }
+
+        //This means they weren't in the Playfab database. Proceed to
+        //Privacy and Consent Policy Guidelines and Terms and Agreements
         GameSceneManager.PrepareToLoad(1);
         GameSceneManager.Deploy();
     }

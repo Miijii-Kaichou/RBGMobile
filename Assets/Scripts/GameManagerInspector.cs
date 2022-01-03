@@ -3,7 +3,7 @@ using UnityEditor;
 #if UNITY_EDITOR
 
 [CustomEditor(typeof(GameManager))]
-public class GameManageInspector : Editor
+public class GameManagerInspector : Editor
 {
     const string resetPlayerModeKey = "OptOut.PlayerModel.Reset";
     SerializedProperty playerModel;

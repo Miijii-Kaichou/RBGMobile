@@ -1,6 +1,4 @@
 using UnityEngine;
-using PlayFab;
-using PlayFab.ClientModels;
 
 public class MainMenuSelection : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class MainMenuSelection : MonoBehaviour
     public void OnEnable()
     {
         GameOverlay.Reinstate();
-        
+
     }
 
     

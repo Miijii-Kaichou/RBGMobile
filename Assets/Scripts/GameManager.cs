@@ -10,6 +10,7 @@ using static Extensions.Convenience;
 
 public class GameManager : Singleton<GameManager>
 {
+    #region Serialized Fields
 
     public PlayerModel playerModel;
 
@@ -21,32 +22,37 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     public bool _enableDebug = false;
+
+    [SerializeField]
+    float gravityValue = 0.980665f;
+    #endregion
+
+    #region Static Properties/Fields
     public static bool EnableDebug => Instance._enableDebug;
 
     public static Dictionary<string, int> VirtualCurrency = new Dictionary<string, int>();
 
-    
-
-    internal static void SetDiffConfig(int difficulty)
-    {
-        SelectedConfig = DiffConfigs[difficulty];
-    }
-
-    [SerializeField]
-    float gravityValue = 0.980665f;
-
     public static float GravityValue => Instance.gravityValue;
 
-
-    const int ResWidth = 1080;
-    const int ResHeight = 1920;
+    static Dictionary<string, int> RequestedStatistics = new Dictionary<string, int>();
+    static List<string> statisticNames = new List<string>()
+            {
+                "SoloModePlayCount",
+                "SurvivalModePlayCount",
+                "WipeOutPlayCount",
+                "SoloEasyBestScore",
+                "SoloNormalBestScore",
+                "SoloHardBestScore",
+                "SoloExpertBestScore"
+            };
 
     //Difficulty Configurations
     public static DifficultyConfig[] DiffConfigs { get; private set; } =
     {
        new DifficultyConfig
        (
-            "DIFF_CONFIG_EASY",
+            tag: "DIFF_CONFIG_EASY",
+            id: 0,
             totalLanes: 3,
             initDuration:  15f,
             durationDelta: 0.05f,
@@ -57,7 +63,8 @@ public class GameManager : Singleton<GameManager>
 
        new DifficultyConfig
        (
-            "DIFF_CONFIG_NORMAL",
+            tag: "DIFF_CONFIG_NORMAL",
+            id: 1,
             totalLanes: 6,
             initDuration:  15f,
             durationDelta: 0.125f,
@@ -68,7 +75,8 @@ public class GameManager : Singleton<GameManager>
 
        new DifficultyConfig
        (
-            "DIFF_CONFIG_HARD",
+            tag: "DIFF_CONFIG_HARD",
+            id: 2,
             totalLanes: 12,
             initDuration:  10f,
             durationDelta: 0.25f,
@@ -80,6 +88,7 @@ public class GameManager : Singleton<GameManager>
        new DifficultyConfig
        (
             "DIFF_CONFIG_EXPERT",
+            id: 3,
             totalLanes: 18,
             initDuration:  5f,
             durationDelta: 0.5f,
@@ -88,9 +97,19 @@ public class GameManager : Singleton<GameManager>
             influence: 2
        ),
     };
-
-
     public static DifficultyConfig SelectedConfig { get; private set; }
+
+    #endregion
+
+    #region Constants
+    const int ResWidth = 1440;
+    const int ResHeight = 2960;
+    #endregion
+
+    internal static void SetDiffConfig(int difficulty)
+    {
+        SelectedConfig = DiffConfigs[difficulty];
+    }
 
 
     // Start is called before the first frame update
@@ -98,7 +117,7 @@ public class GameManager : Singleton<GameManager>
     {
         Application.targetFrameRate = (int)targetFrameRate;
         QualitySettings.vSyncCount = vSyncOn ? 1 : 0;
-
+        Screen.SetResolution(Screen.width, Screen.height, true, (int)targetFrameRate);
     }
 
     public static PlayerModel PlayerModel => Instance.playerModel;
@@ -114,31 +133,47 @@ public class GameManager : Singleton<GameManager>
     {
         var request = new UpdatePlayerStatisticsRequest()
         {
-            Statistics = new System.Collections.Generic.List<StatisticUpdate>()
+            Statistics = new List<StatisticUpdate>()
             {
                 new StatisticUpdate() {StatisticName = "SoloModePlayCount", Value = 0 },
                 new StatisticUpdate(){StatisticName = "SurvivalModePlayCount", Value = 0 },
                 new StatisticUpdate(){StatisticName = "WipeOutPlayCount", Value = 0 },
+                new StatisticUpdate(){StatisticName = "SoloEasyBestScore", Value = 0 },
+                new StatisticUpdate(){StatisticName = "SoloNormalBestScore", Value = 0 },
+                new StatisticUpdate(){StatisticName = "SoloHardBestScore", Value = 0 },
+                new StatisticUpdate(){StatisticName = "SoloExpertBestScore", Value = 0 },
+
             }
         };
 
-        PlayFabClientAPI.UpdatePlayerStatistics(request, GetInitialzeVirtualCurrency, PostError);
+        PlayFabClientAPI.UpdatePlayerStatistics(request, GetVirtualCurrency, PostError);
     }
 
-    public static void GetInitialzeVirtualCurrency(PlayFabResultCommon result)
+    public static void GetVirtualCurrency(PlayFabResultCommon result)
     {
 
         PlayFabClientAPI.GetUserInventory(
             new GetUserInventoryRequest { },
-            ok => { GameManager.VirtualCurrency = ok.VirtualCurrency; GotoMainSelection(ok); },
+            ok => { GotoMainSelection(ok); },
             err => PostError(err)
         );
     }
 
-    static void GotoMainSelection(PlayFabResultCommon success)
+    public static void GetVirtualCurrency(Action<GetUserInventoryResult> success, Action<PlayFabError> fail)
     {
-        Debug.Log("Proceeding to Main Menu");
-        PlayerModel.BlooxCurrency = GameManager.VirtualCurrency["BX"];
+
+        PlayFabClientAPI.GetUserInventory(
+            new GetUserInventoryRequest { },
+            success,
+            fail
+        );
+    }
+
+    static void GotoMainSelection(GetUserInventoryResult success)
+    {
+        VirtualCurrency = success.VirtualCurrency;
+        PlayerModel.BlooxCurrency = VirtualCurrency["BX"];
+        PlayerModel.PrizmCurrency = VirtualCurrency["PZ"];
         GameSceneManager.Deploy();
     }
 
@@ -186,23 +221,76 @@ public class GameManager : Singleton<GameManager>
         PlayFabClientAPI.UpdatePlayerStatistics(request, success, fail);
     }
 
-    #region Not Implemented
-    //public static void PostPlayerBestStatistics(PlayFabResultCommon result, int soloBest, int survivalBest, int wipeOutBest, Action<PlayFabResultCommon> success = null, Action<PlayFabError> fail = null)
-    //{
-    //    var request = new UpdatePlayerStatisticsRequest()
-    //    {
-    //        Statistics = new List<StatisticUpdate>()
-    //        {
-    //            new StatisticUpdate() {StatisticName = "SoloBest", Value = soloBest },
-    //            new StatisticUpdate(){StatisticName = "SurvivalBest", Value = survivalBest },
-    //            new StatisticUpdate(){StatisticName = "WipeOutBest", Value = wipeOutBest},
-    //        }
-    //    };
+    public static void PostPlayerBestStatistics(int soloBest, int difficulty, Action<PlayFabResultCommon> success = null, Action<PlayFabError> fail = null)
+    {
+        string[] soloPlayModes =
+        {
+            "Easy",
+            "Normal",
+            "Hard",
+            "Expert",
+        };
+        PlayerModel.SoloBestScores[difficulty] = soloBest;
+        var request = new UpdatePlayerStatisticsRequest()
+        {
+            Statistics = new List<StatisticUpdate>()
+            {
+                new StatisticUpdate() {StatisticName = $"Solo{soloPlayModes[difficulty]}BestScore", Value = PlayerModel.SoloBestScores[difficulty]},
+            }
+        };
 
-    //    PlayFabClientAPI.UpdatePlayerStatistics(request, success, fail);
-    //}
+        PlayFabClientAPI.UpdatePlayerStatistics(request, success, fail);
 
-    #endregion
+    }
+
+    public static void RequestPlayerBestStatistics(Action<GetPlayerStatisticsResult> success = null, Action<PlayFabError> fail = null)
+    {
+
+        var request = new GetPlayerStatisticsRequest()
+        {
+            StatisticNames = new List<string>()
+            {
+                "SoloModePlayCount",
+                "SurvivalModePlayCount",
+                "WipeOutPlayCount",
+                "SoloEasyBestScore",
+                "SoloNormalBestScore",
+                "SoloHardBestScore",
+                "SoloExpertBestScore"
+            }
+        };
+
+        PlayFabClientAPI.GetPlayerStatistics(request,
+            (ok) =>
+            {
+                PassStats(ok, success);
+            }, (err) =>
+            {
+                fail.Invoke(err);
+            });
+    }
+
+    static void PassStats(GetPlayerStatisticsResult ok, Action<GetPlayerStatisticsResult> success)
+    {
+
+        foreach (StatisticValue stat in ok.Statistics)
+        {
+            RequestedStatistics.Add(stat.StatisticName, stat.Value);
+        }
+
+        int i = 0;
+        //Update Player Model
+        PlayerModel.TimesPlayedSolo = RequestedStatistics[statisticNames[i++]];
+        PlayerModel.TimesPlayedSurvival = RequestedStatistics[statisticNames[i++]];
+        PlayerModel.TimesPlayedWipeOut = RequestedStatistics[statisticNames[i++]];
+        for (int j = 0; j < PlayerModel.SoloBestScores.Length; j++)
+        {
+            PlayerModel.SoloBestScores[j] = RequestedStatistics[statisticNames[i++]];
+        }
+
+        //Invoke Successful Stat Update
+        success.Invoke(ok);
+    }
 
     public static void RequestPlayerModel(string pfID, Action<GetUserDataResult> success, Action<PlayFabError> fail)
     {
@@ -226,7 +314,6 @@ public class GameManager : Singleton<GameManager>
                 PlayerModel.PlayerTheme = ok.Data["RGBTheme"].Value.ToInt();
                 PlayerModel.PlayerExperience = ok.Data["ExperiencePoints"].Value.ToFloat();
                 PlayerLevelManager.LevelExperiencePoints = ok.Data["ExperiencePoints"].Value.ToFloat();
-                Debug.Log(ok.Data["ExperiencePoints"].Value.ToFloat());
                 PlayerModel.HasRecoverableAccount = ok.Data["Recoverable"].Value.ToBool();
                 success.Invoke(ok);
             },
@@ -238,6 +325,3 @@ public class GameManager : Singleton<GameManager>
     }
     #endregion
 }
-
-#if UNITY_EDITOR
-#endif

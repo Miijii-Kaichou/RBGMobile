@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using PlayFab;
 using PlayFab.ClientModels;
+using PlayFab.SharedModels;
 
 public class PlayingField : Singleton<PlayingField>
 {
@@ -74,6 +75,8 @@ public class PlayingField : Singleton<PlayingField>
     public static bool GameSessionStarted = false;
     static float collectedExperience = 0;
 
+    int testValue = 0;
+
     //Start is called just before any of the Update Method is called the first time
     private void Start()
     {
@@ -89,6 +92,8 @@ public class PlayingField : Singleton<PlayingField>
         cachedBlockObjects = new GameObject[MaxBlockPoolSize];
 
         Stats = PlayingFieldStats.CreateNew();
+
+        PostBest();
 
         GameInitializer.Init();
 
@@ -145,16 +150,41 @@ public class PlayingField : Singleton<PlayingField>
     {
         Debug.Log($"You've Gained {collectedExperience} EXP");
         PlayerLevelManager.AddExperience(collectedExperience);
-        GameManager.PushToRemotePlayerModel(UpdateStats, GameManager.PostError);
-        GameOverlay.EnableOverlay();
-        GameSceneManager.LoadScene(2);
+
+        //First we have to push updated player model
+        GameManager.PushToRemotePlayerModel(UpdateCountStats, GameManager.PostError);
+
     }
 
-    void UpdateStats(UpdateUserDataResult result)
+    void UpdateCountStats(UpdateUserDataResult result)
     {
+        //Then update count statistics
         GameManager.PostPlayerPlayCountStatistics(
-            (success) => { Debug.Log("PlayerStats Successfully Updated"); },
+            UpdateBestScore,
             PostError);
+    }
+
+    void UpdateBestScore(PlayFabResultCommon result)
+    {
+        //Finally, post best score if gotten
+        if (Stats.Score <= GameManager.PlayerModel.SoloBestScores[GameManager.SelectedConfig.ID])
+        {
+            DeployScene();
+            return;
+        }
+
+        GameManager.PostPlayerBestStatistics(Stats.Score, GameManager.SelectedConfig.ID,
+            (ok) =>
+            {
+                Debug.Log("PlayerStats Successfully Updated");
+                DeployScene();
+            }, PostError);
+    }
+
+    void DeployScene()
+    {
+        GameOverlay.EnableOverlay();
+        GameSceneManager.LoadScene(2);
     }
 
     void PostError(PlayFabError error)
@@ -449,7 +479,7 @@ public class PlayingField : Singleton<PlayingField>
             collectedExperience += (CurrentLevel / (GameManager.SelectedConfig.PlayerExperienceInfluence * 10f));
             PostScore();
         }
-
+        
         CollectionValidationCallbackMethod();
     }
 
@@ -479,7 +509,7 @@ public class PlayingField : Singleton<PlayingField>
         //Check if selected item is greater than 40.8. If it is, this is not close to the current selected block
         if (QueuedBlocks.Count > 0)
         {
-            var distance = Mathf.Abs(Vector2.Distance(block.Position ,QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
+            var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
             if (distance > Instance.gridLayoutComponent.cellSize.x * 1.75f) return;
         }
 

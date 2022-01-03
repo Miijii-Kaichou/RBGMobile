@@ -5,9 +5,10 @@
 public struct DifficultyConfig
 {
 
-    public DifficultyConfig(string tag, int totalLanes, float initDuration, float durationDelta, float durationCap, float levelDividend, float influence)
+    public DifficultyConfig(string tag, int id, int totalLanes, float initDuration, float durationDelta, float durationCap, float levelDividend, float influence)
     {
         Tag = tag;
+        ID = id;
         StartingLaneCount = totalLanes;
         InitDuration = initDuration;
         DurationDelta = durationDelta;
@@ -17,6 +18,7 @@ public struct DifficultyConfig
     }
 
     public string Tag { get; private set; }
+    public int ID { get; }
 
     #region Starting Lanes
     public int StartingLaneCount { get; private set; }
