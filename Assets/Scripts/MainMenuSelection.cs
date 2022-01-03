@@ -5,8 +5,8 @@ public class MainMenuSelection : MonoBehaviour
 
     public void OnEnable()
     {
+        GameManager.SetFPS(FrameRate.FPS30);
         GameOverlay.Reinstate();
-
     }
 
     
@@ -21,7 +21,11 @@ public class MainMenuSelection : MonoBehaviour
 
     public void OnWipeOut() { }
     public void OnLeaderBoard() { }
-    public void OnInbox() { }
+    public void OnInbox()
+    {
+        GameOverlay.DisableOverlay(1);
+        GameSceneManager.LoadScene(5);
+    }
     public void OnFriendList() { }
     public void OnMenuHome() { }
     public void OnMenuRGBShop() { }

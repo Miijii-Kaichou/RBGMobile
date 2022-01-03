@@ -120,6 +120,11 @@ public class GameManager : Singleton<GameManager>
         Screen.SetResolution(Screen.width, Screen.height, true, (int)targetFrameRate);
     }
 
+    public static void SetFPS(FrameRate rate)
+    {
+        Application.targetFrameRate = (int)rate;
+    }
+
     public static PlayerModel PlayerModel => Instance.playerModel;
 
     #region Client-API Calls

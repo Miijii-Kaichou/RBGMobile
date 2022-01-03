@@ -18,6 +18,8 @@ public class GameSessionLauncher : MonoBehaviour
 
     public void LaunchGame(int difficulty)
     {
+        GameManager.SetFPS(FrameRate.FPS60);
+
         GameManager.SetDiffConfig(difficulty);
         switch (SelectedPlayMode)
         {

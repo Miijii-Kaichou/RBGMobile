@@ -26,14 +26,20 @@ public class GameOverlay : Singleton<GameOverlay>
         Instance.playerAvatarImage.sprite = Sprite.Create(avatar, new Rect(0, 0, avatar.width, avatar.height), new Vector2(0.5f, 0.5f));
     }
 
-    public static void DisableOverlay()
+    public static void DisableOverlay(int index = -1)
     {
-        Instance.PlayerOverlay.SetActive(false);
-        Instance.MenuOverlay.SetActive(false);
+        if (index == 0 || index == -1)
+            Instance.PlayerOverlay.SetActive(false);
+
+        if (index == 1 || index == -1)
+            Instance.MenuOverlay.SetActive(false);
     }
-    public static void EnableOverlay()
+    public static void EnableOverlay(int index = -1)
     {
-        Instance.PlayerOverlay.SetActive(!false);
-        Instance.MenuOverlay.SetActive(!false);
+        if (index == 0 || index == -1)
+            Instance.PlayerOverlay.SetActive(!false);
+
+        if (index == 1 || index == -1)
+            Instance.MenuOverlay.SetActive(!false);
     }
 }
