@@ -58,7 +58,7 @@ public class GameManager : Singleton<GameManager>
             durationDelta: 0.05f,
             durationCap:   4f,
             levelDividend: 256f,
-            influence: 0.25f
+            influence: 1f
        ),
 
        new DifficultyConfig
@@ -70,7 +70,7 @@ public class GameManager : Singleton<GameManager>
             durationDelta: 0.125f,
             durationCap:   3f,
             levelDividend: 256f,
-            influence: 0.5f
+            influence: 2f
        ),
 
        new DifficultyConfig
@@ -82,7 +82,7 @@ public class GameManager : Singleton<GameManager>
             durationDelta: 0.25f,
             durationCap:   2f,
             levelDividend: 128f,
-            influence: 1
+            influence: 4f
        ),
 
        new DifficultyConfig
@@ -94,7 +94,7 @@ public class GameManager : Singleton<GameManager>
             durationDelta: 0.5f,
             durationCap:   1f,
             levelDividend: 64f,
-            influence: 2
+            influence: 8f
        ),
     };
     public static DifficultyConfig SelectedConfig { get; private set; }

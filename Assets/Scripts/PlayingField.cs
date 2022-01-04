@@ -476,7 +476,7 @@ public class PlayingField : Singleton<PlayingField>
             //TODO: Deselect, and destory blocks / send blocks to opponent
             referencedChain[i].Deselect(true);
             Stats.Score += BlockScore;
-            collectedExperience += (CurrentLevel / (GameManager.SelectedConfig.PlayerExperienceInfluence * 10f));
+            collectedExperience += (CurrentLevel / (GameManager.SelectedConfig.PlayerExperienceInfluence * 50f));
             PostScore();
         }
         

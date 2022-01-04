@@ -14,7 +14,7 @@ public class MainMenuSelection : MonoBehaviour
     public void OnSolo()
     {
         GameOverlay.DisableOverlay();
-        GameSceneManager.LoadScene(3);
+        GameSceneManager.LoadScene(3, true);
     }
 
     public void OnSurvival() { }
@@ -24,7 +24,7 @@ public class MainMenuSelection : MonoBehaviour
     public void OnInbox()
     {
         GameOverlay.DisableOverlay(1);
-        GameSceneManager.LoadScene(5);
+        GameSceneManager.LoadScene(5, true);
     }
     public void OnFriendList() { }
     public void OnMenuHome() { }

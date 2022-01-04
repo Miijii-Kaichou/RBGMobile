@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InboxPanelScaler : Singleton<InboxPanelScaler>
+public class InboxPanelScaler : MonoBehaviour
 {
+    public static InboxPanelScaler Instance;
+
     [SerializeField]
     RectTransform rect;
 
@@ -11,6 +13,7 @@ public class InboxPanelScaler : Singleton<InboxPanelScaler>
 
     private void OnEnable()
     {
+        Instance = this;
         Resize();
     }
     public static void Resize()
