@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class PersistentObject : MonoBehaviour
 {
+   
     public bool forceSingleton = false;
     public int objectID => PersistentObjectHierarchy.GetID(this);
     private static PersistentObject Instance;

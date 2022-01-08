@@ -42,8 +42,8 @@ public class UsernameCreation : MonoBehaviour
         GameManager.PlayerModel.PlayerAvatar = 0;
         GameManager.PlayerModel.PlayerTheme = 0;
         GameManager.PlayerModel.TimesPlayedSolo = 0;
-        GameManager.PlayerModel.TimesPlayedSurvival = 0;
-        GameManager.PlayerModel.TimesPlayedWipeOut = 0;
+        GameManager.PlayerModel.TimesPlayedCrusades = 0;
+        GameManager.PlayerModel.TimesPlayedVerses = 0;
         GameManager.PlayerModel.HasRecoverableAccount = false;
 
         //Push Modified PlayerModel to Playfab Title

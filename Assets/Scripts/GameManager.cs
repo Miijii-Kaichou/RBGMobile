@@ -2,11 +2,15 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
-using PlayFab.CloudScriptModels;
-using TMPro;
 using System;
 using System.Collections.Generic;
 using static Extensions.Convenience;
+
+public enum PlayStyle
+{
+    Survival,
+    WipeOut
+}
 
 public class GameManager : Singleton<GameManager>
 {
@@ -23,6 +27,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     public bool _enableDebug = false;
 
+    public static PlayMode CurrentPlayMode;
+    public static PlayStyle CurrentPlayStyle;
+
+    internal static void SetPlayMode(PlayMode mode) => CurrentPlayMode = mode;
+    internal static void SetPlayStyle(PlayStyle style) => CurrentPlayStyle = style;
+
     [SerializeField]
     float gravityValue = 0.980665f;
     #endregion
@@ -33,6 +43,8 @@ public class GameManager : Singleton<GameManager>
     public static Dictionary<string, int> VirtualCurrency = new Dictionary<string, int>();
 
     public static float GravityValue => Instance.gravityValue;
+
+    public static string PlayerID { get; private set; }
 
     static Dictionary<string, int> RequestedStatistics = new Dictionary<string, int>();
     static List<string> statisticNames = new List<string>()
@@ -218,8 +230,8 @@ public class GameManager : Singleton<GameManager>
             Statistics = new List<StatisticUpdate>()
             {
                 new StatisticUpdate() {StatisticName = "SoloModePlayCount", Value = PlayerModel.TimesPlayedSolo },
-                new StatisticUpdate(){StatisticName = "SurvivalModePlayCount", Value = PlayerModel.TimesPlayedSurvival },
-                new StatisticUpdate(){StatisticName = "WipeOutPlayCount", Value = PlayerModel.TimesPlayedWipeOut },
+                new StatisticUpdate(){StatisticName = "SurvivalModePlayCount", Value = PlayerModel.TimesPlayedCrusades },
+                new StatisticUpdate(){StatisticName = "WipeOutPlayCount", Value = PlayerModel.TimesPlayedVerses },
             }
         };
 
@@ -245,12 +257,10 @@ public class GameManager : Singleton<GameManager>
         };
 
         PlayFabClientAPI.UpdatePlayerStatistics(request, success, fail);
-
     }
 
     public static void RequestPlayerBestStatistics(Action<GetPlayerStatisticsResult> success = null, Action<PlayFabError> fail = null)
     {
-
         var request = new GetPlayerStatisticsRequest()
         {
             StatisticNames = new List<string>()
@@ -286,8 +296,8 @@ public class GameManager : Singleton<GameManager>
         int i = 0;
         //Update Player Model
         PlayerModel.TimesPlayedSolo = RequestedStatistics[statisticNames[i++]];
-        PlayerModel.TimesPlayedSurvival = RequestedStatistics[statisticNames[i++]];
-        PlayerModel.TimesPlayedWipeOut = RequestedStatistics[statisticNames[i++]];
+        PlayerModel.TimesPlayedCrusades = RequestedStatistics[statisticNames[i++]];
+        PlayerModel.TimesPlayedVerses = RequestedStatistics[statisticNames[i++]];
         for (int j = 0; j < PlayerModel.SoloBestScores.Length; j++)
         {
             PlayerModel.SoloBestScores[j] = RequestedStatistics[statisticNames[i++]];
@@ -297,12 +307,12 @@ public class GameManager : Singleton<GameManager>
         success.Invoke(ok);
     }
 
-    public static void RequestPlayerModel(string pfID, Action<GetUserDataResult> success, Action<PlayFabError> fail)
+    public static void RequestPlayerModel(Action<GetUserDataResult> success, Action<PlayFabError> fail)
     {
         //Set up GET REQUEST
         var request = new GetUserDataRequest()
         {
-            PlayFabId = pfID,
+            PlayFabId = PlayerID,
             Keys = null
         };
 
@@ -312,21 +322,30 @@ public class GameManager : Singleton<GameManager>
             request,
             ok =>
             {
-                PlayerModel.FirstTimeUser = ok.Data["FirstTimeUser"].Value.ToBool();
-                PlayerModel.UserName = ok.Data["UserName"].Value;
-                PlayerModel.UniqueIdentifier = ok.Data["UniqueIdentifier"].Value;
-                PlayerModel.PlayerAvatar = ok.Data["PlayerAvatar"].Value.ToInt();
-                PlayerModel.PlayerTheme = ok.Data["RGBTheme"].Value.ToInt();
-                PlayerModel.PlayerExperience = ok.Data["ExperiencePoints"].Value.ToFloat();
-                PlayerLevelManager.LevelExperiencePoints = ok.Data["ExperiencePoints"].Value.ToFloat();
-                PlayerModel.HasRecoverableAccount = ok.Data["Recoverable"].Value.ToBool();
-                success.Invoke(ok);
+                try
+                {
+                    PlayerModel.FirstTimeUser = ok.Data["FirstTimeUser"].Value.ToBool();
+                    PlayerModel.UserName = ok.Data["UserName"].Value;
+                    PlayerModel.UniqueIdentifier = ok.Data["UniqueIdentifier"].Value;
+                    PlayerModel.PlayerAvatar = ok.Data["PlayerAvatar"].Value.ToInt();
+                    PlayerModel.PlayerTheme = ok.Data["RGBTheme"].Value.ToInt();
+                    PlayerModel.PlayerExperience = ok.Data["ExperiencePoints"].Value.ToFloat();
+                    PlayerLevelManager.LevelExperiencePoints = ok.Data["ExperiencePoints"].Value.ToFloat();
+                    PlayerModel.HasRecoverableAccount = ok.Data["Recoverable"].Value.ToBool();
+                    success.Invoke(ok);
+                } catch(Exception e)
+                {
+                    fail.Invoke(null);
+                }
             },
             err =>
             {
+                Debug.Log("Hello");
                 fail.Invoke(err);
             }
         );
     }
+
+    public static void SetUpPlayerID(string pID) => PlayerID = pID;
     #endregion
 }

@@ -25,8 +25,8 @@ public class PlayerModel : ScriptableObject
     }
     public int PlayerEXUntilNextLevel = 90;
     public int TimesPlayedSolo = 0;
-    public int TimesPlayedWipeOut = 0;
-    public int TimesPlayedSurvival = 0;
+    public int TimesPlayedVerses = 0;
+    public int TimesPlayedCrusades = 0;
     public int TotalModesPlayed = 0;
     public int _TotalModesPlayed
     {
@@ -34,8 +34,8 @@ public class PlayerModel : ScriptableObject
         get
         {
             TotalModesPlayed = TimesPlayedSolo +
-            TimesPlayedSurvival +
-            TimesPlayedWipeOut;
+            TimesPlayedCrusades +
+            TimesPlayedVerses;
             return TotalModesPlayed;
         }
         private set
@@ -63,8 +63,8 @@ public class PlayerModel : ScriptableObject
         PlayerExperience = default;
         PlayerEXUntilNextLevel = 90;
         TimesPlayedSolo = default;
-        TimesPlayedWipeOut = default;
-        TimesPlayedSurvival = default;
+        TimesPlayedVerses = default;
+        TimesPlayedCrusades = default;
         TotalModesPlayed = default;
         SoloBestScores = new int[4];
         SurvivalBestScore = 0;

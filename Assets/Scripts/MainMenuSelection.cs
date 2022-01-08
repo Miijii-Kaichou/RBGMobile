@@ -9,17 +9,35 @@ public class MainMenuSelection : MonoBehaviour
         GameOverlay.Reinstate();
     }
 
-    
-
     public void OnSolo()
     {
+        //On on Solo, PlayStyle will always be Survival
+        GameManager.SetPlayMode(PlayMode.Solo);
+        GameManager.SetPlayStyle(PlayStyle.Survival);
+
         GameOverlay.DisableOverlay();
         GameSceneManager.LoadScene(3, true);
     }
 
-    public void OnSurvival() { }
+    public void OnCrusade() 
+    {
+        //PlayStyle can be specifically configured in PlayModeSelection
+        GameManager.SetPlayMode(PlayMode.Crusades);
+        GotoPlayModeSelection();
+    }
 
-    public void OnWipeOut() { }
+    public void OnVerses()
+    {
+        //PlayStyle can be specifically configured in PlayModeSelection
+        GameManager.SetPlayMode(PlayMode.Verses);
+        GotoPlayModeSelection();
+    }
+
+    void GotoPlayModeSelection()
+    {
+        GameOverlay.DisableOverlay();
+        GameSceneManager.LoadScene(6, true);
+    }
     public void OnLeaderBoard() { }
     public void OnInbox()
     {

@@ -1,16 +1,33 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Extensions.Constants;
 using Extensions;
+using Photon.Pun;
 
-public static class GameSceneManager
+/// <summary>
+/// Define Scene from the Build Settings
+/// exactly in order.
+/// </summary>
+public enum DefinedScenes
+{
+    Gateway,
+    Username,
+    MainSelection,
+    SoloPlay,
+    Game,
+    Inbox,
+    PlayModeSelection,
+    GameNetworked
+}
+
+public static partial class GameSceneManager
 {
     public static int? StagePrepped { get; private set; } = null;
     static Navigation<int> sceneNavigation = new Navigation<int>();
     static AsyncOperation LoadingOperation;
     static IEnumerator LoadSceneAsyncCoroutine;
     static Scene ActiveScene => SceneManager.GetActiveScene();
+    static bool LoadAsNetwork = false;
 
     public static void LoadScene(int buildIndex, bool extendNavigation = false)
     {
@@ -19,12 +36,23 @@ public static class GameSceneManager
         if (extendNavigation)
             sceneNavigation.Stretch(ActiveScene.buildIndex);
 
+        if (LoadAsNetwork)
+        {
+            PhotonNetwork.LoadLevel(buildIndex);
+            return;
+        }
+
         LoadSceneAsyncCoroutine.Start();
+    }
+
+    public static void LoadScene(DefinedScenes scene, bool extendNavigation = false)
+    {
+        LoadScene((int)scene, extendNavigation);
     }
 
     static IEnumerator LoadSceneAsync(int buildIndex)
     {
-        
+
         try
         {
             LoadingOperation = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
@@ -45,11 +73,17 @@ public static class GameSceneManager
         int previousStage = sceneNavigation.Condense(distance);
         LoadSceneAsyncCoroutine = LoadSceneAsync(previousStage);
         LoadSceneAsyncCoroutine.Start();
+        LoadAsNetwork = false;
     }
 
     internal static void PrepareToLoad(int index)
     {
         StagePrepped = index;
+    }
+
+    internal static void PrepareToLoad(DefinedScenes scene)
+    {
+        PrepareToLoad((int)scene);
     }
 
     internal static void Deploy()
@@ -60,5 +94,11 @@ public static class GameSceneManager
     public static void ReloadScene()
     {
         LoadScene(StagePrepped.Value);
+    }
+
+    internal static void DeployAsNetworked()
+    {
+        LoadAsNetwork = true;   
+        LoadScene(StagePrepped ?? 0);
     }
 }

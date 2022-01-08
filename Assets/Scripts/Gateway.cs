@@ -23,8 +23,6 @@ public class Gateway : MonoBehaviour
             */
             PlayFabSettings.staticSettings.TitleId = "D35D1";
         }
-        //var request = new LoginWithCustomIDRequest { CustomId = "GettingStartedGuide", CreateAccount = true };
-        //PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
 
         LoadPlayerData();
     }
@@ -53,11 +51,14 @@ public class Gateway : MonoBehaviour
     private void OnMobileLogInSuccess(LoginResult result)
     {
         //Begin the Player Data Retrieval Process
+#if UNITY_EDITOR
         Debug.Log("Retrieving Player Data...");
-        GameManager.RequestPlayerModel(result.PlayFabId, FetchPlayerStatistics, PostError);
+#endif
+        GameManager.SetUpPlayerID(result.PlayFabId);
+        GameManager.RequestPlayerModel(FetchPlayerStatistics, PostError);
     }
 
-    #region Player Data Retrieval Process
+#region Player Data Retrieval Process
     /// <summary>
     /// Return the Player Statistics Data. This happens after the Player Model has been retrieved.
     /// </summary>
@@ -83,9 +84,9 @@ public class Gateway : MonoBehaviour
     /// <param name="result"></param>
     public void ValidateFirstTimeUser(PlayFabResultCommon result)
     {
-        Debug.Log("Player Data Successfully Retrieved!");
-
-        
+#if UNITY_EDITOR
+        Debug.Log("Player Data Successfully Retrieved!"); 
+#endif
 
         //Check if this is the first time player had played this game, not by if it is his first time, but if
         //there is no username.
@@ -108,7 +109,7 @@ public class Gateway : MonoBehaviour
         }
         GameSceneManager.Deploy();
     } 
-    #endregion
+#endregion
 
     public void PostError(PlayFabError err)
     {

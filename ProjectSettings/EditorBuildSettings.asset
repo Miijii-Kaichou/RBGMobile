@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inbox.unity
     guid: 5a180e5ddf952c346abf8fffb0794fb0
+  - enabled: 1
+    path: Assets/Scenes/PlayModeSelection.unity
+    guid: c392438c09147c843b05a6bddac1a761
+  - enabled: 1
+    path: Assets/Scenes/GameNetworked.unity
+    guid: a73e0e35a66a9f94692e47128b83df9a
   m_configObjects: {}

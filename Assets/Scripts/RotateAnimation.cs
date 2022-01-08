@@ -13,13 +13,12 @@ public class RotateAnimation : MonoBehaviour
         rotationEularAngleSpeed = new Vector3(0f, 0f, (-1 * rotationSpeed));
     }
 
-    void Update()
+    private void Update()
     {
         Animate();
     }
 
-
-    void Animate()
+    public void Animate()
     {
         eularAngles = rotationEularAngleSpeed; ;
         transform.Rotate(eularAngles);
