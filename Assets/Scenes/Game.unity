@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 806919}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 806918}
   blockImage: {fileID: 806921}
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 3720976}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 3720975}
   blockImage: {fileID: 3720978}
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 27650800}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 27650799}
   blockImage: {fileID: 27650802}
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 31090165}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 31090164}
   blockImage: {fileID: 31090167}
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 36302027}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 36302026}
   blockImage: {fileID: 36302029}
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 42255312}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 42255311}
   blockImage: {fileID: 42255314}
@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 43840100}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 43840099}
   blockImage: {fileID: 43840102}
@@ -2568,7 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 46398186}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 46398185}
   blockImage: {fileID: 46398188}
@@ -2852,7 +2852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 64588982}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 64588981}
   blockImage: {fileID: 64588984}
@@ -3136,7 +3136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 70928908}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 70928907}
   blockImage: {fileID: 70928910}
@@ -3420,7 +3420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 75742378}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 75742377}
   blockImage: {fileID: 75742380}
@@ -3601,7 +3601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 76302366}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 76302365}
   blockImage: {fileID: 76302368}
@@ -3988,7 +3988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 81322739}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 81322738}
   blockImage: {fileID: 81322741}
@@ -4303,7 +4303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 83045954}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 83045953}
   blockImage: {fileID: 83045956}
@@ -4484,7 +4484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 88394223}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 88394222}
   blockImage: {fileID: 88394225}
@@ -4665,7 +4665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 96656106}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 96656105}
   blockImage: {fileID: 96656108}
@@ -5155,7 +5155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 104634434}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 104634433}
   blockImage: {fileID: 104634436}
@@ -5336,7 +5336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 104959692}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 104959691}
   blockImage: {fileID: 104959694}
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 109577972}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 109577971}
   blockImage: {fileID: 109577974}
@@ -5698,7 +5698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 110036218}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 110036217}
   blockImage: {fileID: 110036220}
@@ -5879,7 +5879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 111970670}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 111970669}
   blockImage: {fileID: 111970672}
@@ -6266,7 +6266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 117511799}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 117511798}
   blockImage: {fileID: 117511801}
@@ -6447,7 +6447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 117886263}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 117886262}
   blockImage: {fileID: 117886265}
@@ -6628,7 +6628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 118687211}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 118687210}
   blockImage: {fileID: 118687213}
@@ -7515,7 +7515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 166396696}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 166396695}
   blockImage: {fileID: 166396698}
@@ -7977,7 +7977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 181041845}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 181041844}
   blockImage: {fileID: 181041847}
@@ -8158,7 +8158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 188332185}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 188332184}
   blockImage: {fileID: 188332187}
@@ -8339,7 +8339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 192248217}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 192248216}
   blockImage: {fileID: 192248219}
@@ -8623,7 +8623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 195768551}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 195768550}
   blockImage: {fileID: 195768553}
@@ -8804,7 +8804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 197812558}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 197812557}
   blockImage: {fileID: 197812560}
@@ -9088,7 +9088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 201778163}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 201778162}
   blockImage: {fileID: 201778165}
@@ -9269,7 +9269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 203105151}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 203105150}
   blockImage: {fileID: 203105153}
@@ -9553,7 +9553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 204936691}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 204936690}
   blockImage: {fileID: 204936693}
@@ -9982,7 +9982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 208316346}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 208316345}
   blockImage: {fileID: 208316348}
@@ -10369,7 +10369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 212455876}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 212455875}
   blockImage: {fileID: 212455878}
@@ -10756,7 +10756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 224027117}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 224027116}
   blockImage: {fileID: 224027119}
@@ -10937,7 +10937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 228289734}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 228289733}
   blockImage: {fileID: 228289736}
@@ -11118,7 +11118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 228455836}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 228455835}
   blockImage: {fileID: 228455838}
@@ -12257,7 +12257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 259623598}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 259623597}
   blockImage: {fileID: 259623600}
@@ -12541,7 +12541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 265149795}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 265149794}
   blockImage: {fileID: 265149797}
@@ -12928,7 +12928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 272976451}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 272976450}
   blockImage: {fileID: 272976453}
@@ -13109,7 +13109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 273934343}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 273934342}
   blockImage: {fileID: 273934345}
@@ -13496,7 +13496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 287662454}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 287662453}
   blockImage: {fileID: 287662456}
@@ -13780,7 +13780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 288855972}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 288855971}
   blockImage: {fileID: 288855974}
@@ -14064,7 +14064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 299187731}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 299187730}
   blockImage: {fileID: 299187733}
@@ -14424,7 +14424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 310949530}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 310949529}
   blockImage: {fileID: 310949532}
@@ -14709,7 +14709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 313258481}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 313258483}
   blockImage: {fileID: 313258479}
@@ -15686,7 +15686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 349313277}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 349313276}
   blockImage: {fileID: 349313279}
@@ -16001,7 +16001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 355773943}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 355773942}
   blockImage: {fileID: 355773945}
@@ -16285,7 +16285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 360513873}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 360513872}
   blockImage: {fileID: 360513875}
@@ -16775,7 +16775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 367796019}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 367796018}
   blockImage: {fileID: 367796021}
@@ -17162,7 +17162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 390491200}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 390491199}
   blockImage: {fileID: 390491202}
@@ -17343,7 +17343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 394084063}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 394084062}
   blockImage: {fileID: 394084065}
@@ -17524,7 +17524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 396379776}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 396379775}
   blockImage: {fileID: 396379778}
@@ -17705,7 +17705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 398817038}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 398817037}
   blockImage: {fileID: 398817040}
@@ -18007,7 +18007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 406789463}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 406789462}
   blockImage: {fileID: 406789465}
@@ -18299,7 +18299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 421392669}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 421392668}
   blockImage: {fileID: 421392671}
@@ -18583,7 +18583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 432830400}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 432830399}
   blockImage: {fileID: 432830402}
@@ -18942,7 +18942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 444561727}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 444561726}
   blockImage: {fileID: 444561729}
@@ -19329,7 +19329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 451682373}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 451682372}
   blockImage: {fileID: 451682375}
@@ -19716,7 +19716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 459662636}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 459662635}
   blockImage: {fileID: 459662638}
@@ -19897,7 +19897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 459868571}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 459868570}
   blockImage: {fileID: 459868573}
@@ -20181,7 +20181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 462464890}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 462464889}
   blockImage: {fileID: 462464892}
@@ -20362,7 +20362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 463870825}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 463870824}
   blockImage: {fileID: 463870827}
@@ -20780,7 +20780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 474120236}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 474120235}
   blockImage: {fileID: 474120238}
@@ -21064,7 +21064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 477260705}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 477260704}
   blockImage: {fileID: 477260707}
@@ -21245,7 +21245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 481987697}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 481987696}
   blockImage: {fileID: 481987699}
@@ -21735,7 +21735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 498033992}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 498033991}
   blockImage: {fileID: 498033994}
@@ -22079,7 +22079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519420032}
-  - component: {fileID: 519420031}
+  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 6
   m_Name: Main Camera
@@ -22088,67 +22088,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 519420032}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 1
-    keepAlpha: 1
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
---- !u!20 &519420031
+--- !u!20 &519420029
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22176,7 +22116,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -22185,12 +22125,44 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
-  m_AllowMSAA: 0
+  m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  m_VolumeTrigger: {fileID: 1586714406}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
+  m_AntialiasingQuality: 2
+  m_StopNaN: 1
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &519420032
 Transform:
   m_ObjectHideFlags: 0
@@ -22322,7 +22294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 521636996}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 521636995}
   blockImage: {fileID: 521636998}
@@ -22606,7 +22578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 537855003}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 537855002}
   blockImage: {fileID: 537855005}
@@ -22787,7 +22759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 543833699}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 543833698}
   blockImage: {fileID: 543833701}
@@ -23483,7 +23455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 565985726}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 565985725}
   blockImage: {fileID: 565985728}
@@ -23901,7 +23873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 578175514}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 578175513}
   blockImage: {fileID: 578175516}
@@ -24185,7 +24157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 582346513}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 582346512}
   blockImage: {fileID: 582346515}
@@ -24366,7 +24338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 582347945}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 582347944}
   blockImage: {fileID: 582347947}
@@ -24547,7 +24519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 583342049}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 583342048}
   blockImage: {fileID: 583342051}
@@ -24728,7 +24700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 587501820}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 587501819}
   blockImage: {fileID: 587501822}
@@ -24909,7 +24881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 588136128}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 588136127}
   blockImage: {fileID: 588136130}
@@ -25296,7 +25268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 600670945}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 600670944}
   blockImage: {fileID: 600670947}
@@ -25621,7 +25593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 607170900}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 607170899}
   blockImage: {fileID: 607170902}
@@ -25905,7 +25877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 611300325}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 611300324}
   blockImage: {fileID: 611300327}
@@ -26086,7 +26058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 612981867}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 612981866}
   blockImage: {fileID: 612981869}
@@ -26267,7 +26239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 614229513}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 614229512}
   blockImage: {fileID: 614229515}
@@ -26654,7 +26626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 618862004}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 618862003}
   blockImage: {fileID: 618862006}
@@ -27041,7 +27013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 621430979}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 621430978}
   blockImage: {fileID: 621430981}
@@ -27222,7 +27194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 630564016}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 630564015}
   blockImage: {fileID: 630564018}
@@ -27403,7 +27375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 637279250}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 637279249}
   blockImage: {fileID: 637279252}
@@ -27790,7 +27762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 648538621}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 648538620}
   blockImage: {fileID: 648538623}
@@ -28177,7 +28149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 670901180}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 670901179}
   blockImage: {fileID: 670901182}
@@ -28564,7 +28536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 675850342}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 675850341}
   blockImage: {fileID: 675850344}
@@ -28745,7 +28717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 677364725}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 677364724}
   blockImage: {fileID: 677364727}
@@ -28926,7 +28898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 678448696}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 678448695}
   blockImage: {fileID: 678448698}
@@ -29107,7 +29079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 681445211}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 681445210}
   blockImage: {fileID: 681445213}
@@ -29494,7 +29466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 697969763}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 697969762}
   blockImage: {fileID: 697969765}
@@ -29675,7 +29647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 702070902}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 702070901}
   blockImage: {fileID: 702070904}
@@ -29856,7 +29828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 710661459}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 710661458}
   blockImage: {fileID: 710661461}
@@ -30037,7 +30009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 722549039}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 722549038}
   blockImage: {fileID: 722549041}
@@ -30218,7 +30190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 724477328}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 724477327}
   blockImage: {fileID: 724477330}
@@ -30399,7 +30371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 729549950}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 729549949}
   blockImage: {fileID: 729549952}
@@ -30580,7 +30552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 735743900}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 735743899}
   blockImage: {fileID: 735743902}
@@ -30967,7 +30939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 741519539}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 741519538}
   blockImage: {fileID: 741519541}
@@ -31251,7 +31223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 745236186}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 745236185}
   blockImage: {fileID: 745236188}
@@ -31432,7 +31404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 755932732}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 755932731}
   blockImage: {fileID: 755932734}
@@ -31613,7 +31585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 756488423}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 756488422}
   blockImage: {fileID: 756488425}
@@ -31897,7 +31869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 757294411}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 757294410}
   blockImage: {fileID: 757294413}
@@ -32181,7 +32153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 760841905}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 760841904}
   blockImage: {fileID: 760841907}
@@ -32362,7 +32334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 768031786}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 768031785}
   blockImage: {fileID: 768031788}
@@ -32543,7 +32515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 768196668}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 768196667}
   blockImage: {fileID: 768196670}
@@ -32724,7 +32696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 771149383}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 771149382}
   blockImage: {fileID: 771149385}
@@ -32905,7 +32877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 771844197}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 771844196}
   blockImage: {fileID: 771844199}
@@ -33086,7 +33058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 774490855}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 774490854}
   blockImage: {fileID: 774490857}
@@ -33370,7 +33342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 779740948}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 779740947}
   blockImage: {fileID: 779740950}
@@ -33786,7 +33758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 790092620}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 790092619}
   blockImage: {fileID: 790092622}
@@ -34031,7 +34003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 792170421}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 792170420}
   blockImage: {fileID: 792170423}
@@ -34418,7 +34390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 797434707}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 797434706}
   blockImage: {fileID: 797434709}
@@ -34702,7 +34674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 822945206}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 822945205}
   blockImage: {fileID: 822945208}
@@ -34883,7 +34855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 825209495}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 825209494}
   blockImage: {fileID: 825209497}
@@ -35270,7 +35242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 833718678}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 833718677}
   blockImage: {fileID: 833718680}
@@ -35469,7 +35441,7 @@ RectTransform:
   m_Children:
   - {fileID: 1011955708}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -35526,7 +35498,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 519420029}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -35654,7 +35626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 841482805}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 841482804}
   blockImage: {fileID: 841482807}
@@ -35835,7 +35807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 844047015}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 844047014}
   blockImage: {fileID: 844047017}
@@ -36119,7 +36091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 850772113}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 850772112}
   blockImage: {fileID: 850772115}
@@ -36218,7 +36190,7 @@ RectTransform:
   - {fileID: 872017574}
   - {fileID: 1842683927}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -36275,7 +36247,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 519420029}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -36403,7 +36375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 860618499}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 860618498}
   blockImage: {fileID: 860618501}
@@ -37040,7 +37012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 868684583}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 868684582}
   blockImage: {fileID: 868684585}
@@ -37298,7 +37270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 873824482}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 873824481}
   blockImage: {fileID: 873824484}
@@ -37775,7 +37747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 882459833}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 882459832}
   blockImage: {fileID: 882459835}
@@ -37956,7 +37928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 883339351}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 883339350}
   blockImage: {fileID: 883339353}
@@ -38137,7 +38109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 884573927}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 884573926}
   blockImage: {fileID: 884573929}
@@ -38524,7 +38496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 892178006}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 892178005}
   blockImage: {fileID: 892178008}
@@ -38705,7 +38677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 893103710}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 893103709}
   blockImage: {fileID: 893103712}
@@ -39160,7 +39132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 927584531}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 927584530}
   blockImage: {fileID: 927584533}
@@ -39474,7 +39446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 932971692}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 932971691}
   blockImage: {fileID: 932971694}
@@ -39655,7 +39627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 934026654}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 934026653}
   blockImage: {fileID: 934026656}
@@ -39939,7 +39911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 937071957}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 937071956}
   blockImage: {fileID: 937071959}
@@ -40120,7 +40092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 942250917}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 942250916}
   blockImage: {fileID: 942250919}
@@ -40301,7 +40273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 945128394}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 945128393}
   blockImage: {fileID: 945128396}
@@ -40482,7 +40454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 946899710}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 946899709}
   blockImage: {fileID: 946899712}
@@ -40663,7 +40635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 947788904}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 947788903}
   blockImage: {fileID: 947788906}
@@ -41050,7 +41022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 963801793}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 963801792}
   blockImage: {fileID: 963801795}
@@ -41231,7 +41203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 969803589}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 969803588}
   blockImage: {fileID: 969803591}
@@ -41515,7 +41487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 971649061}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 971649060}
   blockImage: {fileID: 971649063}
@@ -41696,7 +41668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 972680383}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 972680382}
   blockImage: {fileID: 972680385}
@@ -42289,7 +42261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 984427111}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 984427110}
   blockImage: {fileID: 984427113}
@@ -42779,7 +42751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 993376101}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 993376100}
   blockImage: {fileID: 993376103}
@@ -43063,7 +43035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 998272226}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 998272225}
   blockImage: {fileID: 998272228}
@@ -43244,7 +43216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1000665051}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1000665050}
   blockImage: {fileID: 1000665053}
@@ -43603,7 +43575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1006131026}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1006131025}
   blockImage: {fileID: 1006131028}
@@ -43717,7 +43689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -43962,7 +43934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1013835192}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1013835191}
   blockImage: {fileID: 1013835194}
@@ -44246,7 +44218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1017316490}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1017316489}
   blockImage: {fileID: 1017316492}
@@ -44736,7 +44708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1028633224}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1028633223}
   blockImage: {fileID: 1028633226}
@@ -44917,7 +44889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1029796950}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1029796949}
   blockImage: {fileID: 1029796952}
@@ -45201,7 +45173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1034283435}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1034283434}
   blockImage: {fileID: 1034283437}
@@ -45382,7 +45354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1037977230}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1037977229}
   blockImage: {fileID: 1037977232}
@@ -46228,7 +46200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1064619432}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1064619431}
   blockImage: {fileID: 1064619434}
@@ -46512,7 +46484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1068725629}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1068725628}
   blockImage: {fileID: 1068725631}
@@ -47002,7 +46974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1090853566}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1090853565}
   blockImage: {fileID: 1090853568}
@@ -47183,7 +47155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1094330626}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1094330625}
   blockImage: {fileID: 1094330628}
@@ -47364,7 +47336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1098690823}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1098690822}
   blockImage: {fileID: 1098690825}
@@ -47545,7 +47517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1101766197}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1101766196}
   blockImage: {fileID: 1101766199}
@@ -47726,7 +47698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1101919808}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1101919807}
   blockImage: {fileID: 1101919810}
@@ -47907,7 +47879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1102351875}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1102351874}
   blockImage: {fileID: 1102351877}
@@ -48191,7 +48163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1112125554}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1112125553}
   blockImage: {fileID: 1112125556}
@@ -48372,7 +48344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1115696831}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1115696830}
   blockImage: {fileID: 1115696833}
@@ -48656,7 +48628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1119268117}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1119268116}
   blockImage: {fileID: 1119268119}
@@ -48837,7 +48809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1120961709}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1120961708}
   blockImage: {fileID: 1120961711}
@@ -49018,7 +48990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1121128906}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1121128905}
   blockImage: {fileID: 1121128908}
@@ -49405,7 +49377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1128640773}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1128640772}
   blockImage: {fileID: 1128640775}
@@ -49764,7 +49736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1138375319}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1138375318}
   blockImage: {fileID: 1138375321}
@@ -50048,7 +50020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1149030524}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1149030523}
   blockImage: {fileID: 1149030526}
@@ -50641,7 +50613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1158212978}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1158212977}
   blockImage: {fileID: 1158212980}
@@ -50822,7 +50794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1159696612}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1159696611}
   blockImage: {fileID: 1159696614}
@@ -51106,7 +51078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1166576920}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1166576919}
   blockImage: {fileID: 1166576922}
@@ -51699,7 +51671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1188749602}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1188749601}
   blockImage: {fileID: 1188749604}
@@ -51880,7 +51852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1193536910}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1193536909}
   blockImage: {fileID: 1193536912}
@@ -52164,7 +52136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1206766634}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1206766633}
   blockImage: {fileID: 1206766636}
@@ -52716,7 +52688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1220476241}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1220476240}
   blockImage: {fileID: 1220476243}
@@ -52897,7 +52869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1237495835}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1237495834}
   blockImage: {fileID: 1237495837}
@@ -53284,7 +53256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1243231275}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1243231274}
   blockImage: {fileID: 1243231277}
@@ -53465,7 +53437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1247087345}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1247087344}
   blockImage: {fileID: 1247087347}
@@ -53955,7 +53927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1258875259}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1258875258}
   blockImage: {fileID: 1258875261}
@@ -54136,7 +54108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1266609602}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1266609601}
   blockImage: {fileID: 1266609604}
@@ -54523,7 +54495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1268725407}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1268725406}
   blockImage: {fileID: 1268725409}
@@ -54807,7 +54779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1270172148}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1270172147}
   blockImage: {fileID: 1270172150}
@@ -55109,7 +55081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1271534226}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1271534225}
   blockImage: {fileID: 1271534228}
@@ -55290,7 +55262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1275960609}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1275960608}
   blockImage: {fileID: 1275960611}
@@ -55914,7 +55886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1311402390}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1311402389}
   blockImage: {fileID: 1311402392}
@@ -56095,7 +56067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1321521920}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1321521919}
   blockImage: {fileID: 1321521922}
@@ -56276,7 +56248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1323069776}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1323069775}
   blockImage: {fileID: 1323069778}
@@ -56560,7 +56532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1327560686}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1327560685}
   blockImage: {fileID: 1327560688}
@@ -56844,7 +56816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1332112447}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1332112446}
   blockImage: {fileID: 1332112449}
@@ -57025,7 +56997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1333211216}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1333211215}
   blockImage: {fileID: 1333211218}
@@ -57412,7 +57384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1340810039}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1340810038}
   blockImage: {fileID: 1340810041}
@@ -57696,7 +57668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1342485631}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1342485630}
   blockImage: {fileID: 1342485633}
@@ -57877,7 +57849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1344337343}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1344337342}
   blockImage: {fileID: 1344337345}
@@ -58264,7 +58236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1351741656}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1351741655}
   blockImage: {fileID: 1351741658}
@@ -58829,7 +58801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1377922792}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1377922791}
   blockImage: {fileID: 1377922794}
@@ -59010,7 +58982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1393220338}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1393220337}
   blockImage: {fileID: 1393220340}
@@ -59191,7 +59163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1394671343}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1394671342}
   blockImage: {fileID: 1394671345}
@@ -59372,7 +59344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1397004406}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1397004405}
   blockImage: {fileID: 1397004408}
@@ -59759,7 +59731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1406031263}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1406031262}
   blockImage: {fileID: 1406031265}
@@ -59940,7 +59912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1412122945}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1412122944}
   blockImage: {fileID: 1412122947}
@@ -60121,7 +60093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1412326015}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1412326014}
   blockImage: {fileID: 1412326017}
@@ -60405,7 +60377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1419136432}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1419136431}
   blockImage: {fileID: 1419136434}
@@ -60689,7 +60661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1422843838}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1422843837}
   blockImage: {fileID: 1422843840}
@@ -60870,7 +60842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1427907135}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1427907134}
   blockImage: {fileID: 1427907137}
@@ -61051,7 +61023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1436266242}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1436266241}
   blockImage: {fileID: 1436266244}
@@ -61335,7 +61307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1454779456}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1454779455}
   blockImage: {fileID: 1454779458}
@@ -61516,7 +61488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1457752913}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1457752912}
   blockImage: {fileID: 1457752915}
@@ -62006,7 +61978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1459764479}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1459764478}
   blockImage: {fileID: 1459764481}
@@ -62805,7 +62777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1480285845}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1480285844}
   blockImage: {fileID: 1480285847}
@@ -63223,7 +63195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1489506869}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1489506868}
   blockImage: {fileID: 1489506871}
@@ -68213,7 +68185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1491055533}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1491055532}
   blockImage: {fileID: 1491055535}
@@ -68497,7 +68469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1491836928}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1491836927}
   blockImage: {fileID: 1491836930}
@@ -68678,7 +68650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1501080690}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1501080689}
   blockImage: {fileID: 1501080692}
@@ -68962,7 +68934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1505478270}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1505478269}
   blockImage: {fileID: 1505478272}
@@ -69349,7 +69321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1512104118}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1512104117}
   blockImage: {fileID: 1512104120}
@@ -69530,7 +69502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1513799837}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1513799836}
   blockImage: {fileID: 1513799839}
@@ -69814,7 +69786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1519490299}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1519490298}
   blockImage: {fileID: 1519490301}
@@ -69995,7 +69967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1520138312}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1520138311}
   blockImage: {fileID: 1520138314}
@@ -70430,7 +70402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1529741373}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1529741372}
   blockImage: {fileID: 1529741375}
@@ -70714,7 +70686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1541067864}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1541067863}
   blockImage: {fileID: 1541067866}
@@ -71029,7 +71001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1546394024}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1546394023}
   blockImage: {fileID: 1546394026}
@@ -71313,7 +71285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1553974381}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1553974380}
   blockImage: {fileID: 1553974383}
@@ -71906,7 +71878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1574111134}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1574111133}
   blockImage: {fileID: 1574111136}
@@ -72190,7 +72162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1583208369}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1583208368}
   blockImage: {fileID: 1583208371}
@@ -72371,7 +72343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1586653083}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1586653082}
   blockImage: {fileID: 1586653085}
@@ -72461,14 +72433,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586714404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: c5680e735b6d1ca4db2082355fee8319, type: 2}
   isGlobal: 1
-  blendDistance: 0
-  weight: 0.5
   priority: 0
+  blendDistance: 0
+  weight: 0.75
+  sharedProfile: {fileID: 11400000, guid: 077718a3fe350f8468510ce0c7b45d91, type: 2}
 --- !u!4 &1586714406
 Transform:
   m_ObjectHideFlags: 0
@@ -72481,7 +72453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590765160
 GameObject:
@@ -72703,7 +72675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1596268460}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1596268459}
   blockImage: {fileID: 1596268462}
@@ -72884,7 +72856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1613898398}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1613898397}
   blockImage: {fileID: 1613898400}
@@ -73065,7 +73037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1616494903}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1616494902}
   blockImage: {fileID: 1616494905}
@@ -73246,7 +73218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1618891703}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1618891702}
   blockImage: {fileID: 1618891705}
@@ -73427,7 +73399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1623378868}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1623378867}
   blockImage: {fileID: 1623378870}
@@ -73711,7 +73683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1633346907}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1633346906}
   blockImage: {fileID: 1633346909}
@@ -74026,7 +73998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1634665303}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1634665302}
   blockImage: {fileID: 1634665305}
@@ -74207,7 +74179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1636773550}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1636773549}
   blockImage: {fileID: 1636773552}
@@ -74491,7 +74463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1643849271}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1643849270}
   blockImage: {fileID: 1643849273}
@@ -74908,7 +74880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1661809672}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1661809671}
   blockImage: {fileID: 1661809674}
@@ -75326,7 +75298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1678409653}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1678409652}
   blockImage: {fileID: 1678409655}
@@ -75610,7 +75582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1684629639}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1684629638}
   blockImage: {fileID: 1684629641}
@@ -75997,7 +75969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1690476706}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1690476705}
   blockImage: {fileID: 1690476708}
@@ -76178,7 +76150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1693514920}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1693514919}
   blockImage: {fileID: 1693514922}
@@ -76359,7 +76331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1697753515}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1697753514}
   blockImage: {fileID: 1697753517}
@@ -76746,7 +76718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1704236556}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1704236555}
   blockImage: {fileID: 1704236558}
@@ -77030,7 +77002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1710498940}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1710498939}
   blockImage: {fileID: 1710498942}
@@ -77211,7 +77183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1718175946}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1718175945}
   blockImage: {fileID: 1718175948}
@@ -77392,7 +77364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1718375885}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1718375884}
   blockImage: {fileID: 1718375887}
@@ -77779,7 +77751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1724465117}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1724465116}
   blockImage: {fileID: 1724465119}
@@ -78063,7 +78035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1729349977}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1729349976}
   blockImage: {fileID: 1729349979}
@@ -78378,7 +78350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1734231446}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1734231445}
   blockImage: {fileID: 1734231448}
@@ -78765,7 +78737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1742443006}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1742443005}
   blockImage: {fileID: 1742443008}
@@ -78946,7 +78918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1745013645}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1745013644}
   blockImage: {fileID: 1745013647}
@@ -79603,7 +79575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1751032411}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1751032410}
   blockImage: {fileID: 1751032413}
@@ -79887,7 +79859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1757622076}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1757622075}
   blockImage: {fileID: 1757622078}
@@ -80274,7 +80246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1767430372}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1767430371}
   blockImage: {fileID: 1767430374}
@@ -80661,7 +80633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1773782009}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1773782008}
   blockImage: {fileID: 1773782011}
@@ -81388,7 +81360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1784935965}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1784935964}
   blockImage: {fileID: 1784935967}
@@ -81569,7 +81541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1787060899}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1787060898}
   blockImage: {fileID: 1787060901}
@@ -82031,7 +82003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1826203563}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1826203562}
   blockImage: {fileID: 1826203565}
@@ -82315,7 +82287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1840993475}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1840993474}
   blockImage: {fileID: 1840993477}
@@ -82882,7 +82854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1854275753}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1854275752}
   blockImage: {fileID: 1854275755}
@@ -83475,7 +83447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1868999528}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1868999527}
   blockImage: {fileID: 1868999530}
@@ -83862,7 +83834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1875587754}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1875587753}
   blockImage: {fileID: 1875587756}
@@ -84043,7 +84015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1878222752}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1878222751}
   blockImage: {fileID: 1878222754}
@@ -84739,7 +84711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1887230302}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1887230301}
   blockImage: {fileID: 1887230304}
@@ -85126,7 +85098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1893922488}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1893922487}
   blockImage: {fileID: 1893922490}
@@ -85410,7 +85382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1900630309}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1900630308}
   blockImage: {fileID: 1900630311}
@@ -85694,7 +85666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1910215276}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1910215275}
   blockImage: {fileID: 1910215278}
@@ -86259,7 +86231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1915053770}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1915053769}
   blockImage: {fileID: 1915053772}
@@ -86863,7 +86835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1923614708}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1923614707}
   blockImage: {fileID: 1923614710}
@@ -87044,7 +87016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1927333341}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1927333340}
   blockImage: {fileID: 1927333343}
@@ -87328,7 +87300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1934941252}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1934941251}
   blockImage: {fileID: 1934941254}
@@ -87509,7 +87481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1937564627}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1937564626}
   blockImage: {fileID: 1937564629}
@@ -87690,7 +87662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1945371141}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1945371140}
   blockImage: {fileID: 1945371143}
@@ -87871,7 +87843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1947837359}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1947837358}
   blockImage: {fileID: 1947837361}
@@ -88052,7 +88024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1948001847}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1948001846}
   blockImage: {fileID: 1948001849}
@@ -88542,7 +88514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1961255109}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1961255108}
   blockImage: {fileID: 1961255111}
@@ -88826,7 +88798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1971310288}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1971310287}
   blockImage: {fileID: 1971310290}
@@ -89007,7 +88979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1974379372}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1974379371}
   blockImage: {fileID: 1974379374}
@@ -89600,7 +89572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1984325467}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1984325466}
   blockImage: {fileID: 1984325469}
@@ -89781,7 +89753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1989465989}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1989465988}
   blockImage: {fileID: 1989465991}
@@ -89962,7 +89934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1995569337}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1995569336}
   blockImage: {fileID: 1995569339}
@@ -90143,7 +90115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 1999928399}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 1999928398}
   blockImage: {fileID: 1999928401}
@@ -90427,7 +90399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2001467269}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2001467268}
   blockImage: {fileID: 2001467271}
@@ -90814,7 +90786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2007631441}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2007631440}
   blockImage: {fileID: 2007631443}
@@ -90995,7 +90967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2008221243}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2008221242}
   blockImage: {fileID: 2008221245}
@@ -91176,7 +91148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2009556143}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2009556142}
   blockImage: {fileID: 2009556145}
@@ -91357,7 +91329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2011913188}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2011913187}
   blockImage: {fileID: 2011913190}
@@ -91538,7 +91510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2015888605}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2015888604}
   blockImage: {fileID: 2015888607}
@@ -92337,7 +92309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2043940416}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2043940415}
   blockImage: {fileID: 2043940418}
@@ -92621,7 +92593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2049055724}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2049055723}
   blockImage: {fileID: 2049055726}
@@ -93008,7 +92980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2054647018}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2054647017}
   blockImage: {fileID: 2054647020}
@@ -93395,7 +93367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2064034464}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2064034463}
   blockImage: {fileID: 2064034466}
@@ -93576,7 +93548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2067348022}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2067348021}
   blockImage: {fileID: 2067348024}
@@ -93994,7 +93966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2073199266}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2073199265}
   blockImage: {fileID: 2073199268}
@@ -94175,7 +94147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2075151137}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2075151136}
   blockImage: {fileID: 2075151139}
@@ -94356,7 +94328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2077511834}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2077511833}
   blockImage: {fileID: 2077511836}
@@ -94537,7 +94509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2080343939}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2080343938}
   blockImage: {fileID: 2080343941}
@@ -94718,7 +94690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2081866908}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2081866907}
   blockImage: {fileID: 2081866910}
@@ -94899,7 +94871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2084201041}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2084201040}
   blockImage: {fileID: 2084201043}
@@ -95258,7 +95230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2094704280}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2094704279}
   blockImage: {fileID: 2094704282}
@@ -95977,7 +95949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2106777881}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2106777880}
   blockImage: {fileID: 2106777883}
@@ -96910,7 +96882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityCollider: {fileID: 2142779344}
-  mainGameplayCamera: {fileID: 519420031}
+  mainGameplayCamera: {fileID: 519420029}
   cachedData: {fileID: 0}
   blockIdentity: {fileID: 2142779343}
   blockImage: {fileID: 2142779346}

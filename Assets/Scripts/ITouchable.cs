@@ -69,7 +69,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary && uninteractableCondition.WasMet == false)
         {
-            hit = Physics2D.Raycast(mainGameplayCamera.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (hit.collider == entityCollider)
             {
                 callback();
@@ -82,7 +81,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     {
         if (Input.touchCount > 0 && uninteractableCondition.WasMet == false)
         {
-            hit = Physics2D.Raycast(mainGameplayCamera.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();
@@ -95,8 +93,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     {
         if (Input.touchCount > 0 && uninteractableCondition.WasMet == false)
         {
-            
-            hit = Physics2D.Raycast(mainGameplayCamera.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
             if (IsTouching && hit.collider != entityCollider)
             {
                 cachedData = null;
@@ -117,8 +113,6 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
     {
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && uninteractableCondition.WasMet == false)
         {
-            hit = Physics2D.Raycast(mainGameplayCamera.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
-
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();
@@ -164,6 +158,9 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
         {
             try
             {
+                if (Input.touchCount > 0)
+                    hit = Physics2D.Raycast(mainGameplayCamera.ScreenToWorldPoint(Input.touches[0].position), Vector2.zero);
+
                 Main();
             }
             catch

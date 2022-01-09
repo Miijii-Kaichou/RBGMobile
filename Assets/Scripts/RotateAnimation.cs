@@ -8,6 +8,7 @@ public class RotateAnimation : MonoBehaviour
     Vector3 eularAngles;
     Vector3 rotation;
     Vector3 rotationEularAngleSpeed;
+
     private void Awake()
     {
         rotationEularAngleSpeed = new Vector3(0f, 0f, (-1 * rotationSpeed));

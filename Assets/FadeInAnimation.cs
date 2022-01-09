@@ -27,7 +27,7 @@ public class FadeInAnimation : MonoBehaviour
     private void Awake()
     {
         selectionUIImg = GetComponent<Image>();
-        
+        alphaValue = 0;
         initScale = transform.localScale;
         objectScale = initScale;
         initColor = selectionUIImg.color;

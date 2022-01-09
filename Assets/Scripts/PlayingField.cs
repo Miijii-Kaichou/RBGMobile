@@ -72,10 +72,9 @@ public class PlayingField : Singleton<PlayingField>
     static bool haveXPositions = false;
     const int MaxBlockPoolSize = 300;
     const int BlockScore = 10;
+    const int validChainCount = 2;
     public static bool GameSessionStarted = false;
     static float collectedExperience = 0;
-
-    int testValue = 0;
 
     //Start is called just before any of the Update Method is called the first time
     private void Start()
@@ -122,6 +121,7 @@ public class PlayingField : Singleton<PlayingField>
             GameSessionStarted = true;
         });
     }
+
     void UpdateXPositions()
     {
         for (int i = 0; i < test.Blocks.Length; i++)
@@ -426,7 +426,7 @@ public class PlayingField : Singleton<PlayingField>
                 i++;
             }
 
-            const int validChainCount = 4;
+            
             int chainCount = 0;
             int lastBlockIndex = blocksToChain.Length - 1;
             ColorType startingColor = blocksToChain[0].Color;
@@ -510,7 +510,7 @@ public class PlayingField : Singleton<PlayingField>
         if (QueuedBlocks.Count > 0)
         {
             var distance = Mathf.Abs(Vector2.Distance(block.Position, QueuedBlocks.ToArray()[QueuedBlocks.Count - 1].Position));
-            if (distance > Instance.gridLayoutComponent.cellSize.x * 1.75f) return;
+            if (distance > Instance.gridLayoutComponent.cellSize.x * 1.95f) return;
         }
 
         //Select block, since now it's valid
@@ -533,29 +533,6 @@ public class PlayingField : Singleton<PlayingField>
         AreaHighlightHandler.EnableLane(block.LaneID);
 
         block.Node.ConnectedMain(block);
-
-        //Connect Chain to previous in queue
-        if (QueuedBlocks.Count > 1)
-        {
-            Block[] blockArray = QueuedBlocks.ToArray();
-            //Check what side the previous block is on.
-            Block previousBlock = blockArray[QueuedBlocks.Count - 2];
-            BlockSide previousBlockSide = BlockSide.Right;
-            var Xdifference = (block.RectTransform.anchoredPosition.x - previousBlock.RectTransform.anchoredPosition.x);
-            var YDifference = (block.RectTransform.anchoredPosition.y - previousBlock.RectTransform.anchoredPosition.y);
-
-            //Check Right, Bottom, Left, and Top
-            if (Xdifference > 0)
-                previousBlockSide = BlockSide.Left;
-            else if (Xdifference < 0)
-                previousBlockSide = BlockSide.Right;
-            else if (YDifference > 0)
-                previousBlockSide = BlockSide.Down;
-            else if (YDifference < 0)
-                previousBlockSide = BlockSide.Up;
-
-            block.Node.ConnectBlockToSide(previousBlock, previousBlockSide);
-        }
     }
 
     static void ClearPositions()
