@@ -358,7 +358,7 @@ MonoBehaviour:
   targetFrameRate: 60
   vSyncOn: 0
   _enableDebug: 0
-  gravityValue: 60
+  gravityValue: 256
 --- !u!4 &1574527622
 Transform:
   m_ObjectHideFlags: 0

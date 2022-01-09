@@ -19,6 +19,7 @@ public class FadeInAnimation : MonoBehaviour
 
     Vector3 objectScale;
     Vector3 initScale;
+    readonly Vector2 startingVector = new Vector3(3f, 3f);
     readonly Vector3 targetVector = new Vector3(1.5f, 1.5f, 1f);
     Vector3 scaleVelocity;
 
@@ -43,7 +44,7 @@ public class FadeInAnimation : MonoBehaviour
     IEnumerator FadeInRoutine()
     {
         isAppearing = true;
-        objectScale = new Vector3(2.5f, 2.5f);
+        objectScale = startingVector;
         while (isAppearing)
         {
             
