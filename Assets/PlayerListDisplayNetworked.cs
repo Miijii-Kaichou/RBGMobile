@@ -4,20 +4,16 @@ using Photon.Pun;
 public class PlayerListDisplayNetworked : MonoBehaviourPun
 {
     
-
     [SerializeField]
-    PhotonView photonViewGameWatcher;
-
-    [SerializeField]
-    GameWatcher networkHandler;
+    public static GameWatcher networkHandler;
 
     [SerializeField]
     OpposingPlayerTag[] opTags = new OpposingPlayerTag[3];
 
     public void Start()
     {
-        networkHandler = photonViewGameWatcher.GetComponent<GameWatcher>();
-        photonView.RPC("SetUpPlayerTags", RpcTarget.All);
+        networkHandler = PhotonNetwork.InstantiateRoomObject("NetworkHandler", transform.position, Quaternion.identity).GetComponent<GameWatcher>();
+        networkHandler.Init();
     }
 
     [PunRPC]

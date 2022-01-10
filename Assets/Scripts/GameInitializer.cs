@@ -6,8 +6,10 @@ using UnityEngine.UI;
 /// The full intent of this call is to set up the blocks for the first time, and give them
 /// their color-values upon the start of a session
 /// </summary>
-public class GameInitializer : Singleton<GameInitializer>
+public class GameInitializer : MonoBehaviour
 {
+    private static GameInitializer Instance;
+
     //Colors
     [SerializeField]
     Color[] blockColors = new Color[3];
@@ -18,6 +20,11 @@ public class GameInitializer : Singleton<GameInitializer>
     int stackSizeMuliplier = 1;
 
     const int DefaultStackSize = 9;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     /// <summary>
     /// Initialize all blocks in the object pool

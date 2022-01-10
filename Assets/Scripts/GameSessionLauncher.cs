@@ -26,6 +26,9 @@ public class GameSessionLauncher : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject[] playModeOverlays = new GameObject[2];
 
+    Hashtable playerInfo = new Hashtable();
+
+
     string[] titles = new string[]
     {
         "Solo Play",
@@ -63,6 +66,7 @@ public class GameSessionLauncher : MonoBehaviourPunCallbacks
             DefinedScenes.GameNetworked
         );
 
+        if(sceneTitleTMP != null && titles!= null)
         sceneTitleTMP.text = titles[(int)SelectedPlayMode - (int)PlayMode.Solo];
 
         if (buttonTextTMP.Length > 0)
@@ -169,6 +173,8 @@ public class GameSessionLauncher : MonoBehaviourPunCallbacks
 #if UNITY_EDITOR
             Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount + "/2 Starting Game");
 #endif
+            
+
             //TODO: Start game by configuring GameScene
             DisableOverlay(0);
             DisableOverlay(1);
@@ -195,8 +201,6 @@ public class GameSessionLauncher : MonoBehaviourPunCallbacks
             IsOpen = true,
             MaxPlayers = 2
         };
-
-        
 
         PhotonNetwork.CreateRoom($"MatchEntity_{randomRoomName}", roomOptions);
 

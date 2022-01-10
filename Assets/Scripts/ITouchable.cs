@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public interface ITouchable
 {
@@ -65,9 +66,14 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
 
     Condition uninteractableCondition;
 
+
+    [SerializeField]
+
     public void OnTouchStay(ITouchable.TouchCallback callback)
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary && uninteractableCondition.WasMet == false)
+        if (Input.touchCount > 0
+            && Input.touches[0].phase == TouchPhase.Stationary
+            && uninteractableCondition.WasMet == false)
         {
             if (hit.collider == entityCollider)
             {
@@ -84,7 +90,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
             if (!IsTouching && hit.collider == entityCollider)
             {
                 callback();
-                cachedData = entityCollider; 
+                cachedData = entityCollider;
             }
         }
     }
@@ -168,7 +174,7 @@ public abstract class TouchableEntity : MonoBehaviour, ITouchable
                 yield break;
             }
 
-            yield return new WaitForSeconds(1f / 250f);
+            yield return new WaitForSeconds(1f / 500f);
 
         }
     }

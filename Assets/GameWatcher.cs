@@ -1,8 +1,11 @@
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class GameWatcher : MonoBehaviourPun
 {
+
+    private static GameWatcher Instance;
     public PlayerModelClientConnection me => playerMMCs[0];
 
     [SerializeField]
@@ -11,7 +14,13 @@ public class GameWatcher : MonoBehaviourPun
     [SerializeField]
     PlayerModelClientConnection[] playerMMCs = new PlayerModelClientConnection[2];
 
-    private void Start()
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void Init()
     {
         if (PhotonNetwork.IsConnected)
         {
@@ -21,12 +30,18 @@ public class GameWatcher : MonoBehaviourPun
 
     public void BroadcastUpdateScore()
     {
-        
+
     }
 
     public void BroadcastDefeat()
     {
 
+    }
+
+    public static void AddToPlayerList(GameObject obj, PlayerModelClientConnection pmcc, int id)
+    {
+        Instance.playerObjs[id] = obj;
+        Instance.playerMMCs[id] = pmcc;
     }
 
     void InitilizeNetworkedInfo()
@@ -37,16 +52,18 @@ public class GameWatcher : MonoBehaviourPun
             player = 1;
         }
 
-        photonView.RPC("AddNewPlayer", RpcTarget.MasterClient, player);
-        playerMMCs[player] = playerObjs[player].GetComponent<PlayerModelClientConnection>();
-        playerMMCs[player].photonView.RPC("SetID", PhotonNetwork.LocalPlayer, player);
-        playerMMCs[player].photonView.RPC("SetName", PhotonNetwork.LocalPlayer);
+        AddNewPlayer(player);
     }
 
-    [PunRPC]
+
     public void AddNewPlayer(int player)
     {
-        playerObjs[player] = PhotonNetwork.Instantiate("PlayerMCC", transform.position, Quaternion.identity);
+
+        playerObjs[player] = PhotonNetwork.InstantiateRoomObject("PlayerMCC", transform.position, Quaternion.identity);
+        PlayerModelClientConnection pmcc = playerObjs[player].GetComponent<PlayerModelClientConnection>();
+        pmcc.SetID(player);
+        pmcc.SetName();
+        playerMMCs[player] = pmcc;
     }
 
     public PlayerModelClientConnection[] GetPMCC() => playerMMCs;

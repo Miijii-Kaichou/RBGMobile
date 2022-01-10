@@ -8,8 +8,10 @@ using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
 
-public class PlayingField : Singleton<PlayingField>
+public class PlayingField : MonoBehaviour
 {
+    private static PlayingField Instance;
+
     #region Serialized Fields
     [SerializeField, Header("Testing")]
     GameInitializer test;
@@ -72,9 +74,14 @@ public class PlayingField : Singleton<PlayingField>
     static bool haveXPositions = false;
     const int MaxBlockPoolSize = 300;
     const int BlockScore = 10;
-    const int validChainCount = 2;
+    const int ValidChainLength = 3;
     public static bool GameSessionStarted = false;
     static float collectedExperience = 0;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     //Start is called just before any of the Update Method is called the first time
     private void Start()
@@ -438,7 +445,7 @@ public class PlayingField : Singleton<PlayingField>
 
                     if (j == lastBlockIndex)
                     {
-                        if (chainCount >= validChainCount)
+                        if (chainCount >= ValidChainLength)
                         {
                             Stats.ChainLength = chainCount;
                             PostMaxChain();
@@ -456,7 +463,7 @@ public class PlayingField : Singleton<PlayingField>
                         return;
                     }
                 }
-                else if (blocksToChain[j].Color != startingColor || chainCount < validChainCount)
+                else if (blocksToChain[j].Color != startingColor || chainCount < ValidChainLength)
                 {
                     InvalidateCollection(ref blocksToChain);
                     ClearPositions();
@@ -468,9 +475,10 @@ public class PlayingField : Singleton<PlayingField>
 
     static void ValidateCollection(ref Block[] referencedChain)
     {
+        ColorType chainColor = referencedChain[0].Color;
         for (int i = 0; i < referencedChain.Length; i++)
         {
-
+            DisappearEffectPool.SpawnEffect(referencedChain[i].RectTransform, chainColor);
             referencedChain[i].SendToTop();
 
             //TODO: Deselect, and destory blocks / send blocks to opponent

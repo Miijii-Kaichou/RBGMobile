@@ -81,6 +81,7 @@ public class Block : MassObject
 
     public Vector2 Position => _position;
 
+
     public override void Start()
     {
         base.Start();
@@ -153,9 +154,7 @@ public class Block : MassObject
         attachedTouchAction.RevertToOriginalColor();
         SelectionHandler.DisableSlot(_instanceID);
         if (disable)
-        {
-            gameObject.SetActive(false);
-        }
+            Disappear();
     }
 
     public void SetPosition(Vector2 position)
@@ -178,8 +177,14 @@ public class Block : MassObject
 
     public void ReturnToInitialPosition() => RectTransform.anchoredPosition = initPosition;
 
-    public override void OnDisable()
+    public void Disappear()
     {
+        
+        gameObject.SetActive(false);
+    }
+
+    public override void OnDisable()
+    { 
         IsGrounded = false;
         justSpawned = true;
         base.OnDisable();

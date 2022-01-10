@@ -363,7 +363,7 @@ namespace Extensions
         public static int Sum(this int[] _)
         {
             int value = 0;
-            for(int i = 0; i < _.Length; i++)
+            for (int i = 0; i < _.Length; i++)
             {
                 value += _[i];
             }
@@ -473,6 +473,20 @@ namespace Extensions
             }
         }
 
+    }
+
+    public static class Component
+    {
+        public static GameObject[] GetGameObjects(this UnityEngine.Component[] components)
+        {
+            GameObject[] objs = new GameObject[components.Length];
+            for(int i = 0; i < objs.Length; i++)
+            {
+                objs[i] = components[i].gameObject;
+            }
+
+            return objs;
+        }
     }
 
 }

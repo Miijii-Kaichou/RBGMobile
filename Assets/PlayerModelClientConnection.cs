@@ -7,17 +7,16 @@ public class PlayerModelClientConnection : MonoBehaviourPun
     public bool playerIsAlive = false;
     public int currentScore = 0;
 
-    [PunRPC]
     public void SetID(int pID)
     {
         playerID = pID;
         playerIsAlive = true;
+        SetName();
     }
 
-    [PunRPC]
     public void SetName()
     {
-        if (photonView.IsMine)
-            playerName = GameManager.PlayerModel.UserName;
+
+        playerName = GameManager.PlayerModel.UserName;
     }
 }

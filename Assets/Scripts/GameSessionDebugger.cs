@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameSessionDebugger : Singleton<GameSessionDebugger>
+public class GameSessionDebugger : MonoBehaviour
 {
+    private static GameSessionDebugger Instance;
+
     [SerializeField, Header("Debug Tools")]
     GameObject debugObj;
 
@@ -38,6 +40,10 @@ public class GameSessionDebugger : Singleton<GameSessionDebugger>
     string diffConfigFormat = "Diff Config: {0}";
     string activeBlocksFormat = "Active Blocks (#/300): {0}";
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         if (!GameManager.EnableDebug)

@@ -4,6 +4,8 @@ using Photon.Pun;
 
 public class PreparePool : MonoBehaviour
 {
+    public GameObject networkManager;
+
     public List<GameObject> prefabs;
 
     DefaultPool pool;

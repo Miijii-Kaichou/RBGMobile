@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AreaHighlightHandler : Singleton<AreaHighlightHandler>
+public class AreaHighlightHandler : MonoBehaviour
 {
+    private static AreaHighlightHandler Instance;
+
     [SerializeField]
     Image[] cachedLaneHighlights; 
 
@@ -11,6 +13,11 @@ public class AreaHighlightHandler : Singleton<AreaHighlightHandler>
     RectTransform initRectTransform;
 
     public static bool Initialized { get; private set; } = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void OnEnable()
     {
